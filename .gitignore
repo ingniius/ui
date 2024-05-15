@@ -1,0 +1,65 @@
+# Generated Outputs
+.data
+.cache
+.nitro
+.nuxt
+.output
+
+# Compiled Outputs
+*.tsbuildinfo
+build
+dist
+dist-ssr
+vite.config.js.timestamp*
+vite.config.ts.timestamp*
+
+# Environment
+.env
+.env.*
+!.env.d.ts
+!.env.example
+
+# Dependencies
+node_modules/
+/.pnp
+.pnp.js
+package.json.*
+
+# Testing
+benchmarks/
+coverage/
+tmp/
+*.lcov
+.coverage*
+.nyc_output
+
+# Logs
+logs
+*.log
+npm-debug.log*
+pnpm-debug.log*
+pnpm-lock.yaml.*
+yarn-debug.log*
+yarn-error.log*
+
+# IDEs and editors
+/.idea
+.project
+.classpath
+.c9/
+.devcontainer/
+*.launch
+.settings/
+*.sublime-workspace
+
+# IDE - VSCode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+# System Files
+.DS_Store
+.turbo
+.vercel
