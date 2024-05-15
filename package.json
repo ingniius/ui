@@ -13,6 +13,19 @@
   "bugs": {
     "url": "https://github.com/ingniius/ui/issues"
   },
+  "scripts": {
+    "start": "turbo start",
+    "build": "turbo build",
+    "format": "turbo format",
+    "test": "turbo test",
+    "clean": "turbo clean",
+    "clean:dry": "turbo clean && rimraf .turbo node_modules"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2",
+    "rimraf": "^5.0.7",
+    "turbo": "^1.13.3"
+  },
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
