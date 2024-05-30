@@ -1,0 +1,33 @@
+{
+  "name": "@vee-ui/typescript",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "tooling/internals/typescript"
+  },
+  "license": "MIT",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "type": "module",
+  "exports": {
+    "./base": "./src/base.json",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  }
+}
