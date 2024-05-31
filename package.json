@@ -24,6 +24,7 @@
   },
   "dependencies": {
     "@vee-ui/format": "workspace:*",
+    "@vee-ui/linter": "workspace:*",
     "@vee-ui/typescript": "workspace:*"
   },
   "devDependencies": {
