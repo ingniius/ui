@@ -1,0 +1,44 @@
+{
+  "name": "@vee-ui/format",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "tooling/internals/format"
+  },
+  "license": "MIT",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "type": "module",
+  "exports": {
+    "./base": "./src/base.mjs",
+    "./vue": "./src/vue.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules"
+  },
+  "dependencies": {
+    "@ianvs/prettier-plugin-sort-imports": "^4.2.1",
+    "prettier-plugin-tailwindcss": "^0.5.14"
+  },
+  "peerDependencies": {
+    "prettier": ">=3"
+  }
+}

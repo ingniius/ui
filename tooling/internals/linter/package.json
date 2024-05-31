@@ -1,0 +1,51 @@
+{
+  "name": "@vee-ui/linter",
+  "version": "0.0.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "tooling/internals/linter"
+  },
+  "license": "MIT",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "type": "module",
+  "exports": {
+    "./base": "./src/base.mjs",
+    "./nuxt": "./src/nuxt.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "src",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "restricted"
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.3.0",
+    "@nuxt/eslint-config": "^0.3.13",
+    "@typescript-eslint/utils": "^7.11.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.17.0",
+    "typescript-eslint": "^7.11.0"
+  },
+  "peerDependencies": {
+    "eslint": ">= 8 || >= 9"
+  },
+  "devDependencies": {
+    "@types/eslint__js": "^8.42.3"
+  }
+}
