@@ -23,6 +23,7 @@
     "clean:dry": "turbo clean && rimraf .turbo node_modules"
   },
   "dependencies": {
+    "@vee-ui/format": "workspace:*",
     "@vee-ui/typescript": "workspace:*"
   },
   "devDependencies": {
