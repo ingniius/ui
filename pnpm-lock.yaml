@@ -7,6 +7,10 @@ settings:
 importers:
 
   .:
+    dependencies:
+      '@vee-ui/typescript':
+        specifier: workspace:*
+        version: link:tooling/internals/typescript
     devDependencies:
       '@changesets/changelog-git':
         specifier: ^0.2.0
@@ -104,6 +108,8 @@ importers:
       vue-router:
         specifier: ^4.3.2
         version: 4.3.2(vue@3.4.27(typescript@5.4.5))
+
+  tooling/internals/typescript: {}
 
 packages:
 
