@@ -1,4 +1,6 @@
 {
+  "name": "@vee-ui/root",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git"
@@ -12,6 +14,9 @@
   "homepage": "https://github.com/ingniius/ui#readme",
   "bugs": {
     "url": "https://github.com/ingniius/ui/issues"
+  },
+  "publishConfig": {
+    "access": "restricted"
   },
   "scripts": {
     "prepare": "husky || true",
@@ -32,42 +37,42 @@
     "@changesets/cli": "^2.27.5",
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
-    "@nuxt/devtools": "^1.3.2",
-    "@nuxt/kit": "^3.11.2",
-    "@nuxt/module-builder": "^0.7.0",
-    "@nuxt/schema": "^3.11.2",
+    "@nuxt/devtools": "^1.3.3",
+    "@nuxt/kit": "^3.12.1",
+    "@nuxt/module-builder": "^0.7.1",
+    "@nuxt/schema": "^3.12.1",
     "@nuxt/test-utils": "^3.13.1",
     "@testing-library/vue": "^8.1.0",
-    "@types/node": "^20.12.13",
-    "@vitejs/plugin-vue": "^5.0.4",
+    "@types/node": "^20.14.2",
+    "@vitejs/plugin-vue": "^5.0.5",
     "@vitest/coverage-v8": "^1.6.0",
     "@vue/test-utils": "^2.4.6",
     "autoprefixer": "^10.4.19",
     "concurrently": "^8.2.2",
-    "eslint": "^9.3.0",
+    "eslint": "^9.4.0",
     "happy-dom": "^14.12.0",
     "husky": "^9.0.11",
-    "lint-staged": "^15.2.5",
-    "nuxt": "^3.11.2",
+    "lint-staged": "^15.2.7",
+    "nuxt": "^3.12.1",
     "postcss": "^8.4.38",
-    "prettier": "^3.2.5",
+    "prettier": "^3.3.2",
     "rimraf": "^5.0.7",
-    "tailwindcss": "^3.4.3",
-    "turbo": "^1.13.3",
+    "tailwindcss": "^3.4.4",
+    "turbo": "^2.0.3",
     "typescript": "^5.4.5",
     "unbuild": "^2.0.0",
-    "vite": "^5.2.12",
+    "vite": "^5.3.1",
     "vitest": "^1.6.0",
-    "vue": "^3.4.27",
-    "vue-router": "^4.3.2"
+    "vue": "^3.4.28",
+    "vue-router": "^4.3.3"
   },
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
   },
-  "packageManager": "pnpm@9.1.4",
+  "packageManager": "pnpm@9.3.0",
   "volta": {
     "node": "20.14.0",
-    "pnpm": "9.1.4"
+    "pnpm": "9.3.0"
   }
 }

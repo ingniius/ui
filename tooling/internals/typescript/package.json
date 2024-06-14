@@ -1,6 +1,6 @@
 {
   "name": "@vee-ui/typescript",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git",
@@ -19,6 +19,7 @@
   "type": "module",
   "exports": {
     "./base": "./src/base.json",
+    "./vue": "./src/vue.json",
     "./package.json": "./package.json"
   },
   "files": [
