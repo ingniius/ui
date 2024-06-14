@@ -19,6 +19,7 @@
   "type": "module",
   "exports": {
     "./base": "./src/base.json",
+    "./vue": "./src/vue.json",
     "./package.json": "./package.json"
   },
   "files": [
