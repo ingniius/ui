@@ -115,6 +115,8 @@ importers:
         specifier: ^4.3.3
         version: 4.3.3(vue@3.4.28(typescript@5.4.5))
 
+  packages/core/util: {}
+
   tooling/internals/format:
     dependencies:
       '@ianvs/prettier-plugin-sort-imports':
