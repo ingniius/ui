@@ -1,0 +1,63 @@
+{
+  "name": "@vee-ui/tailwindcss",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "tooling/generators/tailwindcss"
+  },
+  "license": "MIT",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && unbuild --stub || true",
+    "build": "unbuild",
+    "format": "concurrently --group 'pnpm:format:*'",
+    "format:check": "eslint src/**/*.ts --fix",
+    "format:write": "prettier src/**/*.ts --write",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {
+    "@egoist/tailwindcss-icons": "^1.8.1",
+    "@headlessui/tailwindcss": "^0.2.1",
+    "@iconify-json/simple-icons": "^1.1.107",
+    "@iconify-json/heroicons": "^1.1.21",
+    "@tailwindcss/forms": "^0.5.7",
+    "@tailwindcss/typography": "^0.5.13"
+  },
+  "peerDependencies": {
+    "defu": ">=6",
+    "tailwindcss": ">=3"
+  },
+  "devDependencies": {
+    "@iconify/json": "^2.2.223"
+  },
+  "prettier": "@vee-ui/format/base"
+}
