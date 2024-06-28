@@ -20,6 +20,7 @@
   "module": "./dist/module.mjs",
   "types": "./dist/module.d.ts",
   "exports": {
+    "./assets/bootstrap.css": "./dist/runtime/assets/css/bootstrap.css",
     ".": {
       "types": "./dist/module.d.ts",
       "require": "./dist/module.cjs",
@@ -27,6 +28,9 @@
     },
     "./package.json": "./package.json"
   },
+  "sideEffects": [
+    "*.css"
+  ],
   "files": [
     "dist",
     "package.json",
