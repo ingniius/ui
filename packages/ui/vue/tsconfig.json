@@ -1,0 +1,10 @@
+{
+  "extends": "@vee-ui/typescript/vue",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "@ui/*": ["./src/runtime/*"] },
+    "types": ["vite/client"]
+  },
+  "include": ["src/**/*.ts", "src/**/*.vue"],
+  "exclude": ["node_modules", "src/**/*.spec.ts"]
+}

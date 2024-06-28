@@ -1,0 +1,76 @@
+{
+  "name": "@vee-ui/vue",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/ui/vue"
+  },
+  "license": "MIT",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "type": "module",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/module.d.ts",
+  "exports": {
+    "./assets/bootstrap.css": "./dist/runtime/assets/css/bootstrap.css",
+    "./composables/useExposeRef": {
+      "types": "./dist/runtime/composables/useExposeRef.d.ts",
+      "require": "./dist/runtime/composables/useExposeRef.cjs",
+      "import": "./dist/runtime/composables/useExposeRef.mjs"
+    },
+    "./composables/useUI": {
+      "types": "./dist/runtime/composables/useUI.d.ts",
+      "require": "./dist/runtime/composables/useUI.cjs",
+      "import": "./dist/runtime/composables/useUI.mjs"
+    },
+    ".": {
+      "types": "./dist/module.d.ts",
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && vite build --mode development || true",
+    "build": "vite build --mode production",
+    "format": "concurrently --group 'pnpm:format:*'",
+    "format:check": "eslint src/**/*.{ts,vue} --fix",
+    "format:write": "prettier src/**/*.{ts,vue} --write",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {
+    "@vee-ui/system": "workspace:*",
+    "@vee-ui/tailwindcss": "workspace:*",
+    "@vee-ui/util": "workspace:*",
+    "@headlessui/vue": "^1.7.22",
+    "@vueuse/core": "^10.11.0"
+  },
+  "peerDependencies": {
+    "defu": ">=6",
+    "scule": ">=1",
+    "vue": ">=3"
+  },
+  "prettier": "@vee-ui/format/vue"
+}
