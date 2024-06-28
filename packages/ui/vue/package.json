@@ -26,6 +26,11 @@
       "require": "./dist/runtime/composables/useExposeRef.cjs",
       "import": "./dist/runtime/composables/useExposeRef.mjs"
     },
+    "./composables/useUI": {
+      "types": "./dist/runtime/composables/useUI.d.ts",
+      "require": "./dist/runtime/composables/useUI.cjs",
+      "import": "./dist/runtime/composables/useUI.mjs"
+    },
     ".": {
       "types": "./dist/module.d.ts",
       "require": "./dist/module.cjs",
