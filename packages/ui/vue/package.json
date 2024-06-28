@@ -21,6 +21,11 @@
   "types": "./dist/module.d.ts",
   "exports": {
     "./assets/bootstrap.css": "./dist/runtime/assets/css/bootstrap.css",
+    "./composables/useExposeRef": {
+      "types": "./dist/runtime/composables/useExposeRef.d.ts",
+      "require": "./dist/runtime/composables/useExposeRef.cjs",
+      "import": "./dist/runtime/composables/useExposeRef.mjs"
+    },
     ".": {
       "types": "./dist/module.d.ts",
       "require": "./dist/module.cjs",
