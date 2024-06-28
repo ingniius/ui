@@ -54,5 +54,8 @@
   "peerDependencies": {
     "defu": ">=6"
   },
+  "devDependencies": {
+    "@vee-ui/tailwindcss": "workspace:*"
+  },
   "prettier": "@vee-ui/format/base"
 }

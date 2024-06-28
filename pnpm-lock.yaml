@@ -138,6 +138,10 @@ importers:
       tailwind-merge:
         specifier: ^2.3.0
         version: 2.3.0
+    devDependencies:
+      '@vee-ui/tailwindcss':
+        specifier: workspace:*
+        version: link:../../../tooling/generators/tailwindcss
 
   packages/core/util: {}
 
