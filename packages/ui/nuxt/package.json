@@ -1,0 +1,67 @@
+{
+  "name": "@vee-ui/nuxt",
+  "version": "0.0.2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/ui/nuxt"
+  },
+  "license": "MIT",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "type": "module",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "types": "./dist/module.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/module.d.ts",
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "sideEffects": [
+    "*.css"
+  ],
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && nuxt-module-build build --stub || true",
+    "build": "nuxt-module-build build",
+    "format": "concurrently --group 'pnpm:format:*'",
+    "format:check": "eslint src/**/*.{ts,vue} --fix",
+    "format:write": "prettier src/**/*.{ts,vue} --write",
+    "test": "vitest run",
+    "test:coverage": "vitest run --coverage",
+    "clean": "rimraf coverage dist .nuxt .turbo node_modules",
+    "postinstall": "nuxt-module-build prepare"
+  },
+  "dependencies": {
+    "@vee-ui/system": "workspace:*",
+    "@vee-ui/tailwindcss": "workspace:*",
+    "@vee-ui/util": "workspace:*",
+    "@vee-ui/vue": "workspace:*",
+    "@nuxtjs/tailwindcss": "^6.12.0"
+  },
+  "peerDependencies": {
+    "defu": ">=6",
+    "pathe": ">=1",
+    "scule": ">=1",
+    "tailwindcss": ">=3"
+  },
+  "prettier": "@vee-ui/format/vue"
+}
