@@ -1,0 +1,10 @@
+*
+!dist/**/*.css
+!dist/**/*.cjs
+!dist/**/*.d.ts
+!dist/**/*.js
+!dist/**/*.mjs
+!dist/**/*.vue
+!LICENSE
+!package.json
+!README.md
