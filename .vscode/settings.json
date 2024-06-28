@@ -1,12 +1,10 @@
 {
+  "css.customData": [".vscode/tailwind.json"],
   "editor.defaultFormatter": "esbenp.prettier-vscode",
   "editor.formatOnSave": true,
-  "editor.quickSuggestions": {
-    "strings": true
-  },
-  "files.associations": {
-    "*.css": "tailwindcss"
-  },
+  "editor.quickSuggestions": { "strings": true },
+  "eslint.useFlatConfig": true,
+  "files.associations": { "*.css": "tailwindcss" },
   "tailwindCSS.classAttributes": ["class", "ui"],
   "tailwindCSS.experimental.classRegex": [
     ["ui:\\s*{([^)]*)\\s*}", "[\"'`]([^\"'`]*).*?[\"'`]"],

@@ -1,6 +1,6 @@
 {
   "name": "@vee-ui/system",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git",
@@ -48,10 +48,14 @@
   },
   "dependencies": {
     "@vee-ui/util": "workspace:*",
+    "clsx": "^2.1.1",
     "tailwind-merge": "^2.3.0"
   },
   "peerDependencies": {
     "defu": ">=6"
+  },
+  "devDependencies": {
+    "@vee-ui/tailwindcss": "workspace:*"
   },
   "prettier": "@vee-ui/format/base"
 }

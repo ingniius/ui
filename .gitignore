@@ -10,8 +10,8 @@
 build
 dist
 dist-ssr
-vite.config.js.timestamp*
-vite.config.ts.timestamp*
+*.config.js.timestamp*
+*.config.ts.timestamp*
 
 # Environment
 .env
@@ -54,10 +54,11 @@ yarn-error.log*
 
 # IDE - VSCode
 .vscode/*
-!.vscode/settings.json
-!.vscode/tasks.json
-!.vscode/launch.json
 !.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/settings.json
+!.vscode/tailwind.json
+!.vscode/tasks.json
 
 # System Files
 .DS_Store

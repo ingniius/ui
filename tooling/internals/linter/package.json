@@ -1,6 +1,6 @@
 {
   "name": "@vee-ui/linter",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git",
@@ -20,6 +20,7 @@
   "exports": {
     "./base": "./src/base.mjs",
     "./nuxt": "./src/nuxt.mjs",
+    "./vue": "./src/vue.mjs",
     "./package.json": "./package.json"
   },
   "files": [
@@ -35,12 +36,12 @@
     "clean": "rimraf .turbo node_modules"
   },
   "dependencies": {
-    "@eslint/js": "^9.4.0",
+    "@eslint/js": "^9.5.0",
     "@nuxt/eslint-config": "^0.3.13",
-    "@typescript-eslint/utils": "^7.13.0",
+    "@typescript-eslint/utils": "^7.14.1",
     "eslint-config-prettier": "^9.1.0",
-    "eslint-plugin-tailwindcss": "^3.17.3",
-    "typescript-eslint": "^7.13.0"
+    "eslint-plugin-tailwindcss": "^3.17.4",
+    "typescript-eslint": "^7.14.1"
   },
   "peerDependencies": {
     "eslint": ">= 8 || >= 9"
