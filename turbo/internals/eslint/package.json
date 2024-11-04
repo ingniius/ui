@@ -1,0 +1,33 @@
+{
+  "name": "@vee-ui/eslint",
+  "version": "0.0.7-rc-1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "turbo/internals/eslint"
+  },
+  "private": true,
+  "exports": {
+    "./base": "./src/base.mjs",
+    "./vue": "./src/vue.mjs"
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules"
+  },
+  "dependencies": {
+    "@eslint/js": "^9.14.0",
+    "@nuxt/eslint-config": "^0.6.1",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-tailwindcss": "^3.17.5",
+    "eslint-plugin-turbo": "^2.2.3",
+    "eslint-plugin-vue": "^9.30.0",
+    "typescript-eslint": "^8.12.2"
+  },
+  "peerDependencies": {
+    "eslint": ">= 9"
+  },
+  "devDependencies": {
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.14.0"
+  }
+}

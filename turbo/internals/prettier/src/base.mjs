@@ -1,0 +1,38 @@
+/** @type {import("prettier").Config} */
+export default {
+  arrowParens: "always",
+  importOrder: [
+    "^@turbo|^vitest",
+    "^@testing-library|^@vue/test-utils",
+    "^@vitejs/(.*)$|^@vitejs|^vite",
+    "^node:",
+    "^vue|^tailwindcss/(.*)$",
+    "^@nuxt/(.*)$|^@nuxt|^@nuxtjs/(.*)$|^@nuxtjs|^nuxt/(.*)$|^nuxt",
+    "^#ui|^#tailwind",
+    "^@vue|^clsx|^defu|^tailwind|^zod",
+    "<THIRD_PARTY_MODULES>",
+    "^@vee-ui/(.*)$",
+    "^@/(.*)$|^~/(.*)$",
+    "^[./]",
+  ],
+  importOrderSeparation: true,
+  importOrderSortSpecifiers: true,
+  jsxSingleQuote: false,
+  overrides: [
+    { files: "*.json.hbs", options: { parser: "json" } },
+    { files: "*.mjs.hbs", options: { parser: "babel" } },
+    { files: "*.ts.hbs", options: { parser: "typescript" } },
+  ],
+  plugins: [
+    "@trivago/prettier-plugin-sort-imports",
+    "prettier-plugin-tailwindcss",
+  ],
+  printWidth: 100,
+  proseWrap: "always",
+  quoteProps: "consistent",
+  semi: true,
+  singleQuote: false,
+  tabWidth: 2,
+  trailingComma: "all",
+  useTabs: false,
+};

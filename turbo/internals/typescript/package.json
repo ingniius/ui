@@ -1,0 +1,14 @@
+{
+  "name": "@vee-ui/typescript",
+  "version": "0.0.7-rc-1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "turbo/internals/typescript"
+  },
+  "private": true,
+  "exports": {
+    "./base": "./src/base.json",
+    "./vue": "./src/vue.json"
+  }
+}

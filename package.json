@@ -1,13 +1,61 @@
 {
   "name": "@vee-ui/root",
-  "version": "0.0.7",
+  "version": "0.0.7-rc-1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git"
   },
+  "license": "Apache-2.0",
   "author": "@ingniius <ingniius@pm.me>",
   "contributors": [
     "@omaucf <omaucf@pm.me>"
   ],
-  "private": true
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "scripts": {
+    "prepare": "husky || true",
+    "start": "turbo start",
+    "build": "turbo build",
+    "check": "turbo check",
+    "format": "turbo format",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean"
+  },
+  "dependencies": {
+    "@changesets/changelog-git": "^0.2.0",
+    "@changesets/cli": "^2.27.9",
+    "@commitlint/cli": "^19.5.0",
+    "@commitlint/config-conventional": "^19.5.0",
+    "@manypkg/cli": "^0.22.0",
+    "@turbo/gen": "^2.2.3",
+    "@types/node": "^22.8.7",
+    "@vee-ui/eslint": "workspace:*",
+    "@vee-ui/prettier": "workspace:*",
+    "@vee-ui/typescript": "workspace:*",
+    "dotenv-cli": "^7.4.2",
+    "globby": "^14.0.2",
+    "husky": "^9.1.6",
+    "lint-staged": "^15.2.10",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.2.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.1.4"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "volta": {
+    "node": "22.11.0",
+    "pnpm": "9.12.3"
+  },
+  "prettier": "@vee-ui/prettier/base"
 }
