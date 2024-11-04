@@ -14,5 +14,14 @@
   "homepage": "https://github.com/ingniius/ui#readme",
   "bugs": {
     "url": "https://github.com/ingniius/ui/issues"
+  },
+  "engines": {
+    "node": ">=22.0.0",
+    "npm": ">=10.0.0"
+  },
+  "packageManager": "pnpm@9.12.3",
+  "volta": {
+    "node": "22.11.0",
+    "pnpm": "9.12.3"
   }
 }
