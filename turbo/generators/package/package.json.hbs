@@ -36,6 +36,7 @@
     "build": "vite build --mode production",
     "check": "tsc --noEmit",
     "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
     "test": "vitest run",
     "clean": "rimraf coverage dist .turbo node_modules"
   },

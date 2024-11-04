@@ -33,6 +33,7 @@
     "@manypkg/cli": "^0.22.0",
     "@turbo/gen": "^2.2.3",
     "@types/node": "^22.8.7",
+    "@vee-ui/eslint": "workspace:*",
     "@vee-ui/prettier": "workspace:*",
     "@vee-ui/typescript": "workspace:*",
     "dotenv-cli": "^7.4.2",

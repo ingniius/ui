@@ -42,6 +42,11 @@ export function createPackageGenerator(plop: PlopTypes.NodePlopAPI) {
       },
       {
         type: "add",
+        path: "packages/{{ name }}/eslint.config.mjs",
+        templateFile: "package/eslint.config.mjs.hbs",
+      },
+      {
+        type: "add",
         path: "packages/{{ name }}/tsconfig.json",
         templateFile: "package/tsconfig.json.hbs",
       },
