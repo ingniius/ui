@@ -34,6 +34,7 @@
     "prepare": "[ ! -d dist ] && vite build --mode development || true",
     "start": "vite build --mode development",
     "build": "vite build --mode production",
+    "check": "tsc --noEmit",
     "test": "vitest run",
     "clean": "rimraf coverage dist .turbo node_modules"
   },

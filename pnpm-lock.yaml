@@ -29,6 +29,9 @@ importers:
       '@types/node':
         specifier: ^22.8.7
         version: 22.8.7
+      '@vee-ui/typescript':
+        specifier: workspace:*
+        version: link:turbo/internals/typescript
       dotenv-cli:
         specifier: ^7.4.2
         version: 7.4.2
@@ -62,6 +65,8 @@ importers:
       vitest:
         specifier: ^2.1.4
         version: 2.1.4(@types/node@22.8.7)
+
+  turbo/internals/typescript: {}
 
 packages:
 

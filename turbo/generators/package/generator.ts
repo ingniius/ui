@@ -44,6 +44,11 @@ export function createPackageGenerator(plop: PlopTypes.NodePlopAPI) {
       },
       {
         type: "add",
+        path: "packages/{{ name }}/tsconfig.json",
+        templateFile: "package/tsconfig.json.hbs",
+      },
+      {
+        type: "add",
         path: "packages/{{ name }}/vite.config.ts",
         templateFile: "package/vite.config.ts.hbs",
       },
@@ -299,7 +304,7 @@ export function isBrowser() {
             const pkg = JSON.parse(content) as PackageJson;
             for (const dep of answers.deps.split(" ").filter(Boolean)) {
               const version = await fetch(
-                `https://registry.npmjs.org/-/package/${dep}/dist-tags`
+                `https://registry.npmjs.org/-/package/${dep}/dist-tags`,
               )
                 .then((res) => res.json())
                 .then((json) => json.latest);
@@ -317,7 +322,7 @@ export function isBrowser() {
         execSync(
           `pnpm exec prettier --write packages/${
             (answers as { name: string }).name
-          }/** --list-different`
+          }/** --list-different`,
         );
         return "Package scaffolded";
       },
