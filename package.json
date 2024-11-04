@@ -25,6 +25,8 @@
     "clean": "turbo clean"
   },
   "dependencies": {
+    "@changesets/changelog-git": "^0.2.0",
+    "@changesets/cli": "^2.27.9",
     "@manypkg/cli": "^0.22.0",
     "@turbo/gen": "^2.2.3",
     "@types/node": "^22.8.7",
