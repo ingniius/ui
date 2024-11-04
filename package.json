@@ -15,6 +15,29 @@
   "bugs": {
     "url": "https://github.com/ingniius/ui/issues"
   },
+  "scripts": {
+    "start": "turbo start",
+    "build": "turbo build",
+    "check": "turbo check",
+    "format": "turbo format",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean"
+  },
+  "dependencies": {
+    "@manypkg/cli": "^0.22.0",
+    "@turbo/gen": "^2.2.3",
+    "@types/node": "^22.8.7",
+    "dotenv-cli": "^7.4.2",
+    "globby": "^14.0.2",
+    "prettier": "^3.3.3",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.2.3",
+    "typescript": "^5.6.3",
+    "vite": "^5.4.10",
+    "vite-plugin-dts": "^4.3.0",
+    "vitest": "^2.1.4"
+  },
   "engines": {
     "node": ">=22.0.0",
     "npm": ">=10.0.0"

@@ -1,0 +1,48 @@
+{
+  "name": "@vee-ui/{{ name }}",
+  "version": "0.0.0",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/{{ name }}"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": ["@omaucf <omaucf@pm.me>"],
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "type": "module",
+  "main": "./dist/index.cjs",
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "require": "./dist/index.cjs",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "package.json", "LICENSE", "README.md"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "[ ! -d dist ] && vite build --mode development || true",
+    "start": "vite build --mode development",
+    "build": "vite build --mode production",
+    "test": "vitest run",
+    "clean": "rimraf coverage dist .turbo node_modules"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {},
+  "typesVersions": {
+    "*": {
+      "*": ["src/*"]
+    }
+  }
+}
