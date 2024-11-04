@@ -5,6 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git"
   },
+  "license": "Apache-2.0",
   "author": "@ingniius <ingniius@pm.me>",
   "contributors": [
     "@omaucf <omaucf@pm.me>"
