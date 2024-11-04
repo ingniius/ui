@@ -10,5 +10,9 @@
   "contributors": [
     "@omaucf <omaucf@pm.me>"
   ],
-  "private": true
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  }
 }
