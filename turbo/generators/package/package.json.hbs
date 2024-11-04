@@ -35,12 +35,14 @@
     "start": "vite build --mode development",
     "build": "vite build --mode production",
     "check": "tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
     "test": "vitest run",
     "clean": "rimraf coverage dist .turbo node_modules"
   },
   "dependencies": {},
   "peerDependencies": {},
   "devDependencies": {},
+  "prettier": "@vee-ui/prettier/base",
   "typesVersions": {
     "*": {
       "*": ["src/*"]
