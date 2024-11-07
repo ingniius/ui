@@ -4,7 +4,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git",
-    "directory": "packages/{{ name }}"
+    "directory": "packages/{{ scope }}/{{ name }}"
   },
   "license": "Apache-2.0",
   "author": "@ingniius <ingniius@pm.me>",
@@ -37,7 +37,7 @@
     "check": "tsc --noEmit",
     "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
     "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
-    "test": "vitest run",
+    "test": "vitest run --passWithNoTests",
     "clean": "rimraf coverage dist .turbo node_modules"
   },
   "dependencies": {},

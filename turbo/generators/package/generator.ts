@@ -19,6 +19,16 @@ export function createPackageGenerator(plop: PlopTypes.NodePlopAPI) {
         message: "What is the name of the package? (You can skip the `@vee-ui/` prefix)",
       },
       {
+        type: "list",
+        name: "scope",
+        message: "What is the scope of the package?",
+        default: "common",
+        choices: [
+          { name: "common", value: "common" },
+          { name: "core", value: "core" },
+        ],
+      },
+      {
         type: "input",
         name: "deps",
         message: "Enter a space separated list of dependencies you would like to install",
@@ -37,28 +47,28 @@ export function createPackageGenerator(plop: PlopTypes.NodePlopAPI) {
       // TEMPLATES
       {
         type: "add",
-        path: "packages/{{ name }}/package.json",
+        path: "packages/{{ scope }}/{{ name }}/package.json",
         templateFile: "package/package.json.hbs",
       },
       {
         type: "add",
-        path: "packages/{{ name }}/eslint.config.mjs",
+        path: "packages/{{ scope }}/{{ name }}/eslint.config.mjs",
         templateFile: "package/eslint.config.mjs.hbs",
       },
       {
         type: "add",
-        path: "packages/{{ name }}/tsconfig.json",
+        path: "packages/{{ scope }}/{{ name }}/tsconfig.json",
         templateFile: "package/tsconfig.json.hbs",
       },
       {
         type: "add",
-        path: "packages/{{ name }}/vite.config.ts",
+        path: "packages/{{ scope }}/{{ name }}/vite.config.ts",
         templateFile: "package/vite.config.ts.hbs",
       },
       // GENERATOR
       {
         type: "add",
-        path: "packages/{{ name }}/.npmignore",
+        path: "packages/{{ scope }}/{{ name }}/.npmignore",
         template: `
 *
 !dist/**/*.cjs
@@ -71,7 +81,7 @@ export function createPackageGenerator(plop: PlopTypes.NodePlopAPI) {
       },
       {
         type: "add",
-        path: "packages/{{ name }}/LICENSE",
+        path: "packages/{{ scope }}/{{ name }}/LICENSE",
         template: `
                                  Apache License
                            Version 2.0, January 2004
@@ -279,7 +289,7 @@ limitations under the License.
       },
       {
         type: "add",
-        path: "packages/{{ name }}/README.md",
+        path: "packages/{{ scope }}/{{ name }}/README.md",
         template: `
 # \`@vee-ui/{{ name }}\`
 
@@ -291,7 +301,7 @@ See [LICENSE](./LICENSE) for more information.
       },
       {
         type: "add",
-        path: "packages/{{ name }}/src/index.ts",
+        path: "packages/{{ scope }}/{{ name }}/src/index.ts",
         template: `
 export function isBrowser() {
   return typeof window !== "undefined";
@@ -301,7 +311,7 @@ export function isBrowser() {
       // TRANSFORMATIONS
       {
         type: "modify",
-        path: "packages/{{ name }}/package.json",
+        path: "packages/{{ scope }}/{{ name }}/package.json",
         async transform(content, answers) {
           if ("deps" in answers && typeof answers.deps === "string") {
             const pkg = JSON.parse(content) as PackageJson;
@@ -321,7 +331,7 @@ export function isBrowser() {
       async (answers) => {
         execSync("pnpm exec manypkg fix", { stdio: "inherit" });
         execSync(
-          `pnpm exec prettier --write packages/${(answers as { name: string }).name}/** --list-different`,
+          `pnpm exec prettier --write packages/${(answers as { scope: string }).scope}/${(answers as { name: string }).name}/** --list-different`,
         );
         return "Package scaffolded";
       },
