@@ -1,14 +1,16 @@
 {
-  "name": "@vee-ui/{{ name }}",
-  "version": "0.0.7-rc-1",
+  "name": "@vee-ui/util",
+  "version": "0.0.7-rc-2",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git",
-    "directory": "packages/{{ scope }}/{{ name }}"
+    "directory": "packages/common/util"
   },
   "license": "Apache-2.0",
   "author": "@ingniius <ingniius@pm.me>",
-  "contributors": ["@omaucf <omaucf@pm.me>"],
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
   "homepage": "https://github.com/ingniius/ui#readme",
   "bugs": {
     "url": "https://github.com/ingniius/ui/issues"
@@ -19,6 +21,16 @@
   "source": "./dist/index.ts",
   "types": "./dist/index.d.ts",
   "exports": {
+    "./assertion": {
+      "types": "./dist/assertion.d.ts",
+      "require": "./dist/assertion.cjs",
+      "import": "./dist/assertion.mjs"
+    },
+    "./types": {
+      "types": "./dist/types.d.ts",
+      "require": "./dist/types.cjs",
+      "import": "./dist/types.mjs"
+    },
     ".": {
       "types": "./dist/index.d.ts",
       "require": "./dist/index.cjs",
@@ -26,7 +38,12 @@
     },
     "./package.json": "./package.json"
   },
-  "files": ["dist", "package.json", "LICENSE", "README.md"],
+  "files": [
+    "dist",
+    "package.json",
+    "LICENSE",
+    "README.md"
+  ],
   "publishConfig": {
     "access": "public"
   },
@@ -37,7 +54,7 @@
     "check": "tsc --noEmit",
     "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
     "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
-    "test": "vitest run --passWithNoTests",
+    "test": "vitest run --passWithNoTestes",
     "clean": "rimraf coverage dist .turbo node_modules"
   },
   "dependencies": {},
@@ -46,7 +63,9 @@
   "prettier": "@vee-ui/prettier/base",
   "typesVersions": {
     "*": {
-      "*": ["src/*"]
+      "*": [
+        "src/*"
+      ]
     }
   }
 }

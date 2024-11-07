@@ -8,8 +8,10 @@ export default [
   ...vuePlugin.configs["flat/recommended"],
   ...vuePlugin.configs["flat/strongly-recommended"],
   {
-    files: ["**/*.ts", "**/*.vue"],
+    files: ["**/*.vue"],
     rules: {
+      "import/first": "off",
+      "import/order": "off",
       "vue/no-multiple-template-root": "off",
       "vue/max-attributes-per-line": "off",
       "vue/multi-word-component-names": "off",
