@@ -1,0 +1,8 @@
+@import "@nuxt/ui";
+
+@layer base {
+  :root {
+    --ui-container-width: var(--width-7xl);
+    --ui-header-height: var(--spacing-16);
+  }
+}

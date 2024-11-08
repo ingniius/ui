@@ -1,0 +1,36 @@
+{
+  "name": "@vee-ui/landing",
+  "version": "0.0.7-rc-2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "examples/landing"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "main": "./nuxt.config.ts",
+  "type": "module",
+  "scripts": {
+    "prepare": "nuxt prepare",
+    "start": "nuxt dev",
+    "build": "nuxt build",
+    "check": "vue-tsc --noEmit",
+    "format": "prettier src/**/*.{ts,vue} --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.{ts,vue} --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "clean": "rimraf .nuxt .turbo node_modules"
+  },
+  "dependencies": {
+    "@vee-ui/nuxt": "workspace:*",
+    "@vee-ui/system": "workspace:*",
+    "@vee-ui/util": "workspace:*"
+  },
+  "prettier": "@vee-ui/prettier/base"
+}

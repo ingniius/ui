@@ -1,5 +1,7 @@
 import type { Component } from "vue";
 
+export type { VariantProps } from "tailwind-variants";
+
 /**
  * @publicApi
  */

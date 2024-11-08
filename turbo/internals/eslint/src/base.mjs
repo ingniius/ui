@@ -1,6 +1,7 @@
 import eslint from "@eslint/js";
+// @ts-ignore
 import prettier from "eslint-config-prettier";
-import turboPlugin from "eslint-plugin-turbo";
+import turbo from "eslint-plugin-turbo";
 import tseslint from "typescript-eslint";
 
 /** @type {Awaited<import('typescript-eslint').Config>} */
@@ -10,17 +11,14 @@ export default tseslint.config(
     ...prettier,
   },
   {
-    files: ["**/*.mjs", "**/*.ts", "**/*.tsx"],
-    plugins: {
-      turbo: turboPlugin,
-    },
+    files: ["**/*.mjs", "**/*.ts"],
     extends: [eslint.configs.recommended, ...tseslint.configs.recommended],
+    plugins: { turbo },
     rules: {
       "@typescript-eslint/ban-ts-comment": "off",
       "@typescript-eslint/no-empty-object-type": "off",
       "@typescript-eslint/no-explicit-any": "off",
       "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
-      "tailwindcss/no-custom-classname": "off",
     },
   },
 );

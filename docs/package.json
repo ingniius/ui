@@ -1,0 +1,40 @@
+{
+  "name": "@vee-ui/docs",
+  "version": "0.0.7-rc-2",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "docs"
+  },
+  "license": "Apache-2.0",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "main": "./nuxt.config.ts",
+  "type": "module",
+  "scripts": {
+    "prepare": "nuxt prepare",
+    "start": "nuxt dev",
+    "build": "nuxt build",
+    "check": "vue-tsc --noEmit",
+    "format": "prettier src/**/*.{ts,vue} --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.{ts,vue} --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "clean": "rimraf .nuxt .turbo node_modules"
+  },
+  "dependencies": {
+    "@vee-ui/nuxt": "workspace:*",
+    "@vee-ui/system": "workspace:*",
+    "@vee-ui/util": "workspace:*",
+    "nuxt-component-meta": "^0.9.0",
+    "nuxt-og-image": "^3.0.8",
+    "shiki-transformer-color-highlight": "^0.2.0",
+    "zod": "^3.23.8"
+  },
+  "prettier": "@vee-ui/prettier/base"
+}

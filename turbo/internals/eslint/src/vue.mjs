@@ -1,12 +1,29 @@
-import vuePlugin from "eslint-plugin-vue";
+// @ts-ignore
+import prettier from "eslint-config-prettier";
+import turbo from "eslint-plugin-turbo";
+import vue from "eslint-plugin-vue";
 import tseslint from "typescript-eslint";
 
 /** @type {Awaited<import('typescript-eslint').Config>} */
 export default [
-  ...vuePlugin.configs["flat/base"],
-  ...vuePlugin.configs["flat/essential"],
-  ...vuePlugin.configs["flat/recommended"],
-  ...vuePlugin.configs["flat/strongly-recommended"],
+  {
+    ignores: ["**/build/", "**/dist/", "**/*.config.*"],
+    ...prettier,
+  },
+  {
+    files: ["**/*.mjs", "**/*.ts", "**/*.vue"],
+    plugins: { turbo },
+    rules: {
+      "@typescript-eslint/ban-ts-comment": "off",
+      "@typescript-eslint/no-empty-object-type": "off",
+      "@typescript-eslint/no-explicit-any": "off",
+      "@typescript-eslint/no-unused-vars": ["warn", { argsIgnorePattern: "^_" }],
+    },
+  },
+  ...vue.configs["flat/base"],
+  ...vue.configs["flat/essential"],
+  ...vue.configs["flat/recommended"],
+  ...vue.configs["flat/strongly-recommended"],
   {
     files: ["**/*.vue"],
     rules: {
