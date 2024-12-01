@@ -1,0 +1,13 @@
+{
+  "name": "@vee-ui/root",
+  "version": "0.0.7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git"
+  },
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "private": true
+}
