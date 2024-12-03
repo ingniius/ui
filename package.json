@@ -15,9 +15,26 @@
   "bugs": {
     "url": "https://github.com/ingniius/ui/issues"
   },
+  "scripts": {
+    "start": "turbo start",
+    "build": "turbo build",
+    "check": "turbo check",
+    "format": "turbo format",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean"
+  },
   "devDependencies": {
+    "@types/node": "^22.10.1",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.16.0",
     "npm-run-all2": "^7.0.1",
-    "rimraf": "^6.0.1"
+    "prettier": "^3.4.1",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.2",
+    "vitest": "^2.1.8"
   },
   "resolutions": {
     "rimraf": ">=6"
