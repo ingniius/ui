@@ -25,6 +25,9 @@
     "test": "turbo test",
     "clean": "turbo clean"
   },
+  "dependencies": {
+    "@vee-ui/typescript": "workspace:*"
+  },
   "devDependencies": {
     "@changesets/changelog-git": "^0.2.0",
     "@changesets/cli": "^2.27.10",

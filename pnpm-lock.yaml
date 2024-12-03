@@ -10,6 +10,10 @@ overrides:
 importers:
 
   .:
+    dependencies:
+      '@vee-ui/typescript':
+        specifier: workspace:*
+        version: link:turbo/settings/typescript
     devDependencies:
       '@changesets/changelog-git':
         specifier: ^0.2.0
@@ -56,6 +60,8 @@ importers:
       vitest:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@22.10.1)
+
+  turbo/settings/typescript: {}
 
 packages:
 
