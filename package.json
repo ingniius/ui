@@ -16,6 +16,7 @@
     "url": "https://github.com/ingniius/ui/issues"
   },
   "scripts": {
+    "prepare": "husky || true",
     "start": "turbo start",
     "build": "turbo build",
     "check": "turbo check",
@@ -27,9 +28,12 @@
   "devDependencies": {
     "@changesets/changelog-git": "^0.2.0",
     "@changesets/cli": "^2.27.10",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
     "@types/node": "^22.10.1",
     "@vitest/coverage-v8": "^2.1.8",
     "eslint": "^9.16.0",
+    "husky": "^9.1.7",
     "npm-run-all2": "^7.0.1",
     "prettier": "^3.4.1",
     "rimraf": "^6.0.1",
