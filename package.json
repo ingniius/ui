@@ -26,6 +26,7 @@
     "clean": "turbo clean"
   },
   "dependencies": {
+    "@vee-ui/eslint": "workspace:*",
     "@vee-ui/prettier": "workspace:*",
     "@vee-ui/typescript": "workspace:*"
   },
