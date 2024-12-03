@@ -1,3 +1,11 @@
+# CHANGESET
+changeset.add:
+	@pnpm changeset add
+changeset.version:
+	@pnpm changeset version
+changeset.publish:
+	@pnpm changeset publish
+
 # TURBO
 turbo.run:
 	@pnpm turbo $(filter-out $@,$(MAKECMDGOALS))
