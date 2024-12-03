@@ -1,13 +1,63 @@
 {
   "name": "@vee-ui/root",
-  "version": "0.0.7",
+  "version": "0.0.8-alpha.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git"
   },
+  "license": "MIT",
   "author": "@ingniius <ingniius@pm.me>",
   "contributors": [
     "@omaucf <omaucf@pm.me>"
   ],
-  "private": true
+  "private": true,
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "scripts": {
+    "prepare": "husky || true",
+    "start": "turbo start",
+    "build": "turbo build",
+    "check": "turbo check",
+    "format": "turbo format",
+    "lint": "turbo lint",
+    "test": "turbo test",
+    "clean": "turbo clean"
+  },
+  "dependencies": {
+    "@vee-ui/eslint": "workspace:*",
+    "@vee-ui/prettier": "workspace:*",
+    "@vee-ui/typescript": "workspace:*"
+  },
+  "devDependencies": {
+    "@changesets/changelog-git": "^0.2.0",
+    "@changesets/cli": "^2.27.10",
+    "@commitlint/cli": "^19.6.0",
+    "@commitlint/config-conventional": "^19.6.0",
+    "@types/node": "^22.10.1",
+    "@vitest/coverage-v8": "^2.1.8",
+    "eslint": "^9.16.0",
+    "husky": "^9.1.7",
+    "npm-run-all2": "^7.0.1",
+    "prettier": "^3.4.1",
+    "rimraf": "^6.0.1",
+    "turbo": "^2.3.3",
+    "typescript": "^5.7.2",
+    "vite": "^6.0.2",
+    "vitest": "^2.1.8"
+  },
+  "resolutions": {
+    "rimraf": ">=6"
+  },
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
+  },
+  "packageManager": "pnpm@9.14.4",
+  "volta": {
+    "node": "22.11.0",
+    "pnpm": "9.14.4"
+  },
+  "prettier": "@vee-ui/prettier/base"
 }
