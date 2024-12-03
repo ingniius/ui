@@ -5,6 +5,7 @@
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git"
   },
+  "license": "MIT",
   "author": "@ingniius <ingniius@pm.me>",
   "contributors": [
     "@omaucf <omaucf@pm.me>"
