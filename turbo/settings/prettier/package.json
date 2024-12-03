@@ -1,0 +1,25 @@
+{
+  "name": "@vee-ui/prettier",
+  "version": "0.0.7",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "turbo/settings/prettier"
+  },
+  "private": true,
+  "exports": {
+    "./base": "./src/base.mjs"
+  },
+  "scripts": {
+    "clean": "rimraf .turbo node_modules"
+  },
+  "dependencies": {
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0"
+  },
+  "peerDependencies": {
+    "prettier": ">=3"
+  },
+  "devDependencies": {
+    "prettier": "^3.4.1"
+  }
+}
