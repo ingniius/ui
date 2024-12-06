@@ -1,4 +1,4 @@
-# @vee-ui/prettier
+# @iueev/prettier
 
 ## 0.0.8-alpha.1
 
