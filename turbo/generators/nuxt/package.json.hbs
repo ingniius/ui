@@ -1,0 +1,54 @@
+{
+  "name": "@iueev/{{ name }}",
+  "version": "0.0.8-alpha.1",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/{{ name }}"
+  },
+  "license": "MIT",
+  "author": "@ingniius <ingniius@pm.me>",
+  "contributors": ["@omaucf <omaucf@pm.me>"],
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "sideEffects": false,
+  "type": "module",
+  "main": "./dist/module.cjs",
+  "module": "./dist/module.mjs",
+  "source": "./dist/module.ts",
+  "types": "./dist/module.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/module.d.ts",
+      "require": "./dist/module.cjs",
+      "import": "./dist/module.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": ["dist", "package.json", "LICENSE", "README.md"],
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "prepare": "nuxt-module-build prepare",
+    "start": "nuxt-module-build build --stub",
+    "build": "nuxt-module-build build",
+    "check": "vue-tsc --noEmit",
+    "format": "prettier src/**/*.ts --write --cache --cache-location node_modules/.cache/.prettiercache",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location node_modules/.cache/.eslintcache",
+    "test": "vitest run --passWithNoTests",
+    "clean": "rimraf coverage dist .nuxt .turbo node_modules",
+    "postinstall": "[ ! -d dist ] && nuxt-module-build build --stub || true"
+  },
+  "dependencies": {},
+  "peerDependencies": {},
+  "devDependencies": {},
+  "prettier": "@iueev/prettier/vue",
+  "typesVersions": {
+    "*": {
+      "*": ["src/*"]
+    }
+  }
+}
