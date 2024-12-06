@@ -2,9 +2,11 @@
 export default {
   arrowParens: "always",
   importOrder: [
-    "^@turbo|^vitest",
-    "^node",
+    "^@turbo|^unbuild|^vitest",
+    "^node:",
     "^@iueev/(.*)$",
+    "^@iconify|^tailwind",
+    "^es-toolkit|^zod",
     "<THIRD_PARTY_MODULES>",
     "^@/(.*)$|^~/(.*)$",
     "^[./]",
@@ -17,7 +19,7 @@ export default {
     { files: "*.mjs.hbs", options: { parser: "babel" } },
     { files: "*.ts.hbs", options: { parser: "typescript" } },
   ],
-  plugins: ["@trivago/prettier-plugin-sort-imports"],
+  plugins: ["@trivago/prettier-plugin-sort-imports", "prettier-plugin-tailwindcss"],
   printWidth: 120,
   proseWrap: "always",
   quoteProps: "consistent",

@@ -1,10 +1,10 @@
 {
-  "name": "@iueev/prettier",
+  "name": "@iueev/eslint",
   "version": "0.0.8-alpha.1",
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git",
-    "directory": "turbo/settings/prettier"
+    "directory": "turbo/includes/eslint"
   },
   "private": true,
   "exports": {
@@ -14,13 +14,17 @@
     "clean": "rimraf .turbo node_modules"
   },
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
-    "prettier-plugin-tailwindcss": "^0.6.9"
+    "@eslint/js": "^9.16.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-plugin-turbo": "^2.3.3",
+    "eslint-plugin-vue": "^9.32.0",
+    "typescript-eslint": "^8.17.0"
   },
   "peerDependencies": {
-    "prettier": ">=3"
+    "eslint": ">= 9"
   },
   "devDependencies": {
-    "prettier": "^3.4.1"
+    "@types/eslint__js": "^8.42.3",
+    "eslint": "^9.16.0"
   }
 }
