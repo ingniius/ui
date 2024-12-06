@@ -8,6 +8,7 @@
   },
   "private": true,
   "exports": {
-    "./base": "./src/base.json"
+    "./base": "./src/base.json",
+    "./vue": "./src/vue.json"
   }
 }
