@@ -8,7 +8,8 @@
   },
   "private": true,
   "exports": {
-    "./base": "./src/base.mjs"
+    "./base": "./src/base.mjs",
+    "./vue": "./src/vue.mjs"
   },
   "scripts": {
     "clean": "rimraf .turbo node_modules"
@@ -21,6 +22,6 @@
     "prettier": ">=3"
   },
   "devDependencies": {
-    "prettier": "^3.4.1"
+    "prettier": "^3.4.2"
   }
 }

@@ -2,7 +2,7 @@
 export default {
   arrowParens: "always",
   importOrder: [
-    "^@turbo|^unbuild|^vitest",
+    "^@turbo|^vitest",
     "^node:",
     "^@iueev/(.*)$",
     "^@iconify|^tailwind",
