@@ -14,7 +14,8 @@
     "clean": "rimraf .turbo node_modules"
   },
   "dependencies": {
-    "@trivago/prettier-plugin-sort-imports": "^4.3.0"
+    "@trivago/prettier-plugin-sort-imports": "^4.3.0",
+    "prettier-plugin-tailwindcss": "^0.6.9"
   },
   "peerDependencies": {
     "prettier": ">=3"
