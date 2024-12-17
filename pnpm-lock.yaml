@@ -25,13 +25,13 @@ importers:
         version: 19.6.0
       '@iueev/eslint':
         specifier: workspace:*
-        version: link:turbo/settings/eslint
+        version: link:turbo/includes/eslint
       '@iueev/prettier':
         specifier: workspace:*
-        version: link:turbo/settings/prettier
+        version: link:turbo/includes/prettier
       '@iueev/typescript':
         specifier: workspace:*
-        version: link:turbo/settings/typescript
+        version: link:turbo/includes/typescript
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2
@@ -66,7 +66,7 @@ importers:
         specifier: ^2.1.8
         version: 2.1.8(@types/node@22.10.2)
 
-  turbo/settings/eslint:
+  turbo/includes/eslint:
     dependencies:
       '@eslint/js':
         specifier: ^9.17.0
@@ -88,7 +88,7 @@ importers:
         specifier: ^9.17.0
         version: 9.17.0(jiti@2.4.1)
 
-  turbo/settings/prettier:
+  turbo/includes/prettier:
     dependencies:
       '@trivago/prettier-plugin-sort-imports':
         specifier: ^5.2.0
@@ -98,7 +98,7 @@ importers:
         specifier: ^3.4.2
         version: 3.4.2
 
-  turbo/settings/typescript: {}
+  turbo/includes/typescript: {}
 
 packages:
 
@@ -108,10 +108,6 @@ packages:
 
   '@babel/code-frame@7.26.2':
     resolution: {integrity: sha512-RJlIHRueQgwWitWgF8OdFYGZX328Ax5BCemNGlqHfplnRT9ESi8JkFlvaVYbS+UubVY6dpv87Fs2u5M29iNFVQ==}
-    engines: {node: '>=6.9.0'}
-
-  '@babel/generator@7.26.2':
-    resolution: {integrity: sha512-zevQbhbau95nkoxSq3f/DC/SC+EEOUZd3DYqfSkMhY2/wfSeaHV1Ew4vk8e+x8lja31IbyuUa2uQ3JONqKbysw==}
     engines: {node: '>=6.9.0'}
 
   '@babel/generator@7.26.3':
@@ -2105,14 +2101,6 @@ snapshots:
       js-tokens: 4.0.0
       picocolors: 1.1.1
 
-  '@babel/generator@7.26.2':
-    dependencies:
-      '@babel/parser': 7.26.2
-      '@babel/types': 7.26.0
-      '@jridgewell/gen-mapping': 0.3.5
-      '@jridgewell/trace-mapping': 0.3.25
-      jsesc: 3.0.2
-
   '@babel/generator@7.26.3':
     dependencies:
       '@babel/parser': 7.26.3
@@ -2127,7 +2115,7 @@ snapshots:
 
   '@babel/parser@7.26.2':
     dependencies:
-      '@babel/types': 7.26.0
+      '@babel/types': 7.26.3
 
   '@babel/parser@7.26.3':
     dependencies:
@@ -2727,10 +2715,10 @@ snapshots:
 
   '@trivago/prettier-plugin-sort-imports@5.2.0(prettier@3.4.2)':
     dependencies:
-      '@babel/generator': 7.26.2
-      '@babel/parser': 7.26.2
+      '@babel/generator': 7.26.3
+      '@babel/parser': 7.26.3
       '@babel/traverse': 7.26.4
-      '@babel/types': 7.26.0
+      '@babel/types': 7.26.3
       javascript-natural-sort: 0.7.1
       lodash: 4.17.21
       prettier: 3.4.2
