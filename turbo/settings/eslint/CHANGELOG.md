@@ -1,4 +1,4 @@
-# @vee-ui/eslint
+# @iueev/eslint
 
 ## 0.0.8-alpha.1
 

@@ -1,4 +1,4 @@
-# @vee-ui/typescript
+# @iueev/typescript
 
 ## 0.0.8-alpha.1
 

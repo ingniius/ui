@@ -10,16 +10,6 @@ overrides:
 importers:
 
   .:
-    dependencies:
-      '@vee-ui/eslint':
-        specifier: workspace:*
-        version: link:turbo/settings/eslint
-      '@vee-ui/prettier':
-        specifier: workspace:*
-        version: link:turbo/settings/prettier
-      '@vee-ui/typescript':
-        specifier: workspace:*
-        version: link:turbo/settings/typescript
     devDependencies:
       '@changesets/changelog-git':
         specifier: ^0.2.0
@@ -33,6 +23,15 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.6.0
         version: 19.6.0
+      '@iueev/eslint':
+        specifier: workspace:*
+        version: link:turbo/settings/eslint
+      '@iueev/prettier':
+        specifier: workspace:*
+        version: link:turbo/settings/prettier
+      '@iueev/typescript':
+        specifier: workspace:*
+        version: link:turbo/settings/typescript
       '@types/node':
         specifier: ^22.10.2
         version: 22.10.2

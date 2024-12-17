@@ -4,7 +4,7 @@ export default {
   importOrder: [
     "^@turbo|^vitest",
     "^node",
-    "^@vee-ui/(.*)$",
+    "^@iueev/(.*)$",
     "<THIRD_PARTY_MODULES>",
     "^@/(.*)$|^~/(.*)$",
     "^[./]",
