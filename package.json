@@ -1,0 +1,10 @@
+{
+  "name": "@iueev/root",
+  "version": "0.0.0",
+  "private": true,
+  "author": "@omaucf <omaucf@pm.me>",
+  "engines": {
+    "node": ">=20.0.0",
+    "npm": ">=10.0.0"
+  }
+}
