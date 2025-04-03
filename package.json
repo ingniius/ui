@@ -4,6 +4,14 @@
   "private": true,
   "author": "@omaucf <omaucf@pm.me>",
   "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
   "engines": {
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
