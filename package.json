@@ -17,9 +17,30 @@
     "node": ">=20.0.0",
     "npm": ">=10.0.0"
   },
+  "scripts": {
+    "start": "turbo start",
+    "dev": "turbo dev",
+    "build": "turbo build",
+    "eslint": "turbo eslint",
+    "test": "turbo test",
+    "typecheck": "turbo typecheck",
+    "clean": "turbo clean"
+  },
+  "devDependencies": {
+    "@manypkg/cli": "^0.23.0",
+    "@turbo/gen": "^2.5.0",
+    "@types/node": "^22.14.0",
+    "npm-run-all2": "^7.0.2",
+    "turbo": "^2.5.0"
+  },
   "pnpm": {
-    "onlyBuiltDependencies": [],
-    "ignoredBuiltDependencies": []
+    "onlyBuiltDependencies": [
+      "core-js-pure"
+    ],
+    "ignoredBuiltDependencies": [],
+    "overrides": {
+      "rimraf": "6.0.1"
+    }
   },
   "volta": {
     "node": "22.14.0",
