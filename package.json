@@ -37,7 +37,8 @@
     "@types/node": "^22.14.0",
     "husky": "^9.1.7",
     "npm-run-all2": "^7.0.2",
-    "turbo": "^2.5.0"
+    "turbo": "^2.5.0",
+    "typescript": "catalog:"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
