@@ -35,16 +35,20 @@
     "@manypkg/cli": "^0.23.0",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^22.14.0",
+    "globby": "^14.1.0",
     "husky": "^9.1.7",
     "npm-run-all2": "^7.0.2",
     "turbo": "^2.5.0",
-    "typescript": "catalog:"
+    "typescript": "catalog:",
+    "unbuild": "catalog:"
   },
   "pnpm": {
     "onlyBuiltDependencies": [
       "core-js-pure"
     ],
-    "ignoredBuiltDependencies": [],
+    "ignoredBuiltDependencies": [
+      "esbuild"
+    ],
     "overrides": {
       "rimraf": "6.0.1"
     }
