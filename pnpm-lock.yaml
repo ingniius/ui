@@ -38,6 +38,9 @@ importers:
       '@commitlint/config-conventional':
         specifier: ^19.8.0
         version: 19.8.0
+      '@iueev/tsc':
+        specifier: workspace:*
+        version: link:turbo/tools/tsc
       '@manypkg/cli':
         specifier: ^0.23.0
         version: 0.23.0
@@ -77,6 +80,8 @@ importers:
       vitest:
         specifier: 'catalog:'
         version: 3.1.1(@types/node@22.14.0)(jiti@2.4.2)
+
+  turbo/tools/tsc: {}
 
 packages:
 

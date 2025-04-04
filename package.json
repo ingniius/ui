@@ -32,6 +32,7 @@
     "@changesets/cli": "^2.28.1",
     "@commitlint/cli": "^19.8.0",
     "@commitlint/config-conventional": "^19.8.0",
+    "@iueev/tsc": "workspace:*",
     "@manypkg/cli": "^0.23.0",
     "@turbo/gen": "^2.5.0",
     "@types/node": "^22.14.0",
