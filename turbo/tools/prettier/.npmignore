@@ -1,0 +1,5 @@
+*
+!src/**/*.mjs
+!package.json
+!LICENSE.md
+!README.md
