@@ -9,6 +9,9 @@ catalogs:
     eslint:
       specifier: 9.23.0
       version: 9.23.0
+    prettier:
+      specifier: 3.5.3
+      version: 3.5.3
     typescript:
       specifier: 5.6.3
       version: 5.6.3
@@ -65,6 +68,9 @@ importers:
       npm-run-all2:
         specifier: ^7.0.2
         version: 7.0.2
+      prettier:
+        specifier: 'catalog:'
+        version: 3.5.3
       turbo:
         specifier: ^2.5.0
         version: 2.5.0
@@ -80,6 +86,12 @@ importers:
       vitest:
         specifier: 'catalog:'
         version: 3.1.1(@types/node@22.14.0)(jiti@2.4.2)
+
+  turbo/tools/prettier:
+    devDependencies:
+      prettier:
+        specifier: 'catalog:'
+        version: 3.5.3
 
   turbo/tools/tsc: {}
 
@@ -2742,6 +2754,11 @@ packages:
   prettier@2.8.8:
     resolution: {integrity: sha512-tdN8qQGvNjw4CHbY+XXk0JgCXn9QiF21a55rBe5LJAU+kDyC4WQn4+awm2Xfk2lQMk5fKup9XgzTZtGkjBdP9Q==}
     engines: {node: '>=10.13.0'}
+    hasBin: true
+
+  prettier@3.5.3:
+    resolution: {integrity: sha512-QQtaxnoDJeAkDvDKWCLiwIXkTgRhwYDEQCghU9Z6q03iyek/rxRh/2lC3HB7P8sWT2xC/y5JDctPLBIGzHKbhw==}
+    engines: {node: '>=14'}
     hasBin: true
 
   pretty-bytes@6.1.1:
@@ -6080,6 +6097,8 @@ snapshots:
   prelude-ls@1.2.1: {}
 
   prettier@2.8.8: {}
+
+  prettier@3.5.3: {}
 
   pretty-bytes@6.1.1: {}
 

@@ -41,6 +41,7 @@
     "globby": "^14.1.0",
     "husky": "^9.1.7",
     "npm-run-all2": "^7.0.2",
+    "prettier": "catalog:",
     "turbo": "^2.5.0",
     "typescript": "catalog:",
     "unbuild": "catalog:",
