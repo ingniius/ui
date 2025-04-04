@@ -43,7 +43,7 @@
     "turbo": "^2.5.0",
     "typescript": "catalog:",
     "unbuild": "catalog:",
-    "vite": "^6.2.4",
+    "vite": "^6.2.5",
     "vitest": "catalog:"
   },
   "pnpm": {
