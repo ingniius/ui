@@ -20,10 +20,4 @@ export const rules = {
 };
 
 /** @type {ReturnType<typeof antfu>} */
-export default (configs) =>
-  antfu(
-    options,
-    { ignores: ["**/*.config.*"], plugins: { turbo } },
-    { rules },
-    ...configs,
-  );
+export default (configs) => antfu(options, { ignores: ["**/*.config.*"], plugins: { turbo } }, { rules }, ...configs);
