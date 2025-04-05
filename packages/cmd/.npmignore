@@ -1,0 +1,6 @@
+*
+!bin/**
+!dist/**
+!package.json
+!LICENSE.md
+!README.md

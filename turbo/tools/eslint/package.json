@@ -19,6 +19,7 @@
   "sideEffects": false,
   "exports": {
     "./base": "./src/base.mjs",
+    "./vue": "./src/vue.mjs",
     "./package.json": "./package.json"
   },
   "files": [
@@ -34,7 +35,7 @@
     "eslint": ">=9"
   },
   "dependencies": {
-    "@antfu/eslint-config": "^4.11.0",
+    "@antfu/eslint-config": "^4.12.0",
     "eslint-plugin-format": "^1.0.1",
     "eslint-plugin-turbo": "^2.5.0"
   },

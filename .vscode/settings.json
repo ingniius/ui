@@ -25,5 +25,8 @@
     "yaml",
     "css",
   ],
+  "files.associations": { "*.css": "tailwindcss" },
+  "tailwindCSS.classAttributes": ["class", "ui"],
+  "tailwindCSS.experimental.classRegex": [["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]],
   "typescript.tsdk": "node_modules/typescript/lib"
 }

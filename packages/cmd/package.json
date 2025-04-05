@@ -1,5 +1,5 @@
 {
-  "name": "@iueev/{{ name }}",
+  "name": "@iueev/cmd",
   "type": "module",
   "version": "0.0.1",
   "author": "@omaucf <omaucf@pm.me>",
@@ -8,7 +8,7 @@
   "repository": {
     "type": "git",
     "url": "git+https://github.com/ingniius/ui.git",
-    "directory": "{{ scope }}/{{ name }}"
+    "directory": "packages/cmd"
   },
   "bugs": {
     "url": "https://github.com/ingniius/ui/issues"
@@ -19,7 +19,7 @@
   "sideEffects": false,
   "exports": {
     ".": {
-      "types": "./dist/index.mts",
+      "types": "./dist/index.d.mts",
       "import": "./dist/index.mjs"
     },
     "./package.json": "./package.json"
@@ -33,17 +33,25 @@
       ]
     }
   },
-  "files": ["LICENSE.md", "README.md", "dist", "package.json"],
+  "bin": {
+    "iueev": "./bin/cmd.mjs"
+  },
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "bin",
+    "dist",
+    "package.json"
+  ],
   "scripts": {
     "prepare": "[ ! -d dist ] && run-s dev || true",
     "dev": "unbuild --stub",
     "build": "unbuild",
     "lint": "eslint src/**/*.ts --fix --cache --cache-location .cache/.eslintcache",
-    "test": "vitest run",
     "typecheck": "tsc --noEmit",
     "clean": "rimraf .cache .turbo coverage dist node_modules"
   },
-  "peerDependencies": {},
-  "dependencies": {},
-  "devDependencies": {}
+  "dependencies": {
+    "citty": "^0.1.6"
+  }
 }

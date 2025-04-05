@@ -1,3 +1,9 @@
 {
-  "recommendations": ["aaron-bond.better-comments", "dbaeumer.vscode-eslint"]
+  "recommendations": [
+    "antfu.iconify",
+    "aaron-bond.better-comments",
+    "bradlc.vscode-tailwindcss",
+    "dbaeumer.vscode-eslint",
+    "vue.volar"
+  ]
 }
