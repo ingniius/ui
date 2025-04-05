@@ -1,0 +1,57 @@
+{
+  "name": "@iueev/cmd",
+  "type": "module",
+  "version": "0.0.1",
+  "author": "@omaucf <omaucf@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/cmd"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs"
+    },
+    "./package.json": "./package.json"
+  },
+  "module": "./dist/index.mjs",
+  "source": "./dist/index.ts",
+  "typesVersions": {
+    "*": {
+      ".": [
+        "./dist/index.d.mts"
+      ]
+    }
+  },
+  "bin": {
+    "iueev": "./bin/cmd.mjs"
+  },
+  "files": [
+    "LICENSE.md",
+    "README.md",
+    "bin",
+    "dist",
+    "package.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s dev || true",
+    "dev": "unbuild --stub",
+    "build": "unbuild",
+    "lint": "eslint src/**/*.ts --fix --cache --cache-location .cache/.eslintcache",
+    "typecheck": "tsc --noEmit",
+    "clean": "rimraf .cache .turbo coverage dist node_modules"
+  },
+  "dependencies": {
+    "citty": "^0.1.6"
+  }
+}

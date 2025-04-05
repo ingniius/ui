@@ -1,0 +1,23 @@
+{
+  "name": "@iueev/nuxt",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prepare": "[ ! -d .nuxt ] && nuxi prepare || true",
+    "start": "nuxi start",
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "lint": "eslint app/**/*.{css,ts,vue} --fix --cache --cache-location .cache/.eslintcache",
+    "typecheck": "nuxt typecheck --noEmit",
+    "clean": "rimraf .cache .nuxt .output .turbo node_modules"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.34",
+    "@iconify-json/simple-icons": "^1.2.31",
+    "@iueev/ui": "workspace:*",
+    "@nuxt/image": "^1.10.0",
+    "nuxt": "catalog:",
+    "vue": "catalog:",
+    "zod": "catalog:"
+  }
+}

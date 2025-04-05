@@ -1,0 +1,7 @@
+*
+!.nuxt/ui/**
+!.nuxt/ui.css
+!dist/**
+!package.json
+!LICENSE.md
+!README.md

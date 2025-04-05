@@ -19,6 +19,7 @@
   "sideEffects": false,
   "exports": {
     "./base": "./src/base.mjs",
+    "./vue": "./src/vue.mjs",
     "./package.json": "./package.json"
   },
   "files": [
