@@ -1,0 +1,20 @@
+{
+  "name": "ui-playground",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "prepare": "[ ! -d .nuxt ] && nuxi prepare || true",
+    "start": "nuxi start",
+    "dev": "nuxi dev",
+    "build": "nuxi build",
+    "lint": "eslint app/**/*.{css,ts,vue} --fix --cache --cache-location .cache/.eslintcache",
+    "typecheck": "nuxt typecheck --noEmit",
+    "clean": "rimraf .cache .nuxt .output .turbo node_modules"
+  },
+  "dependencies": {
+    "@iueev/ui": "workspace:*",
+    "nuxt": "catalog:",
+    "vue": "catalog:",
+    "zod": "catalog:"
+  }
+}

@@ -14,5 +14,8 @@ turbo.pkg:
 turbo.dry:
 	@pnpm turbo clean && rm -rf .turbo node_modules
 
+cli:
+	@pnpm iueev $(filter-out $@,$(MAKECMDGOALS)) $(MAKEFLAGS)
+
 %:
 	@:

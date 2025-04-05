@@ -25,5 +25,7 @@
     "yaml",
     "css",
   ],
+  "files.associations": { "*.css": "tailwindcss" },
+  "tailwindCSS.classAttributes": ["class", "ui"],
   "typescript.tsdk": "node_modules/typescript/lib"
 }
