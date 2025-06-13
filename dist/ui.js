@@ -1,0 +1,6 @@
+(() => {
+  // js/index.mjs
+  function isTrue(n) {
+    return n ? true : false;
+  }
+})();

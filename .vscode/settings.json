@@ -1,0 +1,12 @@
+{
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true,
+    "editor.quickSuggestions": { "strings": "on" },
+    "files.associations": { "*.css": "tailwindcss" },
+    "php.validate.executablePath": "/config/.config/herd-lite/bin/php",
+    "php.validate.run": "onSave",
+    "tailwindCSS.classAttributes": ["class"],
+    "tailwindCSS.experimental.classRegex": [["@?class\\(([^]*)\\)"]],
+    "tailwindCSS.experimental.configFile": "./dist/ui.css",
+    "tailwindCSS.includeLanguages": { "blade": "html" }
+}

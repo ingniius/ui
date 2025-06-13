@@ -1,0 +1,9 @@
+includes:
+    - vendor/nesbot/carbon/extension.neon
+    - phpstan-baseline.neon
+
+parameters:
+    level: max
+    paths:
+        - src/
+    reportUnmatchedIgnoredErrors: true

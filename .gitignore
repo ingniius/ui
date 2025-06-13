@@ -1,0 +1,31 @@
+# Laravel Outputs
+.phpunit.cache
+
+# Node Dependencies
+node_modules
+package.json.*
+
+# PHP Dependencies
+/vendor
+composer.lock
+
+# Testing
+__tmp__
+tmp
+
+# Logs
+*.log
+logs
+
+# IDE
+.vscode/*
+.idea
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# System Files
+.DS_Store
+*.pem
+
+# Workspace Files
+*.todo

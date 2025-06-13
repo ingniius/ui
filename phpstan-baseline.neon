@@ -1,0 +1,1003 @@
+parameters:
+	ignoreErrors:
+		-
+			message: '#^Binary operation "\." between '' nonce\="'' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: src/AssetManager.php
+
+		-
+			message: '#^Call to an undefined method object\:\:endsWith\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Cannot access offset ''/ui\.js'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Cannot access offset ''nonce'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:boot\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:cachedFileResponse\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:cachedFileResponse\(\) has parameter \$contentType with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:cachedFileResponse\(\) has parameter \$downloadCallback with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:cachedFileResponse\(\) has parameter \$filename with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:cachedFileResponse\(\) has parameter \$lastModified with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:httpDate\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:httpDate\(\) has parameter \$timestamp with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:matchesCache\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:matchesCache\(\) has parameter \$lastModified with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:pretendResponseIsFile\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:pretendResponseIsFile\(\) has parameter \$contentType with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:pretendResponseIsFile\(\) has parameter \$file with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:registerAssetDirective\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:registerAssetRoutes\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:scripts\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:scripts\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:uiAppearance\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:uiAppearance\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:uiJs\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\AssetManager\:\:uiMinJs\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Parameter \#1 \$datetime of function strtotime expects string, array\|string given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Parameter \#1 \$file of method Illuminate\\Contracts\\Routing\\ResponseFactory\:\:file\(\) expects SplFileInfo\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Parameter \#1 \$filename of function filemtime expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Parameter \#1 \$json of function json_decode expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Parameter \#1 \$string of function str expects string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Parameter \#2 \$headers of method Illuminate\\Contracts\\Routing\\ResponseFactory\:\:file\(\) expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Part \$expression \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 2
+			path: src/AssetManager.php
+
+		-
+			message: '#^Part \$versionHash \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 2
+			path: src/AssetManager.php
+
+		-
+			message: '#^Trying to invoke mixed but it''s not a callable\.$#'
+			identifier: callable.nonCallable
+			count: 1
+			path: src/AssetManager.php
+
+		-
+			message: '#^Method Ui\\ClassBuilder\:\:add\(\) has parameter \$classes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/ClassBuilder.php
+
+		-
+			message: '#^Parameter \#1 \$array of static method Illuminate\\Support\\Arr\:\:toCssClasses\(\) expects array, array\|string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/ClassBuilder.php
+
+		-
+			message: '#^Method Ui\\Console\\IconCommand\:\:generateIconBlade\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/Console/IconCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\IconCommand\:\:generateIconBlade\(\) has parameter \$iconName with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/IconCommand.php
+
+		-
+			message: '#^Parameter \#1 \$icon of method Ui\\Console\\IconCommand\:\:publishIcon\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/IconCommand.php
+
+		-
+			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\|bool\|string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/IconCommand.php
+
+		-
+			message: '#^Part \$iconName \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: src/Console/IconCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:allComponents\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			identifier: missingType.generics
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:publishDirectory\(\) has parameter \$destination with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:publishDirectory\(\) has parameter \$source with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:publishDirectory\(\) should return string\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:publishFile\(\) has parameter \$component with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:publishFile\(\) has parameter \$destination with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:publishFile\(\) has parameter \$source with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:publishFile\(\) should return string\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\Console\\PublishCommand\:\:searchOptions\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#1 \$callback of function array_map expects \(callable\(mixed\)\: mixed\)\|null, ''strtolower'' given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#1 \$component of method Ui\\Console\\PublishCommand\:\:publishComponent\(\) expects string, TValue given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#1 \$directory of method Illuminate\\Filesystem\\Filesystem\:\:copyDirectory\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#1 \$needles of method Illuminate\\Support\\Stringable\:\:startsWith\(\) expects iterable\<string\>\|string, Illuminate\\Support\\Stringable given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#1 \$path of method Illuminate\\Filesystem\\Filesystem\:\:copy\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#1 \$path of method Illuminate\\Filesystem\\Filesystem\:\:exists\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\|bool\|string\|null given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#2 \$destination of method Illuminate\\Filesystem\\Filesystem\:\:copyDirectory\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \#2 \$target of method Illuminate\\Filesystem\\Filesystem\:\:copy\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \$options of function Laravel\\Prompts\\multisearch expects Closure\(string\)\: array\<int\|string, string\>, Closure\(string\)\: array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Parameter \$options of function Laravel\\Prompts\\search expects Closure\(string\)\: array\<int\|string, string\>, Closure\(string\)\: array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Part \$component \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Part \$destination \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Property Ui\\Console\\PublishCommand\:\:\$allComponents type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/Console/PublishCommand.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:__construct\(\) has parameter \$arguments with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:allTime\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:allTime\(\) has parameter \$start with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:fromPreset\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:last14Days\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:last30Days\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:last3Months\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:last6Months\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:last7Days\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:lastMonth\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:lastQuarter\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:lastWeek\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:lastYear\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:preset\(\) should return Ui\\DateRangePreset\|null but returns mixed\.$#'
+			identifier: return.type
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:start\(\) never returns null so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:thisMonth\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:thisQuarter\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:thisWeek\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:thisYear\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:today\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:yearToDate\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Method Ui\\DateRange\:\:yesterday\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Only iterables can be unpacked, mixed given in argument \#1\.$#'
+			identifier: argument.unpackNonIterable
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Parameter \#1 \$time of static method Carbon\\Carbon\:\:parse\(\) expects Carbon\\Month\|Carbon\\WeekDay\|DateTimeInterface\|float\|int\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Property Ui\\DateRange\:\:\$preset has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Strict comparison using \!\=\= between Carbon\\CarbonInterface and null will always evaluate to true\.$#'
+			identifier: notIdentical.alwaysTrue
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Ternary operator condition is always true\.$#'
+			identifier: ternary.alwaysTrue
+			count: 1
+			path: src/DateRange.php
+
+		-
+			message: '#^Match expression does not handle remaining value\: Ui\\DateRangePreset\:\:Custom$#'
+			identifier: match.unhandled
+			count: 1
+			path: src/DateRangePreset.php
+
+		-
+			message: '#^Method Ui\\DateRangePreset\:\:dates\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangePreset.php
+
+		-
+			message: '#^Method Ui\\DateRangePreset\:\:label\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangePreset.php
+
+		-
+			message: '#^Call to protected static method fromPreset\(\) of class Ui\\DateRange\.$#'
+			identifier: staticMethod.protected
+			count: 3
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot access offset ''end'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot access offset ''preset'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 2
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot access offset ''start'' on mixed\.$#'
+			identifier: offsetAccess.nonOffsetAccessible
+			count: 4
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot access property \$value on mixed\.$#'
+			identifier: property.nonObject
+			count: 2
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot call method end\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 5
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot call method format\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 4
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot call method preset\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Cannot call method start\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 6
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Match expression does not handle remaining value\: mixed$#'
+			identifier: match.unhandled
+			count: 2
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:dehydrate\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:dehydrate\(\) has parameter \$dehydrateChild with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:dehydrate\(\) has parameter \$target with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:hydrate\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:hydrate\(\) has parameter \$meta with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:hydrate\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:hydrateFromType\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:hydrateFromType\(\) has parameter \$type with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:hydrateFromType\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:match\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:match\(\) has parameter \$target with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:matchByType\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:matchByType\(\) has parameter \$type with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:set\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:set\(\) has parameter \$key with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:set\(\) has parameter \$target with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:set\(\) has parameter \$value with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:unset\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:unset\(\) has parameter \$key with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:unset\(\) has parameter \$target with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:unwrapForValidation\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Method Ui\\DateRangeSynth\:\:unwrapForValidation\(\) has parameter \$target with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Parameter \#1 \$value of static method Ui\\DateRangePreset\:\:from\(\) expects int\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 3
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Property Ui\\DateRangeSynth\:\:\$key has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/DateRangeSynth.php
+
+		-
+			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 2
+			path: src/UiManager.php
+
+		-
+			message: '#^Cannot call method exists\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 2
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:boot\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:classes\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:classes\(\) has parameter \$styles with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:componentExists\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:componentExists\(\) has parameter \$name with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:markAssetsRendered\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:scripts\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:scripts\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:uiAppearance\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Method Ui\\UiManager\:\:uiAppearance\(\) has parameter \$options with no type specified\.$#'
+			identifier: missingType.parameter
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Parameter \#1 \$classes of method Ui\\ClassBuilder\:\:add\(\) expects array\|string\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Property Ui\\UiManager\:\:\$hasRenderedAssets has no type specified\.$#'
+			identifier: missingType.property
+			count: 1
+			path: src/UiManager.php
+
+		-
+			message: '#^Call to an undefined method Illuminate\\View\\ComponentAttributeBag\:\:forget\(\)\.$#'
+			identifier: method.notFound
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Cannot call method boot\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Cannot call method getClassComponentAliases\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Cannot call method getClassComponentNamespaces\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Cannot call method precompiler\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Cannot call method propertySynthesizer\(\) on mixed\.$#'
+			identifier: method.nonObject
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Cannot call static method macro\(\) on mixed\.$#'
+			identifier: staticMethod.nonObject
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Method Ui\\UiServiceProvider\:\:bootCommands\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Method Ui\\UiServiceProvider\:\:bootComponentPath\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Method Ui\\UiServiceProvider\:\:bootMacros\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Method Ui\\UiServiceProvider\:\:bootTagCompiler\(\) has no return type specified\.$#'
+			identifier: missingType.return
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Offset ''currentComponentData'' does not exist on array\{\000\*\000componentStack\: array, \000\*\000componentData\: array, \000\*\000currentComponentData\: array, \000\*\000slots\: array, \000\*\000slotStack\: array, \000\*\000fragments\: array, \000\*\000fragmentStack\: array, \000\*\000sections\: array, \.\.\.\}\.$#'
+			identifier: offsetAccess.notFound
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^PHPDoc tag @var with type Illuminate\\View\\Factory is not subtype of native type \$this\(Ui\\UiServiceProvider\)\.$#'
+			identifier: varTag.nativeType
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Parameter \#1 \$aliases of class Ui\\UiTagCompiler constructor expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Parameter \#1 \$key of method Illuminate\\View\\ComponentAttributeBag\:\:get\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Parameter \#1 \$value of method Illuminate\\View\\Compilers\\ComponentTagCompiler\:\:compile\(\) expects string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Parameter \#2 \$namespaces of class Ui\\UiTagCompiler constructor expects array, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Parameter \#3 \$blade of class Ui\\UiTagCompiler constructor expects Illuminate\\View\\Compilers\\BladeCompiler\|null, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UiServiceProvider.php
+
+		-
+			message: '#^Binary operation "\." between ''@slot\('' and mixed results in an error\.$#'
+			identifier: binaryOp.invalid
+			count: 1
+			path: src/UiTagCompiler.php
+
+		-
+			message: '#^Method Ui\\UiTagCompiler\:\:compileClosingTags\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/UiTagCompiler.php
+
+		-
+			message: '#^Method Ui\\UiTagCompiler\:\:compileOpeningTags\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/UiTagCompiler.php
+
+		-
+			message: '#^Method Ui\\UiTagCompiler\:\:compileSelfClosingTags\(\) should return string but returns string\|null\.$#'
+			identifier: return.type
+			count: 1
+			path: src/UiTagCompiler.php
+
+		-
+			message: '#^Method Ui\\UiTagCompiler\:\:componentString\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/UiTagCompiler.php
+
+		-
+			message: '#^Part \$component \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
+			count: 3
+			path: src/UiTagCompiler.php

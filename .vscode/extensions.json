@@ -1,0 +1,9 @@
+{
+    "recommendations": [
+        "antfu.iconify",
+        "bradlc.vscode-tailwindcss",
+        "devsense.phptools-vscode",
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode"
+    ]
+}
