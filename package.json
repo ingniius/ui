@@ -1,0 +1,32 @@
+{
+    "private": true,
+    "type": "module",
+    "packageManager": "pnpm@10.12.1",
+    "engines": {
+        "node": ">=22.0.0",
+        "npm": ">=10.0.0"
+    },
+    "scripts": {
+        "prepare": "husky || true",
+        "build": "node build.config.mjs",
+        "lint": "prettier ./{js,stubs}/** --check",
+        "lint:fix": "prettier ./{js,stubs}/** --write",
+        "clean": "rimraf .phpunit.cache vendor node_modules"
+    },
+    "devDependencies": {
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
+        "brotli-size": "^4.0.0",
+        "esbuild": "^0.25.5",
+        "husky": "^9.1.7",
+        "prettier": "^3.5.3",
+        "prettier-plugin-blade": "^2.1.21",
+        "prettier-plugin-tailwindcss": "^0.6.12",
+        "rimraf": "^6.0.1",
+        "tailwindcss": "^4.1.10"
+    },
+    "volta": {
+        "node": "22.16.0",
+        "pnpm": "10.11.1"
+    }
+}
