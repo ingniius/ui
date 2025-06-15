@@ -1,0 +1,117 @@
+{
+    "name": "@iueev/vue",
+    "type": "module",
+    "version": "0.0.3",
+    "author": "@omaucf <omaucf@pm.me>",
+    "license": "MIT",
+    "homepage": "https://github.com/ingniius/ui#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ingniius/ui.git",
+        "directory": "packages/vue"
+    },
+    "bugs": {
+        "url": "https://github.com/ingniius/ui/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "imports": {
+        "#build/ui/*": "./.nuxt/ui/*.ts",
+        "#build/ui.css": "./.nuxt/ui.css"
+    },
+    "exports": {
+        "./runtime/*": "./dist/runtime/*",
+        "./components/*": {
+            "types": "./dist/runtime/components/*.d.ts",
+            "import": "./dist/runtime/components/*.js"
+        },
+        "./composables/*": {
+            "types": "./dist/runtime/composables/*.d.ts",
+            "import": "./dist/runtime/composables/*.js"
+        },
+        "./utils/*": {
+            "types": "./dist/runtime/utils/*.d.ts",
+            "import": "./dist/runtime/utils/*.js"
+        },
+        ".": {
+            "types": "./dist/module.d.mts",
+            "style": "./dist/runtime/index.css",
+            "import": "./dist/module.mjs"
+        },
+        "./package.json": "./package.json"
+    },
+    "style": "./dist/runtime/index.css",
+    "main": "./dist/module.mjs",
+    "typesVersions": {
+        "*": {
+            "runtime/*": [
+                "./dist/runtime/*"
+            ],
+            "components/*": [
+                "./dist/runtime/components/*.d.ts"
+            ],
+            "composables/*": [
+                "./dist/runtime/composables/*.d.ts"
+            ],
+            "utils/*": [
+                "./dist/runtime/utils/*.d.ts"
+            ],
+            ".": [
+                "./dist/module.d.mts"
+            ]
+        }
+    },
+    "files": [
+        ".nuxt/ui",
+        ".nuxt/ui.css",
+        "LICENSE",
+        "README.md",
+        "dist",
+        "package.json"
+    ],
+    "scripts": {
+        "prepare": "[ ! -d dist ] && run-s dev || true",
+        "dev": "nuxt-module-build build --stub",
+        "build": "nuxt-module-build build",
+        "lint": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "typecheck": "nuxi typecheck --noEmit",
+        "clean": "rimraf .cache .data .nuxt .turbo dist node_modules",
+        "postinstall": "[ ! -d .nuxt ] && nuxi prepare || true"
+    },
+    "peerDependencies": {
+        "nuxt": ">=3",
+        "vue": ">=3"
+    },
+    "peerDependenciesMeta": {
+        "nuxt": {
+            "optional": true
+        },
+        "vue": {
+            "optional": true
+        }
+    },
+    "dependencies": {
+        "@nuxt/icon": "^1.13.0",
+        "@tailwindcss/postcss": "^4.1.10",
+        "@tailwindcss/vite": "^4.1.10",
+        "@vueuse/core": "^13.3.0",
+        "defu": "^6.1.4",
+        "es-toolkit": "^1.39.3",
+        "knitwork": "^1.2.0",
+        "reka-ui": "^2.3.1",
+        "scule": "^1.3.0",
+        "tailwind-variants": "^1.0.0",
+        "tailwindcss": "catalog:"
+    },
+    "optionalDependencies": {
+        "@nuxt/fonts": "*",
+        "@nuxt/image": "*",
+        "@nuxtjs/color-mode": "*"
+    },
+    "devDependencies": {
+        "nuxt": "catalog:",
+        "vue": "catalog:"
+    }
+}

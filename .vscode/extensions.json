@@ -1,9 +1,12 @@
 {
     "recommendations": [
         "antfu.iconify",
+        "astro-build.astro-vscode",
         "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
         "devsense.phptools-vscode",
         "editorconfig.editorconfig",
-        "esbenp.prettier-vscode"
+        "esbenp.prettier-vscode",
+        "vue.volar"
     ]
 }

@@ -6,6 +6,7 @@ namespace Vee;
 
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Blade;
+use Illuminate\Support\Facades\Config;
 use Illuminate\Support\Facades\Route;
 
 final class AssetManager
@@ -60,44 +61,50 @@ HTML;
 
     public static function scripts($options = [])
     {
-        $manifest = json_decode(file_get_contents(__DIR__.'/../dist/manifest.json'), true);
+        $uiPrefix = Config::get('ui.prefix', 'vee');
+
+        $manifest = json_decode(file_get_contents(__DIR__.'/../build/manifest.json'), true);
         $versionHash = $manifest['/ui.js'];
         $nonce = isset($options) && isset($options['nonce']) ? ' nonce="'.$options['nonce'].'"' : '';
 
         if (config('app.debug')) {
-            return "<script src=\"/vee/ui.js?id={$versionHash}\" data-navigate-once{$nonce}></script>";
+            return "<script src=\"/{$uiPrefix}/ui.js?id={$versionHash}\" data-navigate-once{$nonce}></script>";
         }
 
-        return "<script src=\"/vee/ui.min.js?id={$versionHash}\" data-navigate-once{$nonce}></script>";
+        return "<script src=\"/{$uiPrefix}/ui.min.js?id={$versionHash}\" data-navigate-once{$nonce}></script>";
 
     }
 
     public function registerAssetDirective()
     {
+        $uiPrefix = Config::get('ui.prefix', 'vee');
+
         Blade::directive('uiAppearance', fn ($expression) => <<<PHP
-            {!! app('vee')->uiAppearance($expression) !!}
+            {!! app('{$uiPrefix}')->uiAppearance($expression) !!}
         PHP);
 
         Blade::directive('uiScripts', fn ($expression) => <<<PHP
             <?php app('livewire')->forceAssetInjection(); ?>
-            {!! app('vee')->scripts($expression) !!}
+            {!! app('{$uiPrefix}')->scripts($expression) !!}
         PHP);
     }
 
     public function registerAssetRoutes()
     {
-        Route::get('/vee/ui.js', [self::class, 'uiJs']);
-        Route::get('/vee/ui.min.js', [self::class, 'uiMinJs']);
+        $uiPrefix = Config::get('ui.prefix', 'vee');
+
+        Route::get("/{$uiPrefix}/ui.js", [self::class, 'uiJs']);
+        Route::get("/{$uiPrefix}/ui.min.js", [self::class, 'uiMinJs']);
     }
 
     public function uiJs()
     {
-        return $this->pretendResponseIsFile(__DIR__.'/../dist/ui.js', 'text/javascript');
+        return $this->pretendResponseIsFile(__DIR__.'/../build/ui.js', 'text/javascript');
     }
 
     public function uiMinJs()
     {
-        return $this->pretendResponseIsFile(__DIR__.'/../dist/ui.min.js', 'text/javascript');
+        return $this->pretendResponseIsFile(__DIR__.'/../build/ui.min.js', 'text/javascript');
     }
 
     public function pretendResponseIsFile($file, $contentType = 'application/javascript; charset=utf-8')

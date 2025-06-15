@@ -1,0 +1,49 @@
+{
+    "name": "@iueev/tsc",
+    "type": "module",
+    "version": "0.0.3",
+    "author": "@omaucf <omaucf@pm.me>",
+    "license": "MIT",
+    "homepage": "https://github.com/ingniius/ui#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ingniius/ui.git",
+        "directory": "turbo/tools/tsc"
+    },
+    "bugs": {
+        "url": "https://github.com/ingniius/ui/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "exports": {
+        "./astro": "./src/astro.json",
+        "./base": "./src/base.json",
+        "./vue": "./src/vue.json",
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "LICENSE",
+        "README.md",
+        "package.json",
+        "src"
+    ],
+    "scripts": {
+        "clean": "rimraf node_modules"
+    },
+    "peerDependencies": {
+        "typescript": ">=5"
+    },
+    "peerDependenciesMeta": {
+        "typescript": {
+            "optional": false
+        }
+    },
+    "optionalDependencies": {
+        "astro": "*"
+    },
+    "devDependencies": {
+        "typescript": "catalog:"
+    }
+}

@@ -1,5 +1,24 @@
+packages:
+    - docs
+    - packages/**
+    - turbo/tools/*
+
+catalog:
+    astro: ^5.9.3
+    eslint: ^9.29.0
+    nuxt: ^3.17.5
+    prettier: ^3.5.3
+    vue: ^3.5.16
+    tailwindcss: ^4.1.10
+    typescript: ^5.8.3
+
 ignoredBuiltDependencies:
+    - '@parcel/watcher'
+    - core-js-pure
     - esbuild
+    - vue-demi
 
 onlyBuiltDependencies:
     - '@tailwindcss/oxide'
+    - sharp
+    - unrs-resolver

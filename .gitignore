@@ -1,9 +1,21 @@
-# Laravel Outputs
+# Composer/Laravel Outputs
 .phpunit.cache
+
+# Generated Outputs
+.astro
+.cache
+.data
+.nuxt
+.output
+
+# Compiled Outputs
+*.config.ts.timestamp*
+dist
 
 # Node Dependencies
 node_modules
 package.json.*
+!package.json.hbs
 
 # PHP Dependencies
 /vendor
@@ -29,3 +41,4 @@ logs
 
 # Workspace Files
 *.todo
+.turbo

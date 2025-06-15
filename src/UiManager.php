@@ -4,6 +4,8 @@ declare(strict_types=1);
 
 namespace Vee;
 
+use Illuminate\Support\Facades\Config;
+
 use function Livewire\on;
 
 final class UiManager
@@ -45,11 +47,13 @@ final class UiManager
 
     public function componentExists($name)
     {
+        $uiPrefix = Config::get('ui.prefix', 'vee');
+
         // Laravel 12+ uses xxh128 hashing for views https://github.com/laravel/framework/pull/52301...
         if (app()->version() >= 12) {
-            return app('view')->exists(hash('xxh128', 'vee').'::'.$name);
+            return app('view')->exists(hash('xxh128',  $uiPrefix).'::'.$name);
         }
 
-        return app('view')->exists(md5('vee').'::'.$name);
+        return app('view')->exists(md5( $uiPrefix).'::'.$name);
     }
 }

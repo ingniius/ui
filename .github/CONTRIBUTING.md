@@ -1,6 +1,4 @@
-# Contributing to Veehance UI
-
-Contributions are welcome from anyone willing to help 🤝
+# Contributing to Veehance UI 🤝
 
 ## Guidelines
 

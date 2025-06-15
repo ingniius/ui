@@ -1,0 +1,8 @@
+{
+    "extends": "@iueev/tsc/base",
+    "compilerOptions": {
+        "tsBuildInfoFile": ".cache/tsbuildinfo.json"
+    },
+    "include": ["src"],
+    "exclude": ["node_modules", "dist"]
+}
