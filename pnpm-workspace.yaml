@@ -1,5 +1,13 @@
+packages:
+    - packages/**
+    - turbo/tools/*
+
 ignoredBuiltDependencies:
+    - core-js-pure
     - esbuild
 
 onlyBuiltDependencies:
     - '@tailwindcss/oxide'
+
+catalog:
+  prettier: ^3.5.3

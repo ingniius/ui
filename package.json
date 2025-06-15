@@ -8,25 +8,31 @@
     },
     "scripts": {
         "prepare": "husky || true",
-        "build": "node build.config.mjs",
-        "lint": "prettier ./{js,stubs}/** --check",
-        "lint:fix": "prettier ./{js,stubs}/** --write",
-        "clean": "rimraf .phpunit.cache vendor node_modules"
+        "build": "turbo build",
+        "lint": "turbo lint",
+        "clean": "turbo clean"
+    },
+    "optionalDependencies": {
+        "@rollup/rollup-linux-x64-gnu": "4.43.0",
+        "@tailwindcss/oxide-linux-x64-gnu": "^4.1.10",
+        "lightningcss-linux-x64-gnu": "^1.30.1"
     },
     "devDependencies": {
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
+        "@iueev/prettier": "workspace:*",
+        "@turbo/gen": "^2.5.4",
         "brotli-size": "^4.0.0",
         "esbuild": "^0.25.5",
         "husky": "^9.1.7",
-        "prettier": "^3.5.3",
-        "prettier-plugin-blade": "^2.1.21",
-        "prettier-plugin-tailwindcss": "^0.6.12",
+        "prettier": "catalog:",
         "rimraf": "^6.0.1",
-        "tailwindcss": "^4.1.10"
+        "tailwindcss": "^4.1.10",
+        "turbo": "^2.5.4"
     },
     "volta": {
         "node": "22.16.0",
         "pnpm": "10.11.1"
-    }
+    },
+    "prettier": "@iueev/prettier/blade"
 }

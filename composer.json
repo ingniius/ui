@@ -40,10 +40,12 @@
     },
     "scripts": {
         "lint": [
-            "./vendor/bin/pint"
+            "./vendor/bin/pint",
+            "pnpm prettier ./stubs/** --write"
         ],
         "lint:test": [
-            "./vendor/bin/pint --test"
+            "./vendor/bin/pint --test",
+            "pnpm prettier ./stubs/** --check"
         ],
         "test": [
             "@lint:test",

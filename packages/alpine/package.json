@@ -1,0 +1,41 @@
+{
+    "name": "@iueev/alpine",
+    "type": "module",
+    "version": "0.0.3",
+    "author": "@omaucf <omaucf@pm.me>",
+    "license": "MIT",
+    "homepage": "https://github.com/ingniius/ui#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ingniius/ui.git",
+        "directory": "packages/alpine"
+    },
+    "bugs": {
+        "url": "https://github.com/ingniius/ui/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "import": "./dist/index.mjs",
+            "require": "./dist/index.cjs"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "files": [
+        "LICENSE",
+        "README.md",
+        "dist",
+        "package.json"
+    ],
+    "scripts": {
+        "build": "node build.config.mjs",
+        "lint": "prettier . --write --cache --cache-location=.cache/.prettiercache",
+        "lint:check": "prettier . --check",
+        "clean": "rimraf .cache .turbo"
+    },
+    "prettier": "@iueev/prettier/base"
+}
