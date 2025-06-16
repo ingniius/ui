@@ -20,7 +20,6 @@
     "exports": {
         "./base": "./src/base.mjs",
         "./blade": "./src/blade.mjs",
-        "./vue": "./src/vue.mjs",
         "./package.json": "./package.json"
     },
     "files": [

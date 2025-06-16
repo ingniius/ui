@@ -19,12 +19,14 @@
         { "rule": "*semi", "severity": "off", "fixable": true }
     ],
     "eslint.useFlatConfig": true,
-    "eslint.validate": ["javascript", "typescript", "html",  "vue", "markdown", "json", "yaml", "css"],
+    "eslint.validate": ["javascript", "typescript", "html", "markdown", "json", "yaml", "css"],
     "files.associations": { "*.css": "tailwindcss" },
     "php.validate.executablePath": "/config/.config/herd-lite/bin/php",
     "php.validate.run": "onSave",
-    "tailwindCSS.classAttributes": ["class"],
-    "tailwindCSS.experimental.classRegex": [["@?class\\(([^]*)\\)"]],
+    "tailwindCSS.classAttributes": ["class", "ui"],
+    "tailwindCSS.experimental.classRegex": [
+        ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ],
     "tailwindCSS.experimental.configFile": "./build/ui.css",
     "tailwindCSS.includeLanguages": { "blade": "html" },
     "typescript.tsdk": "node_modules/typescript/lib"

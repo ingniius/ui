@@ -1,1003 +1,394 @@
 parameters:
 	ignoreErrors:
 		-
-			message: '#^Binary operation "\." between '' nonce\="'' and mixed results in an error\.$#'
-			identifier: binaryOp.invalid
-			count: 2
-			path: src/AssetManager.php
-
-		-
-			message: '#^Call to an undefined method object\:\:endsWith\(\)\.$#'
-			identifier: method.notFound
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Cannot access offset ''/ui\.js'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Cannot access offset ''nonce'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 2
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:boot\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:cachedFileResponse\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:cachedFileResponse\(\) has parameter \$contentType with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:cachedFileResponse\(\) has parameter \$downloadCallback with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:cachedFileResponse\(\) has parameter \$filename with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:cachedFileResponse\(\) has parameter \$lastModified with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:httpDate\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:httpDate\(\) has parameter \$timestamp with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:matchesCache\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:matchesCache\(\) has parameter \$lastModified with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:pretendResponseIsFile\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:pretendResponseIsFile\(\) has parameter \$contentType with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:pretendResponseIsFile\(\) has parameter \$file with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:registerAssetDirective\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:registerAssetRoutes\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:scripts\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:scripts\(\) has parameter \$options with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:uiAppearance\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:uiAppearance\(\) has parameter \$options with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:uiJs\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\AssetManager\:\:uiMinJs\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Parameter \#1 \$datetime of function strtotime expects string, array\|string given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Parameter \#1 \$file of method Illuminate\\Contracts\\Routing\\ResponseFactory\:\:file\(\) expects SplFileInfo\|string, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Parameter \#1 \$filename of function filemtime expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Parameter \#1 \$json of function json_decode expects string, string\|false given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Parameter \#1 \$string of function str expects string\|null, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Parameter \#2 \$headers of method Illuminate\\Contracts\\Routing\\ResponseFactory\:\:file\(\) expects array, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Parameter \#2 \$timestamp of function gmdate expects int\|null, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Part \$expression \(mixed\) of encapsed string cannot be cast to string\.$#'
-			identifier: encapsedStringPart.nonString
-			count: 2
-			path: src/AssetManager.php
-
-		-
-			message: '#^Part \$versionHash \(mixed\) of encapsed string cannot be cast to string\.$#'
-			identifier: encapsedStringPart.nonString
-			count: 2
-			path: src/AssetManager.php
-
-		-
-			message: '#^Trying to invoke mixed but it''s not a callable\.$#'
-			identifier: callable.nonCallable
-			count: 1
-			path: src/AssetManager.php
-
-		-
-			message: '#^Method Vee\\ClassBuilder\:\:add\(\) has parameter \$classes with no value type specified in iterable type array\.$#'
-			identifier: missingType.iterableValue
-			count: 1
-			path: src/ClassBuilder.php
-
-		-
-			message: '#^Parameter \#1 \$array of static method Illuminate\\Support\\Arr\:\:toCssClasses\(\) expects array, array\|string\|null given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/ClassBuilder.php
-
-		-
-			message: '#^Method Vee\\Console\\IconCommand\:\:generateIconBlade\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/Console/IconCommand.php
-
-		-
-			message: '#^Method Vee\\Console\\IconCommand\:\:generateIconBlade\(\) has parameter \$icon with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/Console/IconCommand.php
-
-		-
-			message: '#^Parameter \#1 \$icon of method Vee\\Console\\IconCommand\:\:publishIcon\(\) expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/Console/IconCommand.php
-
-		-
-			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\|bool\|string\|null given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/Console/IconCommand.php
-
-		-
-			message: '#^Part \$icon \(mixed\) of encapsed string cannot be cast to string\.$#'
-			identifier: encapsedStringPart.nonString
-			count: 1
-			path: src/Console/IconCommand.php
-
-		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:allComponents\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:allComponents\(\) return type with generic class Illuminate\\Support\\Collection does not specify its types\: TKey, TValue$#'
 			identifier: missingType.generics
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:publishDirectory\(\) has parameter \$destination with no type specified\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:publishDirectory\(\) has parameter \$destination with no type specified\.$#'
 			identifier: missingType.parameter
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:publishDirectory\(\) has parameter \$source with no type specified\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:publishDirectory\(\) has parameter \$source with no type specified\.$#'
 			identifier: missingType.parameter
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:publishDirectory\(\) should return string\|null but returns mixed\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:publishDirectory\(\) should return string\|null but returns mixed\.$#'
 			identifier: return.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:publishFile\(\) has parameter \$component with no type specified\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:publishFile\(\) has parameter \$component with no type specified\.$#'
 			identifier: missingType.parameter
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:publishFile\(\) has parameter \$destination with no type specified\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:publishFile\(\) has parameter \$destination with no type specified\.$#'
 			identifier: missingType.parameter
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:publishFile\(\) has parameter \$source with no type specified\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:publishFile\(\) has parameter \$source with no type specified\.$#'
 			identifier: missingType.parameter
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:publishFile\(\) should return string\|null but returns mixed\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:publishFile\(\) should return string\|null but returns mixed\.$#'
 			identifier: return.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\Console\\PublishCommand\:\:searchOptions\(\) return type has no value type specified in iterable type array\.$#'
+			message: '#^Method Vee\\Commands\\PublishCommand\:\:searchOptions\(\) return type has no value type specified in iterable type array\.$#'
 			identifier: missingType.iterableValue
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#1 \$callback of function array_map expects \(callable\(mixed\)\: mixed\)\|null, ''strtolower'' given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Parameter \#1 \$component of method Vee\\Console\\PublishCommand\:\:publishComponent\(\) expects string, TValue given\.$#'
+			message: '#^Parameter \#1 \$component of method Vee\\Commands\\PublishCommand\:\:publishComponent\(\) expects string, TValue given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#1 \$directory of method Illuminate\\Filesystem\\Filesystem\:\:copyDirectory\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#1 \$needles of method Illuminate\\Support\\Stringable\:\:startsWith\(\) expects iterable\<string\>\|string, Illuminate\\Support\\Stringable given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#1 \$path of method Illuminate\\Filesystem\\Filesystem\:\:copy\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#1 \$path of method Illuminate\\Filesystem\\Filesystem\:\:exists\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#1 \$value of function count expects array\|Countable, array\|bool\|string\|null given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#2 \$destination of method Illuminate\\Filesystem\\Filesystem\:\:copyDirectory\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \#2 \$target of method Illuminate\\Filesystem\\Filesystem\:\:copy\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \$options of function Laravel\\Prompts\\multisearch expects Closure\(string\)\: array\<int\|string, string\>, Closure\(string\)\: array given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Parameter \$options of function Laravel\\Prompts\\search expects Closure\(string\)\: array\<int\|string, string\>, Closure\(string\)\: array given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Part \$component \(mixed\) of encapsed string cannot be cast to string\.$#'
 			identifier: encapsedStringPart.nonString
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
 			message: '#^Part \$destination \(mixed\) of encapsed string cannot be cast to string\.$#'
 			identifier: encapsedStringPart.nonString
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Property Vee\\Console\\PublishCommand\:\:\$allComponents type has no value type specified in iterable type array\.$#'
+			message: '#^Property Vee\\Commands\\PublishCommand\:\:\$allComponents type has no value type specified in iterable type array\.$#'
 			identifier: missingType.iterableValue
 			count: 1
-			path: src/Console/PublishCommand.php
+			path: src/Commands/PublishCommand.php
 
 		-
-			message: '#^Method Vee\\DateRange\:\:__construct\(\) has parameter \$arguments with no type specified\.$#'
-			identifier: missingType.parameter
+			message: '#^Part \$expression \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
 			count: 1
-			path: src/DateRange.php
+			path: src/Features/Asset.php
 
 		-
-			message: '#^Method Vee\\DateRange\:\:allTime\(\) has no return type specified\.$#'
-			identifier: missingType.return
+			message: '#^Part \$expression \(mixed\) of encapsed string cannot be cast to string\.$#'
+			identifier: encapsedStringPart.nonString
 			count: 1
-			path: src/DateRange.php
+			path: src/Features/ColorMode.php
 
 		-
-			message: '#^Method Vee\\DateRange\:\:allTime\(\) has parameter \$start with no type specified\.$#'
-			identifier: missingType.parameter
+			message: '#^Call to an undefined method Illuminate\\Support\\Stringable\:\:xxh128\(\)\.$#'
+			identifier: method.notFound
 			count: 1
-			path: src/DateRange.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Method Vee\\DateRange\:\:fromPreset\(\) has no return type specified\.$#'
-			identifier: missingType.return
+			message: '#^Call to function is_array\(\) with list\<string\|null\> will always evaluate to true\.$#'
+			identifier: function.alreadyNarrowedType
 			count: 1
-			path: src/DateRange.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Method Vee\\DateRange\:\:last14Days\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:last30Days\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:last3Months\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:last6Months\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:last7Days\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:lastMonth\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:lastQuarter\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:lastWeek\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:lastYear\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:preset\(\) should return Vee\\DateRangePreset\|null but returns mixed\.$#'
-			identifier: return.type
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:start\(\) never returns null so it can be removed from the return type\.$#'
-			identifier: return.unusedType
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:thisMonth\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:thisQuarter\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:thisWeek\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:thisYear\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:today\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:yearToDate\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Method Vee\\DateRange\:\:yesterday\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Only iterables can be unpacked, mixed given in argument \#1\.$#'
-			identifier: argument.unpackNonIterable
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Parameter \#1 \$time of static method Carbon\\Carbon\:\:parse\(\) expects Carbon\\Month\|Carbon\\WeekDay\|DateTimeInterface\|float\|int\|string\|null, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Property Vee\\DateRange\:\:\$preset has no type specified\.$#'
-			identifier: missingType.property
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Strict comparison using \!\=\= between Carbon\\CarbonInterface and null will always evaluate to true\.$#'
-			identifier: notIdentical.alwaysTrue
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Ternary operator condition is always true\.$#'
-			identifier: ternary.alwaysTrue
-			count: 1
-			path: src/DateRange.php
-
-		-
-			message: '#^Match expression does not handle remaining value\: Vee\\DateRangePreset\:\:Custom$#'
-			identifier: match.unhandled
-			count: 1
-			path: src/DateRangePreset.php
-
-		-
-			message: '#^Method Vee\\DateRangePreset\:\:dates\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangePreset.php
-
-		-
-			message: '#^Method Vee\\DateRangePreset\:\:label\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangePreset.php
-
-		-
-			message: '#^Call to protected static method fromPreset\(\) of class Vee\\DateRange\.$#'
-			identifier: staticMethod.protected
-			count: 3
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot access offset ''end'' on mixed\.$#'
+			message: '#^Cannot access offset ''root'' on mixed\.$#'
 			identifier: offsetAccess.nonOffsetAccessible
 			count: 2
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot access offset ''preset'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 2
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot access offset ''start'' on mixed\.$#'
-			identifier: offsetAccess.nonOffsetAccessible
-			count: 4
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot access property \$value on mixed\.$#'
-			identifier: property.nonObject
-			count: 2
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot call method end\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 5
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot call method format\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 4
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot call method preset\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 2
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Cannot call method start\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 6
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Match expression does not handle remaining value\: mixed$#'
-			identifier: match.unhandled
-			count: 2
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:dehydrate\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:dehydrate\(\) has parameter \$dehydrateChild with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:dehydrate\(\) has parameter \$target with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:hydrate\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:hydrate\(\) has parameter \$meta with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:hydrate\(\) has parameter \$value with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:hydrateFromType\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:hydrateFromType\(\) has parameter \$type with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:hydrateFromType\(\) has parameter \$value with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:match\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:match\(\) has parameter \$target with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:matchByType\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:matchByType\(\) has parameter \$type with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:set\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:set\(\) has parameter \$key with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:set\(\) has parameter \$target with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:set\(\) has parameter \$value with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:unset\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:unset\(\) has parameter \$key with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:unset\(\) has parameter \$target with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:unwrapForValidation\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Method Vee\\DateRangeSynth\:\:unwrapForValidation\(\) has parameter \$target with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Parameter \#1 \$value of static method Vee\\DateRangePreset\:\:from\(\) expects int\|string, mixed given\.$#'
-			identifier: argument.type
-			count: 3
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Property Vee\\DateRangeSynth\:\:\$key has no type specified\.$#'
-			identifier: missingType.property
-			count: 1
-			path: src/DateRangeSynth.php
-
-		-
-			message: '#^Binary operation "\." between non\-falsy\-string and mixed results in an error\.$#'
-			identifier: binaryOp.invalid
-			count: 2
-			path: src/UiManager.php
+			path: src/UIManager.php
 
 		-
 			message: '#^Cannot call method exists\(\) on mixed\.$#'
 			identifier: method.nonObject
 			count: 2
-			path: src/UiManager.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Method Vee\\UiManager\:\:boot\(\) has no return type specified\.$#'
-			identifier: missingType.return
+			message: '#^Cannot cast mixed to string\.$#'
+			identifier: cast.string
 			count: 1
-			path: src/UiManager.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Method Vee\\UiManager\:\:classes\(\) has no return type specified\.$#'
-			identifier: missingType.return
+			message: '#^Method Vee\\UIManager\:\:componentExists\(\) should return bool but returns mixed\.$#'
+			identifier: return.type
+			count: 2
+			path: src/UIManager.php
+
+		-
+			message: '#^Method Vee\\UIManager\:\:tv\(\) has parameter \$config with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
 			count: 1
-			path: src/UiManager.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Method Vee\\UiManager\:\:classes\(\) has parameter \$styles with no type specified\.$#'
-			identifier: missingType.parameter
+			message: '''
+				#^PHPDoc tag @param has invalid value \(array\{
+				    extend\?\: array\<string, mixed\>
+				    base\?\: string\|list\<string\|null\>,
+				    slots\?\: array\<string, string\|list\<string\|null\>\>,
+				    variants\?\: array\<string, array\<string, string\|array\<string, string\|list\<string\|null\>\>\>\>,
+				    compoundVariants\?\: array\<array\<string, string\|array\<string\>\>\>,
+				    defaultVariants\?\: array\<string, string\>
+				\} \$config\)\: Unexpected token "base", expected '\}' at offset 77 on line 4$#
+			'''
+			identifier: phpDoc.parseError
 			count: 1
-			path: src/UiManager.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Method Vee\\UiManager\:\:componentExists\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiManager.php
-
-		-
-			message: '#^Method Vee\\UiManager\:\:componentExists\(\) has parameter \$name with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/UiManager.php
-
-		-
-			message: '#^Method Vee\\UiManager\:\:markAssetsRendered\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiManager.php
-
-		-
-			message: '#^Method Vee\\UiManager\:\:scripts\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiManager.php
-
-		-
-			message: '#^Method Vee\\UiManager\:\:scripts\(\) has parameter \$options with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/UiManager.php
-
-		-
-			message: '#^Method Vee\\UiManager\:\:uiAppearance\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiManager.php
-
-		-
-			message: '#^Method Vee\\UiManager\:\:uiAppearance\(\) has parameter \$options with no type specified\.$#'
-			identifier: missingType.parameter
-			count: 1
-			path: src/UiManager.php
-
-		-
-			message: '#^Parameter \#1 \$classes of method Vee\\ClassBuilder\:\:add\(\) expects array\|string\|null, mixed given\.$#'
+			message: '#^Parameter \#1 \$config of class Vee\\Utils\\Tva constructor expects array\<string, mixed\>, array given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/UiManager.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Property Vee\\UiManager\:\:\$hasRenderedAssets has no type specified\.$#'
-			identifier: missingType.property
+			message: '#^Parameter \#1 \$existing of method Vee\\UIManager\:\:mergeBase\(\) expects list\<string\|null\>\|string, mixed given\.$#'
+			identifier: argument.type
 			count: 1
-			path: src/UiManager.php
+			path: src/UIManager.php
 
 		-
-			message: '#^Call to an undefined method Illuminate\\View\\ComponentAttributeBag\:\:forget\(\)\.$#'
-			identifier: method.notFound
+			message: '#^Parameter \#1 \$recipes of method Vee\\Utils\\Cva\:\:apply\(\) expects array\<string, bool\|string\|null\>, array given\.$#'
+			identifier: argument.type
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \#1 \$recipes of method Vee\\Utils\\Tva\:\:apply\(\) expects array\<string, string\|null\>, array given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \#1 \$string of function md5 expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \#1 \$string of static method Illuminate\\Support\\Str\:\:of\(\) expects string, string\|false given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \#2 \$base of method Vee\\UIManager\:\:mergeBase\(\) expects list\<string\|null\>\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \$base of class Vee\\Utils\\Cva constructor expects list\<string\|null\>\|string, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \$compoundVariants of class Vee\\Utils\\Cva constructor expects list\<array\<string, mixed\>\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \$defaultVariants of class Vee\\Utils\\Cva constructor expects array\<string, string\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
+
+		-
+			message: '#^Parameter \$variants of class Vee\\Utils\\Cva constructor expects array\<string, array\<string, list\<string\>\|string\|null\>\>, mixed given\.$#'
+			identifier: argument.type
+			count: 1
+			path: src/UIManager.php
 
 		-
 			message: '#^Cannot call method boot\(\) on mixed\.$#'
 			identifier: method.nonObject
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
 			message: '#^Cannot call method getClassComponentAliases\(\) on mixed\.$#'
 			identifier: method.nonObject
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
 			message: '#^Cannot call method getClassComponentNamespaces\(\) on mixed\.$#'
 			identifier: method.nonObject
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
 			message: '#^Cannot call method precompiler\(\) on mixed\.$#'
 			identifier: method.nonObject
 			count: 1
-			path: src/UiServiceProvider.php
-
-		-
-			message: '#^Cannot call method propertySynthesizer\(\) on mixed\.$#'
-			identifier: method.nonObject
-			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
 			message: '#^Cannot call static method macro\(\) on mixed\.$#'
 			identifier: staticMethod.nonObject
 			count: 1
-			path: src/UiServiceProvider.php
-
-		-
-			message: '#^Method Vee\\UiServiceProvider\:\:bootCommands\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiServiceProvider.php
-
-		-
-			message: '#^Method Vee\\UiServiceProvider\:\:bootComponentPath\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiServiceProvider.php
-
-		-
-			message: '#^Method Vee\\UiServiceProvider\:\:bootMacros\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiServiceProvider.php
-
-		-
-			message: '#^Method Vee\\UiServiceProvider\:\:bootTagCompiler\(\) has no return type specified\.$#'
-			identifier: missingType.return
-			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
 			message: '#^Offset ''currentComponentData'' does not exist on array\{\000\*\000componentStack\: array, \000\*\000componentData\: array, \000\*\000currentComponentData\: array, \000\*\000slots\: array, \000\*\000slotStack\: array, \000\*\000fragments\: array, \000\*\000fragmentStack\: array, \000\*\000sections\: array, \.\.\.\}\.$#'
 			identifier: offsetAccess.notFound
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
-			message: '#^PHPDoc tag @var with type Illuminate\\View\\Factory is not subtype of native type \$this\(Vee\\UiServiceProvider\)\.$#'
+			message: '#^PHPDoc tag @var with type Illuminate\\View\\Factory is not subtype of native type \$this\(Vee\\UIServiceProvider\)\.$#'
 			identifier: varTag.nativeType
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
-			message: '#^Parameter \#1 \$aliases of class Vee\\UiTagCompiler constructor expects array, mixed given\.$#'
+			message: '#^Parameter \#1 \$aliases of class Vee\\UITagCompiler constructor expects array, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/UiServiceProvider.php
-
-		-
-			message: '#^Parameter \#1 \$key of method Illuminate\\View\\ComponentAttributeBag\:\:get\(\) expects string, mixed given\.$#'
-			identifier: argument.type
-			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
 			message: '#^Parameter \#1 \$value of method Illuminate\\View\\Compilers\\ComponentTagCompiler\:\:compile\(\) expects string, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
-			message: '#^Parameter \#2 \$namespaces of class Vee\\UiTagCompiler constructor expects array, mixed given\.$#'
+			message: '#^Parameter \#2 \$namespaces of class Vee\\UITagCompiler constructor expects array, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
-			message: '#^Parameter \#3 \$blade of class Vee\\UiTagCompiler constructor expects Illuminate\\View\\Compilers\\BladeCompiler\|null, mixed given\.$#'
+			message: '#^Parameter \#3 \$blade of class Vee\\UITagCompiler constructor expects Illuminate\\View\\Compilers\\BladeCompiler\|null, mixed given\.$#'
 			identifier: argument.type
 			count: 1
-			path: src/UiServiceProvider.php
+			path: src/UIServiceProvider.php
 
 		-
 			message: '#^Binary operation "\." between ''@slot\('' and mixed results in an error\.$#'
 			identifier: binaryOp.invalid
 			count: 1
-			path: src/UiTagCompiler.php
+			path: src/UITagCompiler.php
 
 		-
-			message: '#^Method Vee\\UiTagCompiler\:\:compileClosingTags\(\) should return string but returns string\|null\.$#'
-			identifier: return.type
+			message: '#^Method Vee\\UITagCompiler\:\:compileClosingTags\(\) never returns array so it can be removed from the return type\.$#'
+			identifier: return.unusedType
 			count: 1
-			path: src/UiTagCompiler.php
+			path: src/UITagCompiler.php
 
 		-
-			message: '#^Method Vee\\UiTagCompiler\:\:compileOpeningTags\(\) should return string but returns string\|null\.$#'
-			identifier: return.type
-			count: 1
-			path: src/UiTagCompiler.php
-
-		-
-			message: '#^Method Vee\\UiTagCompiler\:\:compileSelfClosingTags\(\) should return string but returns string\|null\.$#'
-			identifier: return.type
-			count: 1
-			path: src/UiTagCompiler.php
-
-		-
-			message: '#^Method Vee\\UiTagCompiler\:\:componentString\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			message: '#^Method Vee\\UITagCompiler\:\:compileClosingTags\(\) return type has no value type specified in iterable type array\.$#'
 			identifier: missingType.iterableValue
 			count: 1
-			path: src/UiTagCompiler.php
+			path: src/UITagCompiler.php
+
+		-
+			message: '#^Method Vee\\UITagCompiler\:\:compileOpeningTags\(\) never returns array so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: src/UITagCompiler.php
+
+		-
+			message: '#^Method Vee\\UITagCompiler\:\:compileOpeningTags\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/UITagCompiler.php
+
+		-
+			message: '#^Method Vee\\UITagCompiler\:\:compileSelfClosingTags\(\) never returns array so it can be removed from the return type\.$#'
+			identifier: return.unusedType
+			count: 1
+			path: src/UITagCompiler.php
+
+		-
+			message: '#^Method Vee\\UITagCompiler\:\:compileSelfClosingTags\(\) return type has no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/UITagCompiler.php
+
+		-
+			message: '#^Method Vee\\UITagCompiler\:\:componentString\(\) has parameter \$attributes with no value type specified in iterable type array\.$#'
+			identifier: missingType.iterableValue
+			count: 1
+			path: src/UITagCompiler.php
 
 		-
 			message: '#^Part \$component \(mixed\) of encapsed string cannot be cast to string\.$#'
 			identifier: encapsedStringPart.nonString
 			count: 3
-			path: src/UiTagCompiler.php
+			path: src/UITagCompiler.php

@@ -1,5 +1,0 @@
-{
-    "extends": "@iueev/tsc/astro",
-    "include": [".astro/types.d.ts", "**/*"],
-    "exclude": ["node_modules", "dist"]
-}

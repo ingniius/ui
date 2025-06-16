@@ -1,15 +1,11 @@
 @props([
-    'container' => null,
+    'container' => false,
 ])
 
 @php
-    $classes = Vee\Ui::classes()
-        ->add('min-h-[calc(100vh-var(--ui-header-height))]')
-        ->add('p-6 lg:p-8')
-        ->add('[[data-ui-container]_&]:px-0') // If there is a wrapping container, let IT handle the x padding...
-        ->add($container ? 'mx-auto w-full [:where(&)]:max-w-(--ui-container)' : '');
+    $self = Vee\UI::tv(['extend' => Vee\Theme\Main::theme(), ...useComponents('main')])(['container' => $container]);
 @endphp
 
-<main {{ $attributes->class($classes) }} data-ui-main>
+<main {{ $attributes->class($self->root()) }} data-ui-main>
     {{ $slot }}
 </main>

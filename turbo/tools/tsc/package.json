@@ -18,9 +18,7 @@
     },
     "sideEffects": false,
     "exports": {
-        "./astro": "./src/astro.json",
         "./base": "./src/base.json",
-        "./vue": "./src/vue.json",
         "./package.json": "./package.json"
     },
     "files": [
@@ -39,9 +37,6 @@
         "typescript": {
             "optional": false
         }
-    },
-    "optionalDependencies": {
-        "astro": "*"
     },
     "devDependencies": {
         "typescript": "catalog:"

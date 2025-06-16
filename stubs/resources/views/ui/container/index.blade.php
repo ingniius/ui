@@ -1,7 +1,7 @@
 @php
-    $classes = Vee\Ui::classes()->add('mx-auto w-full [:where(&)]:max-w-(--ui-container) px-6 lg:px-8');
+    $self = Vee\UI::tv(['extend' => Vee\Theme\Container::theme(), ...useComponents('container')])();
 @endphp
 
-<div {{ $attributes->class($classes) }} data-ui-container>
+<div {{ $attributes->class($self->root()) }} data-ui-container>
     {{ $slot }}
 </div>

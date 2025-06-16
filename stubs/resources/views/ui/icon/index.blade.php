@@ -1,16 +1,23 @@
 @props([
+    'icon' => null,
     'name' => null,
-    'size' => 'md',
+    'variant' => null,
 ])
 
 @php
-    $classes = Vee\Ui::classes()->add(
-        match ($size) {
-            'xs' => '[:where(&)]:size-4',
-            'sm' => '[:where(&)]:size-5',
-            'md' => '[:where(&)]:size-6',
-        },
-    );
+    $self = Vee\UI::tv(['extend' => Vee\Theme\Icon::theme(), ...useComponents('icon')])(['variant' => $variant]);
+
+    $iconify = null;
+    if ($name) {
+        $iconify = $name;
+    } elseif ($icon) {
+        if (str_contains($icon, ':')) {
+            $iconify = $icon;
+        } else {
+            $iconSet = useIcons($icon);
+            $iconify = $iconSet[$variant ?? 'solid'] ?? $iconSet['solid'] ?? $icon;
+        }
+    }
 @endphp
 
-<x-icon :name="$name" {{ $attributes->class($classes) }} />
+<x-icon :name="$iconify" {{ $attributes->class($self->root()) }} />

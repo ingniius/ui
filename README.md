@@ -10,12 +10,15 @@ Ensure you have the following installed:
 ## Components API
 
 ```
+├── avatar
+├── card
 ├── container
 ├── icon
+├── image
 ├── link
 └── main
 
-4 components
+7 components
 ```
 
 ## License

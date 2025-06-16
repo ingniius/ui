@@ -6,11 +6,12 @@ return [
 
     'prefix' => 'vee',
 
+    'components' => [],
+
     'theme' => [
         'colors' => [
             'primary' => 'indigo',
-            'secondary' => 'violet',
-            'accent' => 'lime',
+            'secondary' => 'teal',
             'success' => 'green',
             'info' => 'blue',
             'warning' => 'yellow',
@@ -18,10 +19,10 @@ return [
             'neutral' => 'zinc',
         ],
         'icons' => [
-            'dark' => 'lucide:moon',
-            'light' => 'lucide:sun',
-            'loading' => 'lucide:refresh-cw',
-            'system' => 'lucide:monitor',
+            'dark' => ['solid' => 'heroicons-solid:moon', 'outline' => 'heroicons-outline:moon'],
+            'light' => ['solid' => 'heroicons-solid:sun',  'outline' => 'heroicons-outline:sun'],
+            'system' => ['solid' =>'heroicons-solid:color-swatch',  'outline' => 'heroicons-outline:color-swatch'],
+            'user' => ['solid' =>'heroicons-solid:user',  'outline' => 'heroicons-outline:user'],
         ],
         'transitions' => true,
     ],
