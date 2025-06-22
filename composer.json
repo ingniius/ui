@@ -1,0 +1,41 @@
+{
+    "name": "ingniius/ui",
+    "description": "A visual enhanced design system for Livewire.",
+    "keywords": [
+        "laravel",
+        "livewire",
+        "components",
+        "ui"
+    ],
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "@omaucf",
+            "email": "omaucf@pm.me"
+        }
+    ],
+    "require": {
+        "php": "^8.2|^8.3|^8.4",
+        "laravel/framework": "^10.0|^11.0|^12.0",
+        "livewire/livewire": "^3.5.19"
+    },
+    "autoload": {
+        "psr-4": {
+            "Vee\\": "src/"
+        }
+    },
+    "extra": {
+        "laravel": {
+            "aliases": {
+                "Vee": "Vee\\UI"
+            }
+        }
+    },
+    "minimum-stability": "dev",
+    "prefer-stable": true,
+    "config": {
+        "preferred-install": "dist",
+        "sort-packages": true
+    }
+}
