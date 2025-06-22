@@ -6,7 +6,7 @@
         "npm": ">=10.0.0"
     },
     "scripts": {
-        "dev": "turbo clean",
+        "dev": "turbo dev",
         "clean": "turbo clean"
     },
     "optionalDependencies": {
@@ -15,6 +15,8 @@
         "lightningcss-linux-x64-gnu": "^1.30.1"
     },
     "devDependencies": {
+        "@commitlint/cli": "^19.8.1",
+        "@commitlint/config-conventional": "^19.8.1",
         "esbuild": "^0.25.5",
         "npm-run-all2": "^8.0.4",
         "rimraf": "^6.0.1",
