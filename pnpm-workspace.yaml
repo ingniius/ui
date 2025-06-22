@@ -1,0 +1,8 @@
+catalog:
+    tailwindcss: ^4.1.10
+
+ignoredBuiltDependencies:
+    - esbuild
+
+onlyBuiltDependencies:
+    - '@tailwindcss/oxide'
