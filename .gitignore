@@ -1,0 +1,37 @@
+# Composer/Laravel Outputs
+.phpunit.cache
+
+# Generated Outputs
+.cache
+
+# Compiled Outputs
+dist
+
+# Node Dependencies
+node_modules
+
+# PHP Dependencies
+/vendor
+composer.lock
+
+# Testing
+__tmp__
+tmp
+
+# Logs
+*.log
+logs
+
+# IDE
+.vscode/*
+.idea
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# System Files
+.DS_Store
+*.pem
+
+# Workspace Files
+*.todo
+.turbo
