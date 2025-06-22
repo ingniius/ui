@@ -1,0 +1,27 @@
+* text=auto eol=lf
+
+*.blade.php diff=html
+*.css diff=css
+*.html diff=html
+*.md diff=markdown
+*.php diff=php
+
+/.github export-ignore
+/.husky export-ignore
+/.vscode export-ignore
+
+.commitlintrc export-ignore
+.editorconfig export-ignore
+
+.gitattributes export-ignore
+.gitignore export-ignore
+
+package.json export-ignore
+pnpm-lock.yaml export-ignore
+pnpm-workspace.yaml export-ignore
+turbo.json export-ignore
+
+CHANGELOG.md export-ignore
+README.md export-ignore
+
+Makefile export-ignore
