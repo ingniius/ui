@@ -5,6 +5,10 @@
         "node": ">=22.0.0",
         "npm": ">=10.0.0"
     },
+    "scripts": {
+        "dev": "turbo clean",
+        "clean": "turbo clean"
+    },
     "optionalDependencies": {
         "@rollup/rollup-linux-x64-gnu": "4.44.0",
         "@tailwindcss/oxide-linux-x64-gnu": "^4.1.10",
@@ -12,7 +16,10 @@
     },
     "devDependencies": {
         "esbuild": "^0.25.5",
-        "tailwindcss": "catalog:"
+        "npm-run-all2": "^8.0.4",
+        "rimraf": "^6.0.1",
+        "tailwindcss": "catalog:",
+        "turbo": "^2.5.4"
     },
     "volta": {
         "node": "22.16.0",
