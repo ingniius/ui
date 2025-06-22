@@ -1,0 +1,12 @@
+{
+    "editor.formatOnSave": false,
+    "editor.quickSuggestions": { "strings": "on" },
+    "files.associations": { "*.css": "tailwindcss" },
+    "php.validate.executablePath": "/config/.config/herd-lite/bin/php",
+    "php.validate.run": "onSave",
+    "tailwindCSS.classAttributes": ["class", "ui"],
+    "tailwindCSS.experimental.classRegex": [
+        ["ui:\\s*{([^)]*)\\s*}", "(?:'|\"|`)([^']*)(?:'|\"|`)"]
+    ],
+    "tailwindCSS.includeLanguages": { "blade": "html" }
+}
