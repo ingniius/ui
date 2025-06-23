@@ -1,3 +1,10 @@
+changeset.add:
+	@pnpm changeset add
+changeset.version:
+	@pnpm changeset version
+changeset.publish:
+	@pnpm changeset publish
+
 composer.run:
 	@composer run $(filter-out $@,$(MAKECMDGOALS))
 composer.lint:
