@@ -1,7 +1,7 @@
 {
     "name": "@iueev/tsc",
     "type": "module",
-    "version": "0.0.0",
+    "version": "0.0.1",
     "author": "@omaucf <omaucf@pm.me>",
     "license": "MIT",
     "homepage": "https://github.com/ingniius/ui#readme",
