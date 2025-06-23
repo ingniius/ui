@@ -28,6 +28,7 @@
         "phpstan/phpstan": "^2.1"
     },
     "autoload": {
+        "files": ["src/functions.php"],
         "psr-4": {
             "Vee\\": "src/"
         }
