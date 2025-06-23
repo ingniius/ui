@@ -1,5 +1,9 @@
 composer.run:
 	@composer run $(filter-out $@,$(MAKECMDGOALS))
+composer.lint:
+	@composer run lint
+composer.test:
+	@composer run test
 composer.dry:
 	@rm -rf .phpunit.cache vendor
 
