@@ -1,0 +1,49 @@
+{
+    "name": "@iueev/eslint",
+    "type": "module",
+    "version": "0.0.0",
+    "author": "@omaucf <omaucf@pm.me>",
+    "license": "MIT",
+    "homepage": "https://github.com/ingniius/ui#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ingniius/ui.git",
+        "directory": "turbo/tools/eslint"
+    },
+    "bugs": {
+        "url": "https://github.com/ingniius/ui/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "exports": {
+        "./base": "./src/base.mjs",
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "LICENSE",
+        "README.md",
+        "package.json",
+        "src"
+    ],
+    "scripts": {
+        "clean": "rimraf node_modules"
+    },
+    "peerDependencies": {
+        "eslint": ">=9"
+    },
+    "peerDependenciesMeta": {
+        "eslint": {
+            "optional": false
+        }
+    },
+    "dependencies": {
+        "@antfu/eslint-config": "^4.15.0",
+        "eslint-config-turbo": "^2.5.4",
+        "eslint-plugin-format": "^1.0.1"
+    },
+    "devDependencies": {
+        "eslint": "catalog:"
+    }
+}
