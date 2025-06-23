@@ -24,6 +24,7 @@
         "@changesets/cli": "^2.29.5",
         "@commitlint/cli": "^19.8.1",
         "@commitlint/config-conventional": "^19.8.1",
+        "@iueev/prettier": "workspace:*",
         "@iueev/tsc": "workspace:*",
         "@types/node": "^24.0.3",
         "@turbo/gen": "^2.5.4",
@@ -42,5 +43,6 @@
     "volta": {
         "node": "22.16.0",
         "pnpm": "10.12.2"
-    }
+    },
+    "prettier": "@iueev/prettier/base"
 }
