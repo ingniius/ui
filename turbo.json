@@ -5,9 +5,24 @@
         "topo": {
             "dependsOn": ["^topo"]
         },
+        "start": {
+            "persistent": true
+        },
         "dev": {
             "cache": false,
             "persistent": false
+        },
+        "build": {
+            "dependsOn": ["^build"],
+            "outputs": ["dist/**"]
+        },
+        "lint": {
+            "dependsOn": ["^topo", "^build"],
+            "outputs": [".cache/.prettiercache", ".cache/.eslintcache"]
+        },
+        "typecheck": {
+            "dependsOn": ["^topo", "^build"],
+            "outputs": [".cache/tsbuildinfo.json"]
         },
         "clean": {
             "cache": false
