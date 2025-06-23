@@ -1,11 +1,17 @@
 packages:
+    - packages/**
     - turbo/tools/*
 
 catalog:
+    eslint: ^9.29.0
+    prettier: ^3.5.3
     tailwindcss: ^4.1.10
+    typescript: ^5.8.3
 
 ignoredBuiltDependencies:
+    - core-js-pure
     - esbuild
 
 onlyBuiltDependencies:
     - '@tailwindcss/oxide'
+    - unrs-resolver

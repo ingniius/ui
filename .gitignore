@@ -6,9 +6,12 @@
 
 # Compiled Outputs
 dist
+!/dist
 
 # Node Dependencies
 node_modules
+package.json.*
+!package.json.hbs
 
 # PHP Dependencies
 /vendor

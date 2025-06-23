@@ -1,7 +1,9 @@
 {
     "recommendations": [
         "bradlc.vscode-tailwindcss",
+        "dbaeumer.vscode-eslint",
         "devsense.phptools-vscode",
-        "editorconfig.editorconfig"
+        "editorconfig.editorconfig",
+        "esbenp.prettier-vscode"
     ]
 }

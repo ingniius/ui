@@ -1,0 +1,47 @@
+{
+    "name": "@iueev/prettier",
+    "type": "module",
+    "version": "0.0.1",
+    "author": "@omaucf <omaucf@pm.me>",
+    "license": "MIT",
+    "homepage": "https://github.com/ingniius/ui#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ingniius/ui.git",
+        "directory": "turbo/tools/prettier"
+    },
+    "bugs": {
+        "url": "https://github.com/ingniius/ui/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "exports": {
+        "./base": "./src/base.mjs",
+        "./package.json": "./package.json"
+    },
+    "files": [
+        "LICENSE",
+        "README.md",
+        "package.json",
+        "src"
+    ],
+    "scripts": {
+        "clean": "rimraf node_modules"
+    },
+    "peerDependencies": {
+        "prettier": ">=3"
+    },
+    "peerDependenciesMeta": {
+        "prettier": {
+            "optional": false
+        }
+    },
+    "dependencies": {
+        "prettier-plugin-tailwindcss": "^0.6.12"
+    },
+    "devDependencies": {
+        "prettier": "catalog:"
+    }
+}

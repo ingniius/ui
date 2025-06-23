@@ -20,10 +20,45 @@
         "laravel/framework": "^10.0|^11.0|^12.0",
         "livewire/livewire": "^3.5.19"
     },
+    "require-dev": {
+        "laravel/pint": "^1.13",
+        "orchestra/testbench": "^10.4",
+        "pestphp/pest": "^3.8",
+        "pestphp/pest-plugin-laravel": "^3.2",
+        "phpstan/phpstan": "^2.1"
+    },
     "autoload": {
+        "files": ["src/functions.php"],
         "psr-4": {
             "Vee\\": "src/"
         }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Tests\\": "tests/"
+        }
+    },
+    "scripts": {
+        "lint": [
+            "./vendor/bin/pint"
+        ],
+        "lint:test": [
+            "./vendor/bin/pint --test"
+        ],
+        "test": [
+            "@lint:test",
+            "@test:unit",
+            "@type:analyse"
+        ],
+        "test:unit": [
+            "./vendor/bin/pest"
+        ],
+        "type:analyse": [
+            "./vendor/bin/phpstan analyse --memory-limit=256M"
+        ],
+        "type:generate": [
+            "./vendor/bin/phpstan analyse --generate-baseline --memory-limit=256M"
+        ]
     },
     "extra": {
         "laravel": {
@@ -35,6 +70,9 @@
     "minimum-stability": "dev",
     "prefer-stable": true,
     "config": {
+        "allow-plugins": {
+            "pestphp/pest-plugin": true
+        },
         "preferred-install": "dist",
         "sort-packages": true
     }
