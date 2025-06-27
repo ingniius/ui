@@ -1,12 +1,20 @@
-# Composer/Laravel Outputs
+# Laravel Outputs
 .phpunit.cache
 
 # Generated Outputs
 .cache
+.nitro
+.nuxt
+.output
 
 # Compiled Outputs
 dist
 !/dist
+
+# Environment
+.env
+.env.*
+!.env.example
 
 # Node Dependencies
 node_modules
@@ -14,8 +22,8 @@ package.json.*
 !package.json.hbs
 
 # PHP Dependencies
-/vendor
 composer.lock
+/vendor
 
 # Testing
 __tmp__

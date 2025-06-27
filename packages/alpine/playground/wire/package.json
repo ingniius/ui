@@ -1,0 +1,18 @@
+{
+    "name": "@alpine/wire",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "start": "php artisan serve",
+        "dev": "composer run dev",
+        "dev:watch": "dotenv-run -- vite",
+        "build": "vite build",
+        "lint": "composer run lint",
+        "test": "composer run test",
+        "clean": "rimraf public/build node_modules"
+    },
+    "devDependencies": {
+        "laravel-vite-plugin": "^1.3.0"
+    },
+    "prettier": "@iueev/prettier/blade"
+}

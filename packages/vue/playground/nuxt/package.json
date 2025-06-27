@@ -1,0 +1,26 @@
+{
+    "name": "@vue/nuxt",
+    "type": "module",
+    "private": true,
+    "scripts": {
+        "prepare": "[ ! -d .nuxt ] && nuxt prepare || true",
+        "start": "dotenv-run -- nuxt start",
+        "dev": "dotenv-run -- nuxt dev",
+        "build": "nuxt build",
+        "generate": "nuxt generate",
+        "lint": "eslint . --fix",
+        "typecheck": "nuxt typecheck --noEmit",
+        "clean": "rimraf .nuxt .output node_modules"
+    },
+    "dependencies": {
+        "@iconify-json/heroicons-outline": "^1.2.1",
+        "@iconify-json/heroicons-solid": "^1.2.1",
+        "@iueev/vue": "workspace:",
+        "@nuxt/fonts": "^0.11.4",
+        "@nuxtjs/color-mode": "^3.5.2"
+    },
+    "devDependencies": {
+        "nuxt": "catalog:",
+        "vue": "catalog:"
+    }
+}

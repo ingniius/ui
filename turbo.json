@@ -14,7 +14,7 @@
         },
         "build": {
             "dependsOn": ["^build"],
-            "outputs": ["dist/**"]
+            "outputs": [".output/**", "public/build/**", "dist/**"]
         },
         "lint": {
             "dependsOn": ["^topo", "^build"],

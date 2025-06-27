@@ -19,6 +19,7 @@
     "sideEffects": false,
     "exports": {
         "./base": "./src/base.mjs",
+        "./blade": "./src/blade.mjs",
         "./package.json": "./package.json"
     },
     "files": [
@@ -39,6 +40,7 @@
         }
     },
     "dependencies": {
+        "prettier-plugin-blade": "",
         "prettier-plugin-tailwindcss": "^0.6.12"
     },
     "devDependencies": {

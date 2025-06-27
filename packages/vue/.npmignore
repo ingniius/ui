@@ -1,0 +1,12 @@
+*
+!.nuxt/ui/**/*.ts
+!.nuxt/ui.css
+!dist/runtime/*.css
+!dist/runtime/**/*.d.ts
+!dist/runtime/**/*.js
+!dist/runtime/**/*.vue
+!dist/*.d.mts
+!dist/*.mjs
+!LICENSE.md
+!README.md
+!package.json

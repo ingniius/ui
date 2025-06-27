@@ -1,0 +1,10 @@
+import { defineBuildConfig } from 'unbuild';
+
+import { peerDependencies } from './package.json';
+
+export default defineBuildConfig({
+    clean: true,
+    declaration: true,
+    entries: ['src/defaults.ts', 'src/index.ts'],
+    externals: [...Object.keys(peerDependencies || {})].map(name => new RegExp(`^${name}(/.*)?`)),
+});

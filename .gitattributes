@@ -6,6 +6,7 @@
 *.md diff=markdown
 *.php diff=php
 
+/.changeset export-ignore
 /.github export-ignore
 /.husky export-ignore
 /.vscode export-ignore
@@ -27,6 +28,7 @@ phpunit.xml.dist export-ignore
 .npmrc export-ignore
 .nvmrc export-ignore
 
+esbuild.config.mjs export-ignore
 package.json export-ignore
 pint.json export-ignore
 
