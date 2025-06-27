@@ -27,23 +27,23 @@
         "@iueev/eslint": "workspace:*",
         "@iueev/prettier": "workspace:*",
         "@iueev/tsc": "workspace:*",
-        "@types/node": "^24.0.4",
         "@turbo/gen": "^2.5.4",
-        "eslint": "catalog:",
+        "@types/node": "^24.0.7",
+        "brotli-size": "^4.0.0",
         "esbuild": "^0.25.5",
+        "eslint": "catalog:",
         "globby": "^14.1.0",
         "husky": "^9.1.7",
         "npm-run-all2": "^8.0.4",
         "prettier": "catalog:",
         "rimraf": "^6.0.1",
-        "typescript": "catalog:",
         "turbo": "^2.5.4",
-        "unbuild": "^3.5.0",
-        "vite": "^7.0.0"
+        "typescript": "catalog:",
+        "unbuild": "^3.5.0"
     },
     "volta": {
         "node": "22.16.0",
         "pnpm": "10.12.4"
     },
-    "prettier": "@iueev/prettier/base"
+    "prettier": "@iueev/prettier/blade"
 }

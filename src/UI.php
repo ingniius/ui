@@ -10,6 +10,6 @@ final class UI extends Facade
 {
     public static function getFacadeAccessor(): string
     {
-        return 'vee';
+        return uKey();
     }
 }

@@ -1,0 +1,94 @@
+{
+    "name": "@iueev/alpine",
+    "type": "module",
+    "version": "0.0.0",
+    "author": "@omaucf <omaucf@pm.me>",
+    "license": "MIT",
+    "homepage": "https://github.com/ingniius/ui#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ingniius/ui.git",
+        "directory": "packages/alpine"
+    },
+    "bugs": {
+        "url": "https://github.com/ingniius/ui/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "exports": {
+        "./runtime/*": "./dist/runtime/*",
+        "./stores/*": {
+            "types": "./dist/runtime/stores/*.d.mts",
+            "import": "./dist/runtime/stores/*.mjs"
+        },
+        "./utils/*": {
+            "types": "./dist/runtime/utils/*.d.mts",
+            "import": "./dist/runtime/utils/*.mjs"
+        },
+        "./bundler": {
+            "types": "./dist/bundler.d.mts",
+            "import": "./dist/bundler.mjs"
+        },
+        "./wire": {
+            "types": "./dist/module.d.mts",
+            "import": "./dist/module.mjs"
+        },
+        "./plugin": {
+            "types": "./plugin.d.ts"
+        },
+        ".": {
+            "types": "./dist/index.d.mts",
+            "import": "./dist/index.mjs"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "typesVersions": {
+        "*": {
+            "runtime/*": [
+                "./dist/runtime/*"
+            ],
+            "stores/*": [
+                "./dist/runtime/stores/*"
+            ],
+            "utils/*": [
+                "./dist/runtime/utils/*"
+            ],
+            "bundler": [
+                "./dist/bundler.d.mts"
+            ],
+            "wire": [
+                "./dist/module.d.mts"
+            ],
+            "plugin": [
+                "./plugin.d.ts"
+            ],
+            ".": ["./dist/index.d.mts"]
+        }
+    },
+    "files": [
+        "LICENSE",
+        "README.md",
+        "dist",
+        "package.json",
+        "plugin.d.ts"
+    ],
+    "scripts": {
+        "prepare": "[ ! -d dist ] && run-s dev || true",
+        "dev": "unbuild --stub",
+        "build": "unbuild",
+        "lint": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "typecheck": "tsc --noEmit",
+        "clean": "rimraf .cache .turbo dist node_modules"
+    },
+    "peerDependencies": {
+        "alpinejs": ">=3"
+    },
+    "dependencies": {},
+    "devDependencies": {
+        "@types/alpinejs": "^3.13.11",
+        "alpinejs": "^3.14.9"
+    }
+}

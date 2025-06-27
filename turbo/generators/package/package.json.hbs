@@ -1,45 +1,45 @@
 {
-  "name": "@iueev/{{ name }}",
-  "type": "module",
-  "version": "0.0.0",
-  "author": "@omaucf <omaucf@pm.me>",
-  "license": "MIT",
-  "homepage": "https://github.com/ingniius/ui#readme",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/ingniius/ui.git",
-    "directory": "{{ scope }}/{{ name }}"
-  },
-  "bugs": {
-    "url": "https://github.com/ingniius/ui/issues"
-  },
-  "publishConfig": {
-    "access": "public"
-  },
-  "sideEffects": false,
-  "exports": {
-    ".": {
-      "types": "./dist/index.d.mts",
-      "import": "./dist/index.mjs"
+    "name": "@iueev/{{ name }}",
+    "type": "module",
+    "version": "0.0.0",
+    "author": "@omaucf <omaucf@pm.me>",
+    "license": "MIT",
+    "homepage": "https://github.com/ingniius/ui#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/ingniius/ui.git",
+        "directory": "{{ scope }}/{{ name }}"
     },
-    "./package.json": "./package.json"
-  },
-  "main": "./dist/index.mjs",
-  "typesVersions": {
-    "*": {
-      ".": ["./dist/index.d.mts"]
-    }
-  },
-  "files": ["LICENSE", "README.md", "dist", "package.json"],
-  "scripts": {
-    "prepare": "[ ! -d dist ] && run-s dev || true",
-    "dev": "unbuild --stub",
-    "build": "unbuild",
-    "lint": "eslint . --fix --cache --cache-location .cache/.eslintcache",
-    "typecheck": "tsc --noEmit",
-    "clean": "rimraf .cache .turbo dist node_modules"
-  },
-  "peerDependencies": {},
-  "dependencies": {},
-  "devDependencies": {}
+    "bugs": {
+        "url": "https://github.com/ingniius/ui/issues"
+    },
+    "publishConfig": {
+        "access": "public"
+    },
+    "sideEffects": false,
+    "exports": {
+        ".": {
+            "types": "./dist/index.d.mts",
+            "import": "./dist/index.mjs"
+        },
+        "./package.json": "./package.json"
+    },
+    "main": "./dist/index.mjs",
+    "typesVersions": {
+        "*": {
+            ".": ["./dist/index.d.mts"]
+        }
+    },
+    "files": ["LICENSE", "README.md", "dist", "package.json"],
+    "scripts": {
+        "prepare": "[ ! -d dist ] && run-s dev || true",
+        "dev": "unbuild --stub",
+        "build": "unbuild",
+        "lint": "eslint . --fix --cache --cache-location .cache/.eslintcache",
+        "typecheck": "tsc --noEmit",
+        "clean": "rimraf .cache .turbo dist node_modules"
+    },
+    "peerDependencies": {},
+    "dependencies": {},
+    "devDependencies": {}
 }
