@@ -39,7 +39,7 @@
         }
     },
     "dependencies": {
-        "@antfu/eslint-config": "^4.15.0",
+        "@antfu/eslint-config": "^4.16.1",
         "eslint-config-turbo": "^2.5.4",
         "eslint-plugin-format": "^1.0.1"
     },
