@@ -27,6 +27,11 @@
 				"coverage/**"
 			]
 		},
+		"typecheck": {
+			"outputs": [
+				".cache/tsbuildinfo.json"
+			]
+		},
 		"clean": {
 			"cache": false
 		},
