@@ -3,3 +3,7 @@ packages:
   - examples/*
   - packages/*
   - turbo/tools/*
+
+ignoredBuiltDependencies:
+  - core-js-pure
+  - esbuild

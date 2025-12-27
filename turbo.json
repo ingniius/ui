@@ -1,0 +1,37 @@
+{
+	"$schema": "https://turborepo.com/schema.json",
+	"globalDependencies": [
+		"**/.env.*local"
+	],
+	"ui": "tui",
+	"envMode": "loose",
+	"tasks": {
+		"start": {
+			"persistent": true
+		},
+		"dev": {
+			"cache": false,
+			"interactive": true,
+			"persistent": true
+		},
+		"build": {
+			"dependsOn": [
+				"^build"
+			],
+			"outputs": [
+				"dist/**"
+			]
+		},
+		"test": {
+			"outputs": [
+				"coverage/**"
+			]
+		},
+		"clean": {
+			"cache": false
+		},
+		"//#dry": {
+			"cache": false
+		}
+	}
+}
