@@ -1,42 +1,17 @@
 {
 	"$schema": "https://turborepo.com/schema.json",
-	"globalDependencies": [
-		"**/.env.*local"
-	],
+	"globalDependencies": ["**/.env.*local"],
 	"ui": "tui",
 	"envMode": "loose",
 	"tasks": {
-		"start": {
-			"persistent": true
-		},
-		"dev": {
-			"cache": false,
-			"interactive": true,
-			"persistent": true
-		},
-		"build": {
-			"dependsOn": [
-				"^build"
-			],
-			"outputs": [
-				"dist/**"
-			]
-		},
-		"test": {
-			"outputs": [
-				"coverage/**"
-			]
-		},
-		"typecheck": {
-			"outputs": [
-				".cache/tsbuildinfo.json"
-			]
-		},
-		"clean": {
-			"cache": false
-		},
-		"//#dry": {
-			"cache": false
-		}
+		"start": { "persistent": true },
+		"dev": { "cache": false, "interactive": true, "persistent": true },
+		"build": { "dependsOn": ["^build"], "outputs": ["dist/**"] },
+		"test": { "outputs": ["coverage"] },
+		"typecheck": { "outputs": [".cache/tsbuildinfo.json"] },
+		"clean": { "cache": false },
+		"//#check": {},
+		"//#fix": { "cache": false },
+		"//#dry": { "cache": false }
 	}
 }
