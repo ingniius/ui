@@ -1,0 +1,16 @@
+{
+  "name": "@veehance/biome",
+  "version": "0.0.0",
+  "private": true,
+  "exports": {
+    "./base.json": "./src/base.json",
+    "./package.json": "./package.json"
+  },
+  "scripts": {
+    "clean": "git clean -xdf .turbo node_modules"
+  },
+  "peerDependencies": {
+    "@biomejs/biome": ">=2",
+    "ultracite": ">=6"
+  }
+}

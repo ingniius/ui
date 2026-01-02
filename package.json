@@ -10,15 +10,19 @@
     "start": "turbo start",
     "dev": "turbo dev",
     "build": "turbo build",
+    "check": "ultracite check",
+    "fix": "ultracite fix",
     "test": "turbo test",
     "typecheck": "turbo typecheck",
     "clean": "turbo clean",
     "dry": "git clean -xdf .turbo node_modules"
   },
   "dependencies": {
+    "@veehance/biome": "workspace:*",
     "@veehance/typescript": "workspace:*"
   },
   "devDependencies": {
+    "@biomejs/biome": "^2.3.10",
     "@changesets/changelog-git": "^0.2.1",
     "@changesets/cli": "^2.29.8",
     "@commitlint/cli": "^20.3.0",
@@ -32,6 +36,7 @@
     "tsdown": "^0.18.4",
     "turbo": "^2.7.2",
     "typescript": "^5.9.3",
+    "ultracite": "^7.0.5",
     "vite": "^7.3.0",
     "vitest": "^4.0.16"
   },

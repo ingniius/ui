@@ -1,0 +1,15 @@
+{
+  "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["@veehance/biome/base.json"],
+  "files": {
+    "includes": [
+      "**",
+      "!__tmp__",
+      "!**/.cache",
+      "!**/.turbo",
+      "!**/build",
+      "!**/dist",
+      "!**/node_modules"
+    ]
+  }
+}
