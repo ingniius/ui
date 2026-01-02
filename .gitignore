@@ -1,0 +1,36 @@
+# Outputs
+.cache
+build
+dist
+
+# Environment
+.env
+.env.*
+!.env.example
+
+# NodeJS
+node_modules
+.pnp
+.pnp.js
+
+# Testing
+coverage
+
+# Debug
+.pnpm-debug.log*
+
+# Temporary
+__tmp__
+
+# IDEs
+.idea/*
+.vscode/*
+!.vscode/extensions.json
+!.vscode/settings.json
+
+# Misc
+.DS_Store
+*.pem
+
+# Development
+.turbo
