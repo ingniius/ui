@@ -1,0 +1,47 @@
+{
+	"name": "@veehance/{{ name }}",
+	"version": "0.0.0",
+	"type": "module",
+	"author": "@ingniius <ingniius@pm.me>",
+	"license": "MIT",
+	"homepage": "https://github.com/ingniius/ui#readme",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/ingniius/ui.git",
+		"directory": "{{ path }}/{{ name }}"
+	},
+	"bugs": {
+		"url": "https://github.com/ingniius/ui/issues"
+	},
+	"maintainers": [
+		"@omaucf <omaucf@pm.me>"
+	],
+	"publishConfig": {
+		"access": "public"
+	},
+	"sideEffects": false,
+	"main": "./dist/index.mjs",
+	"module": "./dist/index.mjs",
+	"types": "./dist/index.d.mts",
+	"exports": {
+		".": "./dist/index.mjs",
+		"./package.json": "./package.json"
+	},
+	"files": [
+		"LICENSE",
+		"README.md",
+		"dist/**/*.d.mts",
+		"dist/**/*.mjs",
+		"package.json"
+	],
+	"scripts": {
+		"prepare": "[ ! -d dist ] && run-s build || true",
+		"build": "tsdown",
+		"test": "vitest run --coverage",
+		"typecheck": "tsc --noEmit",
+		"clean": "git clean -xdf .cache .turbo dist coverage node_modules"
+	},
+	"peerDependencies": {},
+	"dependencies": {},
+	"devDependencies": {}
+}

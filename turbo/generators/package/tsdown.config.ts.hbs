@@ -1,0 +1,13 @@
+import { defineConfig } from "tsdown";
+
+import pkg from "./package.json" with { type: "json" };
+
+export default defineConfig({
+	entry: ["src/**/*.ts", "!src/**/*.spec.ts"],
+	unbundle: true,
+	dts: true,
+	exports: true,
+	external: [...Object.keys(pkg.peerDependencies || {})].map(
+    (name) => new RegExp(`^${name}(/.*)?`),
+  ),
+});
