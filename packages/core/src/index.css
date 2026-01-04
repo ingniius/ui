@@ -1,0 +1,77 @@
+@custom-variant light {
+  &:is(.light *) {
+    @slot;
+  }
+}
+
+@custom-variant dark {
+  &:is(.dark *) {
+    @slot;
+  }
+}
+
+@layer base {
+  html {
+    @apply font-sans antialiased touch-manipulation;
+    text-rendering: optimizelegibility;
+  }
+
+  body {
+    @apply min-h-dvh scheme-light dark:scheme-dark;
+  }
+
+  :root,
+  :host,
+  .light {
+    --ui-text-dimmed: var(--color-neutral-400);
+    --ui-text-muted: var(--color-neutral-500);
+    --ui-text-toned: var(--color-neutral-600);
+    --ui-text: var(--color-neutral-700);
+    --ui-text-highlighted: var(--color-neutral-900);
+    --ui-text-inverted: white;
+
+    --ui-bg: white;
+    --ui-bg-muted: var(--color-neutral-50);
+    --ui-bg-elevated: var(--color-neutral-100);
+    --ui-bg-accented: var(--color-neutral-200);
+    --ui-bg-inverted: var(--color-neutral-900);
+
+    --ui-border: var(--color-neutral-200);
+    --ui-border-muted: var(--color-neutral-200);
+    --ui-border-accented: var(--color-neutral-300);
+    --ui-border-inverted: var(--color-neutral-900);
+
+    --ui-radius: 0.25rem;
+    --ui-container: var(--container-8xl);
+    --ui-header-height: --spacing(16);
+  }
+
+  .dark {
+    --ui-text-dimmed: var(--color-neutral-500);
+    --ui-text-muted: var(--color-neutral-400);
+    --ui-text-toned: var(--color-neutral-300);
+    --ui-text: var(--color-neutral-200);
+    --ui-text-highlighted: white;
+    --ui-text-inverted: var(--color-neutral-900);
+
+    --ui-bg: var(--color-neutral-900);
+    --ui-bg-muted: var(--color-neutral-800);
+    --ui-bg-elevated: var(--color-neutral-800);
+    --ui-bg-accented: var(--color-neutral-700);
+    --ui-bg-inverted: white;
+
+    --ui-border: var(--color-neutral-800);
+    --ui-border-muted: var(--color-neutral-700);
+    --ui-border-accented: var(--color-neutral-700);
+    --ui-border-inverted: white;
+  }
+}
+
+@utility no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+
+  &::-webkit-scrollbar {
+    display: none;
+  }
+}

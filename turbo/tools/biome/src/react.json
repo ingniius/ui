@@ -1,0 +1,16 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/react", "ultracite/next"],
+  "overrides": [
+    {
+      "includes": ["**/{app,routes}/**/*.{ts,tsx}"],
+      "linter": {
+        "rules": {
+          "style": {
+            "useFilenamingConvention": "off"
+          }
+        }
+      }
+    }
+  ]
+}

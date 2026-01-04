@@ -1,0 +1,85 @@
+{
+  "name": "@veehance/react",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/react"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "style": "./dist/index.css",
+  "main": "./dist/index.mjs",
+  "module": "./dist/index.mjs",
+  "types": "./dist/index.d.mts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "style": "./dist/index.css",
+      "import": "./dist/index.mjs"
+    },
+    "./types": "./dist/lib/types/index.mjs",
+    "./unplugin": "./dist/unplugin.mjs",
+    "./vite": "./dist/vite.mjs",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.css",
+    "dist/**/*.d.mts",
+    "dist/**/*.mjs",
+    "package.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "build": "tsdown",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo dist coverage node_modules"
+  },
+  "peerDependencies": {
+    "es-toolkit": ">=1.43",
+    "react": ">=19",
+    "react-dom": ">=19",
+    "unplugin": ">=2.3",
+    "vite": ">=7"
+  },
+  "peerDependenciesMeta": {
+    "es-toolkit": {
+      "optional": true
+    },
+    "react": {
+      "optional": true
+    },
+    "react-dom": {
+      "optional": true
+    },
+    "unplugin": {
+      "optional": true
+    },
+    "vite": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/vite": "^4.1.18",
+    "@veehance/core": "workspace:*",
+    "defu": "^6.1.4"
+  }
+}

@@ -1,0 +1,24 @@
+{
+  "name": "@example/next",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "scripts": {
+    "start": "next start",
+    "dev": "dotenv-run -- next dev",
+    "build": "next build",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .next .turbo node_modules"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.82",
+    "@veehance/core": "workspace:*",
+    "@veehance/react": "workspace:*",
+    "es-toolkit": "1.43.0",
+    "geist": "^1.5.1",
+    "next": "^16.1.1",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwind-variants": "^3.2.2"
+  }
+}
