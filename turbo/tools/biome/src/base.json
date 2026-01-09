@@ -10,6 +10,11 @@
             "groups": [
               ":NODE:",
               ":BLANK_LINE:",
+              ["@tanstack/**", "next/**", "react", "react-dom", "react-router"],
+              ["@unhead/**", "@vueuse/**", "vue", "vue-router"],
+              ":BLANK_LINE:",
+              ["#app", "#build/**", "#components", "#imports"],
+              ":BLANK_LINE:",
               ["@veehance/**"],
               ":BLANK_LINE:",
               ":PACKAGE:",
@@ -24,12 +29,26 @@
       }
     }
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "formatter": {
     "indentStyle": "space",
     "lineWidth": 80
   },
   "linter": {
     "rules": {
+      "nursery": {
+        "useSortedClasses": {
+          "level": "on",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["cc", "cv"]
+          }
+        }
+      },
       "style": {
         "useBlockStatements": "off",
         "useConsistentTypeDefinitions": "off"

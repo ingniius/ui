@@ -1,0 +1,20 @@
+@import "@veehance/core";
+@import "#build/ui.css";
+
+@layer base {
+  body {
+    @apply bg-default text-default;
+  }
+
+  ::-webkit-scrollbar {
+    @apply w-[0.4rem];
+  }
+
+  ::-webkit-scrollbar-track {
+    @apply bg-neutral-200 dark:bg-neutral-800;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    @apply rounded-2xl bg-neutral-500 dark:bg-neutral-400;
+  }
+}

@@ -1,7 +1,17 @@
 # Outputs
 .cache
+.next
+.nitro
+.nuxt
+.output
+.react-router
+.tanstack
 build
 dist
+generated
+auto-imports.d.ts
+components.d.ts
+next-env.d.ts
 
 # Environment
 .env
@@ -21,6 +31,7 @@ coverage
 
 # Temporary
 __tmp__
+tmp
 
 # IDEs
 .idea/*

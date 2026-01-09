@@ -1,0 +1,162 @@
+{
+  "name": "@veehance/vue",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "imports": {
+    "#build/theme/*": "./.nuxt/theme/*.ts",
+    "#build/iconset": "./.nuxt/iconset.ts",
+    "#build/image": "./.nuxt/image.ts",
+    "#build/link": "./.nuxt/link.ts",
+    "#build/ui.css": "./.nuxt/ui.css"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/index.css",
+      "import": "./dist/index.js"
+    },
+    "./integration/app-config": "./dist/integration/app-config.js",
+    "./integration/auto-import": "./dist/integration/auto-import.js",
+    "./integration/components": "./dist/integration/components.js",
+    "./integration/environment": "./dist/integration/environment.js",
+    "./integration/plugins": "./dist/integration/plugins.js",
+    "./integration/templates": "./dist/integration/templates.js",
+    "./base/components/Link": "./dist/lib/base/components/Link.js",
+    "./base/composables/use-app-config": "./dist/lib/base/composables/use-app-config.js",
+    "./base/plugins/color-mode": "./dist/lib/base/plugins/color-mode.js",
+    "./base/plugins/head": "./dist/lib/base/plugins/head.js",
+    "./base/stubs": "./dist/lib/base/stubs.js",
+    "./base/types": "./dist/lib/base/types/index.js",
+    "./base/types/link": "./dist/lib/base/types/link.js",
+    "./components/Container": "./dist/lib/components/Container.js",
+    "./components/Icon": "./dist/lib/components/Icon.js",
+    "./components/Link": "./dist/lib/components/Link.js",
+    "./components/LinkBase": "./dist/lib/components/LinkBase.js",
+    "./components/Main": "./dist/lib/components/Main.js",
+    "./inertia/components/Link": "./dist/lib/inertia/components/Link.js",
+    "./inertia/components/LinkBase": "./dist/lib/inertia/components/LinkBase.js",
+    "./inertia/stubs": "./dist/lib/inertia/stubs.js",
+    "./inertia/types": "./dist/lib/inertia/types/index.js",
+    "./inertia/types/link": "./dist/lib/inertia/types/link.js",
+    "./plugins/colors": "./dist/lib/plugins/colors.js",
+    "./router/components/Link": "./dist/lib/router/components/Link.js",
+    "./router/stubs": "./dist/lib/router/stubs.js",
+    "./router/types": "./dist/lib/router/types/index.js",
+    "./router/types/link": "./dist/lib/router/types/link.js",
+    "./types": "./dist/lib/types/index.js",
+    "./types/html": "./dist/lib/types/html.js",
+    "./types/link": "./dist/lib/types/link.js",
+    "./module": "./dist/module.js",
+    "./template": "./dist/template.js",
+    "./unplugin": "./dist/unplugin.js",
+    "./vite": "./dist/vite.js",
+    "./package.json": "./package.json",
+    "./plugin": "./plugin.d.ts"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.css",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "package.json",
+    "plugin.d.ts"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .nuxt .turbo dist node_modules",
+    "postinstall": "[ ! -d .nuxt ] && nuxt prepare || true"
+  },
+  "peerDependencies": {
+    "@inertiajs/vue3": ">=2",
+    "@unhead/vue": ">=2",
+    "@vueuse/core": ">=14",
+    "defu": ">=6",
+    "es-toolkit": ">=1.43",
+    "ohash": ">=2",
+    "hookable": ">=6",
+    "reka-ui": ">=2",
+    "vue": ">=3",
+    "vue-router": ">=4",
+    "ufo": ">=1.6"
+  },
+  "peerDependenciesMeta": {
+    "@inertiajs/vue3": {
+      "optional": true
+    },
+    "@unhead/vue": {
+      "optional": true
+    },
+    "@vueuse/core": {
+      "optional": true
+    },
+    "defu": {
+      "optional": true
+    },
+    "es-toolkit": {
+      "optional": true
+    },
+    "ohash": {
+      "optional": true
+    },
+    "hookable": {
+      "optional": true
+    },
+    "reka-ui": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "vue-router": {
+      "optional": true
+    },
+    "ufo": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "@iconify-json/lucide": ">=1.2",
+    "@nuxt/fonts": ">=0.12",
+    "@nuxtjs/color-mode": ">=4"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.2.2",
+    "@nuxt/schema": "^4.2.2",
+    "@veehance/core": "workspace:*",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/vite": "^4.1.18",
+    "knitwork": "^1.3.0",
+    "magic-string": "^0.30.21",
+    "mlly": "^1.8.0",
+    "pathe": "^2.0.3",
+    "scule": "^1.3.0",
+    "tinyglobby": "^0.2.15",
+    "unplugin": "catalog:",
+    "unplugin-auto-import": "^20.3.0",
+    "unplugin-vue-components": "^30.0.0"
+  }
+}

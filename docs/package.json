@@ -1,0 +1,36 @@
+{
+  "name": "@veehance/docs",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "imports": {
+    "#build/theme/*": "./.nuxt/theme/*.ts",
+    "#build/iconset": "./.nuxt/iconset.ts",
+    "#build/image": "./.nuxt/image.ts",
+    "#build/link": "./.nuxt/link.ts",
+    "#build/ui.css": "./.nuxt/ui.css"
+  },
+  "scripts": {
+    "prepare": "[ ! -d .nuxt ] && nuxt prepare || true",
+    "start": "node .output/server/index.mjs",
+    "dev": "dotenv-run -- nuxt dev",
+    "build": "nuxt build",
+    "typecheck": "nuxt typecheck --noEmit",
+    "clean": "git clean -xdf .cache .nuxt .output .turbo node_modules"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.84",
+    "@nuxt/fonts": "^0.12.1",
+    "@nuxt/image": "^2.0.0",
+    "@nuxtjs/color-mode": "^4.0.0",
+    "@veehance/core": "workspace:*",
+    "@veehance/vue": "workspace:*",
+    "@vueuse/core": "^14.1.0",
+    "defu": "^6.1.4",
+    "es-toolkit": "1.43.0",
+    "ohash": "^2.0.11",
+    "reka-ui": "^2.7.0",
+    "vue": "catalog:",
+    "tailwind-variants": "^3.2.2"
+  }
+}

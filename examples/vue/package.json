@@ -1,0 +1,35 @@
+{
+  "name": "@example/vue",
+  "version": "0.0.0",
+  "type": "module",
+  "private": true,
+  "imports": {
+    "#build/theme/*": "./generated/theme/*.ts",
+    "#build/iconset": "./generated/iconset.ts",
+    "#build/image": "./generated/image.ts",
+    "#build/link": "./generated/link.ts",
+    "#build/ui.css": "./generated/ui.css"
+  },
+  "scripts": {
+    "start": "vite preview",
+    "dev": "dotenv-run -- vite dev",
+    "build": "vite build",
+    "typecheck": "vue-tsc -p ./tsconfig.json --noEmit",
+    "clean": "git clean -xdf .cache .turbo dist generated node_modules"
+  },
+  "dependencies": {
+    "@iconify-json/lucide": "^1.2.84",
+    "@unhead/vue": "^2.1.2",
+    "@veehance/core": "workspace:*",
+    "@veehance/vue": "workspace:*",
+    "@vueuse/core": "^14.1.0",
+    "defu": "^6.1.4",
+    "es-toolkit": "1.43.0",
+    "hookable": "^6.0.1",
+    "ohash": "^2.0.11",
+    "reka-ui": "^2.7.0",
+    "vue": "catalog:",
+    "tailwind-variants": "^3.2.2",
+    "ufo": "^1.6.2"
+  }
+}
