@@ -4,6 +4,20 @@ packages:
   - packages/*
   - turbo/tools/*
 
+catalog:
+  "@types/react": 19.2.8
+  "@types/react-dom": 19.2.3
+  react: 19.2.3
+  react-dom: 19.2.3
+  unplugin: 2.3.11
+  unplugin-vue: 7.0.8
+  vue: 3.5.26
+
 ignoredBuiltDependencies:
+  - "@parcel/watcher"
   - core-js-pure
   - esbuild
+
+onlyBuiltDependencies:
+  - sharp
+  - vue-demi
