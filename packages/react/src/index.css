@@ -1,0 +1,12 @@
+@import "@veehance/core";
+
+@layer base {
+  html {
+    @apply font-sans antialiased touch-manipulation;
+    text-rendering: optimizelegibility;
+  }
+
+  body {
+    @apply bg-(--ui-bg) text-(--ui-text);
+  }
+}

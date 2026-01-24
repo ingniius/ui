@@ -1,0 +1,116 @@
+{
+  "name": "@veehance/vue",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "imports": {
+    "#build/ui/*": "./.nuxt/ui/*.ts",
+    "#build/ui.css": "./.nuxt/ui.css"
+  },
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/index.css",
+      "import": "./dist/index.js"
+    },
+    "./container": "./dist/lib/components/Container.js",
+    "./main": "./dist/lib/components/Main.js",
+    "./types": "./dist/lib/types/index.js",
+    "./nuxt": "./dist/nuxt.js",
+    "./template": "./dist/template.js",
+    "./unplugin": "./dist/unplugin.js",
+    "./vite": "./dist/vite.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.css",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "package.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "test": "vitest run --coverage",
+    "typecheck": "vue-tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo coverage dist node_modules",
+    "postinstall": "[ ! -d .nuxt ] && nuxt prepare || true"
+  },
+  "peerDependencies": {
+    "@inertiajs/vue3": ">=2",
+    "@tanstack/vue-router": ">=1",
+    "@unhead/vue": ">=2",
+    "@vueuse/core": ">=14",
+    "defu": ">=6",
+    "es-toolkit": ">=1",
+    "reka-ui": ">=2",
+    "vue": ">=3",
+    "vue-router": ">=4"
+  },
+  "peerDependenciesMeta": {
+    "@inertiajs/vue3": {
+      "optional": true
+    },
+    "@tanstack/vue-router": {
+      "optional": true
+    },
+    "@unhead/vue": {
+      "optional": true
+    },
+    "@vueuse/core": {
+      "optional": true
+    },
+    "defu": {
+      "optional": true
+    },
+    "es-toolkit": {
+      "optional": true
+    },
+    "reka-ui": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "vue-router": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "@nuxt/fonts": ">=0.13",
+    "@nuxt/image": ">=2",
+    "@nuxtjs/color-mode": ">=4"
+  },
+  "dependencies": {
+    "@iconify/vue": "^5.0.0",
+    "@nuxt/kit": "^4.3.0",
+    "@nuxt/schema": "^4.3.0",
+    "@tailwindcss/postcss": "^4.1.18",
+    "@tailwindcss/vite": "^4.1.18",
+    "@veehance/core": "workspace:*",
+    "unplugin": "catalog:",
+    "vite": "catalog:"
+  }
+}

@@ -4,6 +4,24 @@ packages:
   - packages/*
   - turbo/tools/*
 
+catalog:
+  '@types/react': 19.2.9
+  '@types/react-dom': 19.2.3
+  react: 19.2.3
+  react-dom: 19.2.3
+  solid-js: 1.9.11
+  svelte: 5.48.1
+  unplugin: 3.0.0
+  unplugin-solid: 1.0.0
+  unplugin-vue: 7.1.1
+  vite: 7.3.1
+  vue: 3.5.27
+
 ignoredBuiltDependencies:
+  - '@parcel/watcher'
   - core-js-pure
   - esbuild
+
+onlyBuiltDependencies:
+  - sharp
+  - vue-demi

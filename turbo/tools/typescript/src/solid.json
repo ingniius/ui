@@ -1,0 +1,11 @@
+{
+  "$schema": "https://json.schemastore.org/tsconfig",
+  "display": "Solid",
+  "extends": "./base.json",
+  "compilerOptions": {
+    "jsx": "preserve",
+    "jsxImportSource": "solid-js",
+    "lib": ["es2022", "DOM", "DOM.Iterable"],
+    "verbatimModuleSyntax": false
+  }
+}

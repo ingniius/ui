@@ -1,0 +1,110 @@
+{
+  "name": "@veehance/svelte",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/svelte"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/index.css",
+      "svelte": "./dist/index.js"
+    },
+    "./container": {
+      "types": "./dist/components/Container.svelte.d.ts",
+      "svelte": "./dist/components/Container.svelte"
+    },
+    "./main": {
+      "types": "./dist/components/Main.svelte.d.ts",
+      "svelte": "./dist/components/Main.svelte"
+    },
+    "./types": {
+      "types": "./dist/types/index.d.ts",
+      "svelte": "./dist/types/index.js"
+    },
+    "./unplugin": {
+      "types": "./dist/unplugin.d.ts",
+      "svelte": "./dist/unplugin.js"
+    },
+    "./vite": {
+      "types": "./dist/vite.d.ts",
+      "svelte": "./dist/vite.js"
+    },
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.css",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "dist/**/*.svelte",
+    "package.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "dev": "svelte-package && tsdown --watch",
+    "build": "svelte-package && tsdown",
+    "test": "vitest run --coverage",
+    "typecheck": "svelte-kit sync && svelte-check --tsconfig ./tsconfig.json",
+    "clean": "git clean -xdf .cache .svelte-kit .turbo coverage dist node_modules",
+    "postinstall": "[ ! -d .svelte-kit ] && svelte-kit sync || true"
+  },
+  "peerDependencies": {
+    "@inertiajs/svelte": ">=2",
+    "bits-ui": ">=2",
+    "defu": ">=6",
+    "es-toolkit": ">=1",
+    "mode-watcher": ">=1",
+    "sv-router": ">=0.13",
+    "svelte": ">=5"
+  },
+  "peerDependenciesMeta": {
+    "@inertiajs/svelte": {
+      "optional": true
+    },
+    "bits-ui": {
+      "optional": true
+    },
+    "defu": {
+      "optional": true
+    },
+    "es-toolkit": {
+      "optional": true
+    },
+    "mode-watcher": {
+      "optional": true
+    },
+    "sv-router": {
+      "optional": true
+    },
+    "svelte": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@iconify/svelte": "^5.2.1",
+    "@tailwindcss/vite": "^4.1.18",
+    "@veehance/core": "workspace:*",
+    "unplugin": "catalog:",
+    "vite": "catalog:"
+  }
+}

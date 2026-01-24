@@ -1,0 +1,14 @@
+{
+  "$schema": "../node_modules/@biomejs/biome/configuration_schema.json",
+  "extends": ["ultracite/solid"],
+  "linter": {
+    "rules": {
+      "correctness": {
+        "noSolidDestructuredProps": "error"
+      },
+      "performance": {
+        "useSolidForComponent": "error"
+      }
+    }
+  }
+}

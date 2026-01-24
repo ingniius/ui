@@ -1,0 +1,89 @@
+{
+  "name": "@veehance/solid",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/solid"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/index.css",
+      "import": "./dist/index.js"
+    },
+    "./container": "./dist/lib/components/Container.js",
+    "./main": "./dist/lib/components/Main.js",
+    "./types": "./dist/lib/types/index.js",
+    "./unplugin": "./dist/unplugin.js",
+    "./vite": "./dist/vite.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.css",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "package.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo coverage dist node_modules"
+  },
+  "peerDependencies": {
+    "@solidjs/router": ">=0.15",
+    "@tanstack/solid-router": ">=1",
+    "defu": ">=6",
+    "es-toolkit": ">=1",
+    "inertia-adapter-solid": ">=0.3",
+    "solid-js": ">=1"
+  },
+  "peerDependenciesMeta": {
+    "@solidjs/router": {
+      "optional": true
+    },
+    "@tanstack/solid-router": {
+      "optional": true
+    },
+    "defu": {
+      "optional": true
+    },
+    "es-toolkit": {
+      "optional": true
+    },
+    "inertia-adapter-solid": {
+      "optional": true
+    },
+    "solid-js": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "@tailwindcss/vite": "^4.1.18",
+    "@veehance/core": "workspace:*",
+    "solid-iconify": "^0.0.5",
+    "unplugin": "catalog:",
+    "vite": "catalog:"
+  }
+}

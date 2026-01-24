@@ -1,0 +1,10 @@
+{
+  "framework": "vue:nuxt",
+  "theme": {
+    "defaultVariants": { "color": "primary", "size": "md" },
+    "colors": ["primary", "secondary", "success", "info", "warning", "error"],
+    "iconset": ["lucide", { "github": "simple-icons:github" }],
+    "style": "vega",
+    "transitions": true
+  }
+}
