@@ -4,6 +4,8 @@
   "private": true,
   "exports": {
     "./base.json": "./src/base.json",
+    "./react.json": "./src/react.json",
+    "./vue.json": "./src/vue.json",
     "./package.json": "./package.json"
   },
   "scripts": {

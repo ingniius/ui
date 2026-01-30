@@ -1,0 +1,14 @@
+{
+  "framework": "vue:nuxt",
+  "css": {
+    "baseColor": "zinc",
+    "entry": "./app/styles.css"
+  },
+  "theme": {
+    "defaultVariants": { "color": "primary", "size": "md" },
+    "colors": ["primary", "secondary", "success", "info", "warning", "error"],
+    "iconset": ["lucide", { "github": "simple-icons:github" }],
+    "style": "maia",
+    "transitions": true
+  }
+}
