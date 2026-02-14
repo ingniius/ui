@@ -1,0 +1,90 @@
+{
+  "name": "@veehance/vue",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/vue"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/index.css",
+      "import": "./dist/index.js"
+    },
+    "./nuxt": "./dist/nuxt.js",
+    "./unplugin": "./dist/unplugin.js",
+    "./vite": "./dist/vite.js",
+    "./package.json": "./package.json",
+    "./registry.json": "./registry.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.css",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "package.json",
+    "registry.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "typecheck": "nuxt typecheck --noEmit --noEmit",
+    "clean": "git clean -xdf .cache .nuxt .turbo dist node_modules",
+    "postinstall": "[ ! -d .nuxt ] && nuxt prepare || true"
+  },
+  "peerDependencies": {
+    "@nuxt/schema": ">=4",
+    "nuxt": ">=4",
+    "tailwind-variants": ">=3",
+    "vue": ">=3",
+    "zod": ">=4"
+  },
+  "peerDependenciesMeta": {
+    "@nuxt/schema": {
+      "optional": true
+    },
+    "nuxt": {
+      "optional": true
+    },
+    "tailwind-variants": {
+      "optional": true
+    },
+    "vue": {
+      "optional": true
+    },
+    "zod": {
+      "optional": true
+    }
+  },
+  "optionalDependencies": {
+    "@iconify-json/lucide": ">=1.2",
+    "@nuxt/fonts": ">=0.14"
+  },
+  "dependencies": {
+    "@nuxt/kit": "^4.3.1",
+    "@tailwindcss/postcss": "^4.2.1",
+    "@tailwindcss/vite": "^4.2.1",
+    "@veehance/core": "workspace:*",
+    "unplugin": "catalog:",
+    "vite": "catalog:"
+  }
+}

@@ -1,15 +1,28 @@
 {
   "$schema": "./node_modules/@biomejs/biome/configuration_schema.json",
-  "extends": ["@veehance/biome/base.json"],
+  "extends": [
+    "@veehance/biome/base.json",
+    "@veehance/biome/react.json",
+    "@veehance/biome/vue.json"
+  ],
   "files": {
     "includes": [
       "**",
       "!__tmp__",
       "!**/.cache",
+      "!**/.next",
+      "!**/.nitro",
+      "!**/.nuxt",
+      "!**/.output",
+      "!**/.react-router",
+      "!**/.tanstack",
       "!**/.turbo",
       "!**/build",
+      "!**/coverage",
       "!**/dist",
-      "!**/node_modules"
+      "!**/generated",
+      "!**/node_modules",
+      "!**/routeTree.gen.ts"
     ]
   }
 }

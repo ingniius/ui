@@ -3,11 +3,20 @@ import { defineConfig } from "tsdown";
 import pkg from "./package.json" with { type: "json" };
 
 export default defineConfig({
-	entry: ["src/**/*.ts", "!src/**/*.spec.ts"],
-	unbundle: true,
-	dts: true,
-	exports: true,
-	external: [...Object.keys(pkg.peerDependencies || {})].map(
+  entry: ["src/**/*.ts", "!src/**/*.spec.ts"],
+  unbundle: true,
+  dts: true,
+  exports: {
+    customExports: () => ({
+      ".": "./dist/index.js",
+      "./package.json": "./package.json",
+    }),
+  },
+  external: [...Object.keys(pkg.peerDependencies || {})].map(
     (name) => new RegExp(`^${name}(/.*)?`),
   ),
+  outExtensions: ({ format }) => {
+    if (format === "es") return { js: ".js" };
+    return {};
+  },
 });

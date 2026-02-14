@@ -1,0 +1,51 @@
+{
+  "framework": [
+    "vue:core",
+    {
+      "colorMode": true,
+      "fonts": true,
+      "icon": false,
+      "image": false,
+      "locale": false,
+      "mdc": false
+    }
+  ],
+  "dts": {
+    "output": "./generated",
+    "prefix": "U"
+  },
+  "tailwind": {
+    "strategy": ["merge", { "prefix": "" }],
+    "css": "./app/styles.css",
+    "cssVariables": true,
+    "includes": ["isolate"],
+    "plugins": ["tailwind-animate"],
+    "sources": ["./app.config.{js,ts}", "./theme"]
+  },
+  "theme": {
+    "colors": ["primary", "secondary", "success", "info", "warning", "error"],
+    "defaultVariants": { "color": "primary", "size": "md" },
+    "iconset": ["lucide", { "github": "simple-icons:github" }],
+    "preset": ["vega", { "main": { "base": "min-h-screen" } }],
+    "transitions": true
+  },
+  "ui": {
+    "colors": {
+      "primary": "emerald",
+      "secondary": "cyan",
+      "success": "green",
+      "info": "blue",
+      "warning": "yellow",
+      "error": "red",
+      "neutral": "zinc"
+    }
+  },
+  "uiPro": {
+    "auth": false,
+    "chat": false,
+    "content": false,
+    "dashboard": false,
+    "page": false,
+    "post": false
+  }
+}

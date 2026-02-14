@@ -6,7 +6,22 @@
   "tasks": {
     "start": { "persistent": true },
     "dev": { "cache": false, "interactive": true, "persistent": true },
-    "build": { "dependsOn": ["^build"], "outputs": ["build/**", "dist/**"] },
+    "build": {
+      "dependsOn": ["^build"],
+      "outputs": [
+        ".next/**",
+        "!.next/cache/**",
+        ".nitro/**",
+        ".nuxt/**",
+        ".output/**",
+        ".react-router/**",
+        ".tanstack/**",
+        "build/**",
+        "dist/**",
+        "generated/**",
+        "next-env.d.ts"
+      ]
+    },
     "test": { "outputs": ["coverage"] },
     "typecheck": { "outputs": [".cache/tsbuildinfo.json"] },
     "clean": { "cache": false },

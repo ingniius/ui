@@ -1,0 +1,5 @@
+{
+  "$schema": "./node_modules/@veehance/core/registry.json",
+  "name": "@veehance/react",
+  "homepage": "https://vee-ui.com"
+}

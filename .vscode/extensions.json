@@ -1,3 +1,8 @@
 {
-  "recommendations": ["biomejs.biome"]
+  "recommendations": [
+    "antfu.iconify",
+    "biomejs.biome",
+    "bradlc.vscode-tailwindcss",
+    "vue.volar"
+  ]
 }

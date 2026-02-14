@@ -1,0 +1,43 @@
+export const defaults = {
+  dts: { output: "./generated", prefix: "U" },
+  colorMode: true,
+  fonts: true,
+  icon: false,
+  image: false,
+  locale: false,
+  mdc: false,
+  router: false,
+  tailwind: {
+    strategy: "merge" as const,
+    css: "./app/styles.css",
+    cssVariables: true,
+    includes: ["isolate"],
+    plugins: ["tailwind-animate"],
+    sources: ["./app.config.{mjs,ts}", "./theme"],
+  },
+  theme: {
+    colors: undefined,
+    defaultVariants: { color: "primary" as const, size: "md" as const },
+    iconset: "lucide" as const,
+    preset: "vega" as const,
+    transitions: true,
+  },
+  ui: {
+    colors: {
+      primary: "emerald",
+      secondary: "cyan",
+      success: "green",
+      info: "blue",
+      warning: "yellow",
+      error: "red",
+    },
+  },
+  uiPro: {
+    auth: false,
+    chat: false,
+    content: false,
+    dashboard: false,
+    page: false,
+    post: false,
+  },
+};

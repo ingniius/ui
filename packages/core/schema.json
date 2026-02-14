@@ -1,0 +1,372 @@
+{
+  "$id": "https://vee-ui.com/schemas/ui.schema.json",
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Veehance UI Config",
+  "description": "The central configuration file for Veehance UI.",
+  "type": "object",
+  "unevaluatedProperties": false,
+  "required": ["framework"],
+  "$defs": {
+    "frameworkName": {
+      "type": "string",
+      "description": "Framework identifier in the format \"runtime:adapter\" (e.g., \"vue:nuxt\" or \"react:next\").",
+      "pattern": "^[a-z]+:[a-z0-9-]+$"
+    },
+    "frameworkFeatures": {
+      "type": "object",
+      "description": "Optional feature overrides merged with adapter defaults.",
+      "additionalProperties": false,
+      "properties": {
+        "colorMode": {
+          "type": "boolean",
+          "description": "Enable color mode support."
+        },
+        "fonts": {
+          "type": "boolean",
+          "description": "Enable automatic font integration."
+        },
+        "image": {
+          "type": "boolean",
+          "description": "Enable framework image support."
+        },
+        "locale": {
+          "type": "boolean",
+          "description": "Enable localization support."
+        },
+        "mdc": {
+          "type": "boolean",
+          "description": "Enable Markdown Components support."
+        }
+      }
+    },
+    "frameworkInput": {
+      "description": "Defines the runtime and adapter used by the project. Accepts either a string identifier (\"runtime:adapter\") or a tuple with feature overrides.",
+      "oneOf": [
+        { "$ref": "#/$defs/frameworkName" },
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            { "$ref": "#/$defs/frameworkName" },
+            { "$ref": "#/$defs/frameworkFeatures" }
+          ]
+        }
+      ]
+    },
+    "strategyOptions": {
+      "type": "object",
+      "description": "Advanced configuration for Tailwind class merging behavior.",
+      "additionalProperties": false,
+      "properties": {
+        "prefix": {
+          "type": "string",
+          "description": "Class prefix applied during Tailwind merge resolution."
+        },
+        "cacheSize": {
+          "type": "number",
+          "description": "Number of cached class combinations used for merge optimization."
+        }
+      }
+    },
+    "strategyInput": {
+      "description": "Defines how utility classes are combined. Can be a simple mode (\"merge\" or \"join\") or a tuple with custom merge configuration.",
+      "default": "merge",
+      "oneOf": [
+        { "type": "string", "enum": ["merge", "join"] },
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            { "type": "string", "enum": ["merge", "join"] },
+            { "$ref": "#/$defs/strategyOptions" }
+          ]
+        }
+      ]
+    },
+    "rawStrategy": {
+      "type": "object",
+      "description": "Transformed Tailwind strategy after runtime processing.",
+      "required": ["twMerge", "twMergeConfig"],
+      "additionalProperties": false,
+      "properties": {
+        "twMerge": {
+          "type": "boolean",
+          "description": "Indicates whether class merging is enabled."
+        },
+        "twMergeConfig": {
+          "$ref": "#/$defs/strategyOptions",
+          "description": "Indicates whether class merging is enabled."
+        }
+      }
+    },
+    "accentColor": {
+      "type": "string",
+      "description": "Predefined accent color.",
+      "enum": [
+        "emerald",
+        "cyan",
+        "green",
+        "blue",
+        "yellow",
+        "red",
+        "orange",
+        "amber",
+        "lime",
+        "teal",
+        "sky",
+        "indigo",
+        "violet",
+        "purple",
+        "fuchsia",
+        "pink",
+        "rose"
+      ]
+    },
+    "baseColor": {
+      "type": "string",
+      "description": "Predefined neutral base color.",
+      "enum": [
+        "zinc",
+        "slate",
+        "gray",
+        "neutral",
+        "stone",
+        "mauve",
+        "olive",
+        "mist",
+        "taupe"
+      ]
+    },
+    "shade": {
+      "type": "object",
+      "description": "Full shade scale (50–950).",
+      "additionalProperties": false,
+      "properties": {
+        "50": { "type": "string" },
+        "100": { "type": "string" },
+        "200": { "type": "string" },
+        "300": { "type": "string" },
+        "400": { "type": "string" },
+        "500": { "type": "string" },
+        "600": { "type": "string" },
+        "700": { "type": "string" },
+        "800": { "type": "string" },
+        "900": { "type": "string" },
+        "950": { "type": "string" }
+      },
+      "required": [
+        "50",
+        "100",
+        "200",
+        "300",
+        "400",
+        "500",
+        "600",
+        "700",
+        "800",
+        "900",
+        "950"
+      ]
+    },
+    "paletteColor": {
+      "description": "Palette color: enum, custom string, or full shade object.",
+      "anyOf": [
+        { "$ref": "#/$defs/accentColor" },
+        { "type": "string" },
+        { "$ref": "#/$defs/shade" }
+      ]
+    },
+    "rawIconset": {
+      "type": "object",
+      "description": "Custom icon name mappings.",
+      "additionalProperties": { "type": "string" }
+    },
+    "iconset": {
+      "description": "Iconset name or tuple with custom mapping.",
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [
+            { "type": "string" },
+            { "$ref": "#/$defs/rawIconset" }
+          ]
+        }
+      ]
+    },
+    "rawPreset": {
+      "type": "object",
+      "description": "Loose preset override configuration.",
+      "properties": {
+        "icon": {
+          "type": "object",
+          "properties": {
+            "dynamic": { "type": "boolean" }
+          }
+        }
+      },
+      "additionalProperties": true
+    },
+    "preset": {
+      "description": "Preset name or tuple with override config.",
+      "oneOf": [
+        { "type": "string" },
+        {
+          "type": "array",
+          "minItems": 2,
+          "maxItems": 2,
+          "prefixItems": [{ "type": "string" }, { "$ref": "#/$defs/rawPreset" }]
+        }
+      ]
+    }
+  },
+  "properties": {
+    "$schema": {
+      "type": "string",
+      "description": "Optional JSON Schema reference."
+    },
+    "framework": {
+      "$ref": "#/$defs/frameworkInput"
+    },
+    "cli": {
+      "type": "object",
+      "description": "Configuration for the Veehance CLI.",
+      "additionalProperties": false,
+      "properties": {
+        "output": {
+          "type": "string",
+          "description": "Output directory."
+        },
+        "source": {
+          "type": "string",
+          "description": "Registry URL or local path.",
+          "default": "https://vee-ui.com/registry.json"
+        }
+      }
+    },
+    "dts": {
+      "type": "object",
+      "description": "Type declaration generation settings for improving editor autocomplete.",
+      "additionalProperties": false,
+      "properties": {
+        "aliases": {
+          "type": "object",
+          "description": "Path alias mappings used when generating declaration files.",
+          "additionalProperties": {
+            "type": "array",
+            "items": { "type": "string" }
+          }
+        },
+        "prefixes": {
+          "type": "object",
+          "description": "Custom component prefixes used in generated type definitions.",
+          "properties": {
+            "colorMode": { "type": "string" },
+            "prose": { "type": "string" },
+            "ui": { "type": "string" }
+          }
+        }
+      }
+    },
+    "tailwind": {
+      "type": "object",
+      "description": "Tailwind integration.",
+      "additionalProperties": false,
+      "properties": {
+        "strategy": { "$ref": "#/$defs/strategyInput" },
+        "css": {
+          "type": "string",
+          "description": "Path to the main Tailwind CSS entry file."
+        },
+        "cssVariables": {
+          "type": "boolean",
+          "description": "Enables generation of CSS variables."
+        },
+        "includes": {
+          "type": "array",
+          "description": "Additional Tailwind classes to include.",
+          "items": { "type": "string" }
+        },
+        "plugins": {
+          "type": "array",
+          "description": "Tailwind plugins to register automatically.",
+          "items": { "type": "string" }
+        },
+        "sources": {
+          "type": "array",
+          "description": "Additional file glob patterns scanned for class usage.",
+          "items": { "type": "string" }
+        }
+      }
+    },
+    "theme": {
+      "type": "object",
+      "description": "Global theme configuration controlling design tokens and presets.",
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "type": "array",
+          "description": "Enabled semantic colors. (e.g., \"primary\", \"secondary\", \"success\")",
+          "items": { "type": "string" }
+        },
+        "defaultVariants": {
+          "type": "object",
+          "description": "Default variant values applied to all components.",
+          "properties": {
+            "color": {
+              "type": "string",
+              "description": "Default semantic color applied to components."
+            },
+            "size": {
+              "type": "string",
+              "description": "Default size variant applied to components."
+            }
+          }
+        },
+        "iconset": {
+          "$ref": "#/$defs/iconset",
+          "description": "Accepts a predefined iconset name or a tuple with custom icon mappings."
+        },
+        "preset": {
+          "$ref": "#/$defs/preset",
+          "description": "Can be a preset name or a tuple with override options."
+        },
+        "transitions": {
+          "type": "boolean",
+          "description": "Enables or disables built-in component transition animations."
+        }
+      }
+    },
+    "ui": {
+      "type": "object",
+      "description": "UI-level overrides.",
+      "additionalProperties": false,
+      "properties": {
+        "colors": {
+          "type": "object",
+          "description": "Semantic color overrides.",
+          "properties": {
+            "neutral": { "$ref": "#/$defs/baseColor" }
+          },
+          "additionalProperties": { "$ref": "#/$defs/paletteColor" }
+        },
+        "components": {
+          "$ref": "#/$defs/rawPreset",
+          "description": "Component preset overrides."
+        },
+        "icons": {
+          "$ref": "#/$defs/rawIconset",
+          "description": "Custom icon overrides."
+        },
+        "strategy": {
+          "$ref": "#/$defs/rawStrategy",
+          "description": "Resolved Tailwind strategy output form."
+        }
+      }
+    }
+  }
+}
