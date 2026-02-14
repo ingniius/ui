@@ -1,0 +1,75 @@
+{
+  "name": "@veehance/core",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/core"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": [
+    "**/*.css"
+  ],
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "style": "./dist/index.css",
+      "import": "./dist/index.js"
+    },
+    "./iconset/*": "./dist/iconset/*.js",
+    "./iconset": "./dist/iconset/index.js",
+    "./locale/*": "./dist/locale/*.js",
+    "./locale": "./dist/locale/index.js",
+    "./preset/*": "./dist/preset/*.js",
+    "./preset": "./dist/preset/index.js",
+    "./theme/*": "./dist/theme/*.js",
+    "./theme": "./dist/theme/index.js",
+    "./helpers": "./dist/lib/helpers/index.js",
+    "./types": "./dist/lib/types/index.js",
+    "./utils": "./dist/lib/utils/index.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "dist/**/*.css",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "package.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo coverage dist generated node_modules"
+  },
+  "peerDependencies": {
+    "defu": ">=6",
+    "tailwind-variants": ">=3"
+  },
+  "peerDependenciesMeta": {
+    "defu": {
+      "optional": true
+    },
+    "tailwind-variants": {
+      "optional": true
+    }
+  },
+  "dependencies": {
+    "tailwind-merge": "^3.5.0"
+  }
+}

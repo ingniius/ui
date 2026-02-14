@@ -1,14 +1,17 @@
 {
-  "[javascript]": {
+  "[css]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[json]": {
+  "[javascript,javascriptreact]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[jsonc]": {
+  "[json,jsonc]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
-  "[typescript]": {
+  "[typescript,typescriptreact]": {
+    "editor.defaultFormatter": "biomejs.biome"
+  },
+  "[vue]": {
     "editor.defaultFormatter": "biomejs.biome"
   },
   "editor.codeActionsOnSave": {
@@ -21,5 +24,25 @@
   "editor.quickSuggestions": {
     "strings": "on"
   },
+  "files.associations": {
+    "*.css": "tailwindcss"
+  },
+  "files.watcherExclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "files.readonlyInclude": {
+    "**/routeTree.gen.ts": true
+  },
+  "material-icon-theme.files.associations": {
+    "**.stories.vue": "storybook"
+  },
+  "material-icon-theme.folders.associations": {
+    "react": "React-components",
+    "react-next": "Next",
+    "vue-nuxt": "Nuxt"
+  },
+  "tailwindCSS.classAttributes": ["class", "className", "ui"],
+  "tailwindCSS.classFunctions": ["cc", "cn", "cv", "cx"],
+  "tailwindCSS.experimental.configFile": "docs/app/styles.css",
   "typescript.tsdk": "node_modules/typescript/lib"
 }

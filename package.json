@@ -1,6 +1,6 @@
 {
   "private": true,
-  "packageManager": "pnpm@10.27.0",
+  "packageManager": "pnpm@10.30.1",
   "engines": {
     "node": ">=24.0.0",
     "npm": ">=11.0.0"
@@ -19,29 +19,52 @@
   },
   "dependencies": {
     "@veehance/biome": "workspace:*",
+    "@veehance/cli": "workspace:*",
     "@veehance/typescript": "workspace:*"
   },
   "devDependencies": {
-    "@biomejs/biome": "^2.3.10",
+    "@biomejs/biome": "^2.4.4",
     "@changesets/changelog-git": "^0.2.1",
     "@changesets/cli": "^2.29.8",
-    "@commitlint/cli": "^20.3.0",
-    "@commitlint/config-conventional": "^20.3.0",
+    "@commitlint/cli": "^20.4.2",
+    "@commitlint/config-conventional": "^20.4.2",
     "@dotenv-run/cli": "^1.3.6",
-    "@turbo/gen": "^2.7.2",
-    "@types/node": "^25.0.3",
-    "@vitest/coverage-v8": "^4.0.16",
+    "@nuxt/devtools": "^3.2.1",
+    "@nuxt/test-utils": "^4.0.0",
+    "@testing-library/dom": "^10.4.1",
+    "@testing-library/react": "^16.3.2",
+    "@turbo/gen": "^2.8.10",
+    "@types/node": "^25.3.0",
+    "@types/react": "catalog:",
+    "@types/react-dom": "catalog:",
+    "@vitejs/plugin-react": "^5.1.4",
+    "@vitejs/plugin-vue": "^6.0.4",
+    "@vitest/coverage-v8": "^4.0.18",
+    "@vue/test-utils": "^2.4.6",
+    "happy-dom": "^20.7.0",
     "husky": "^9.1.7",
     "npm-run-all2": "^8.0.4",
-    "tsdown": "^0.18.4",
-    "turbo": "^2.7.2",
+    "nuxt": "catalog:",
+    "react": "catalog:",
+    "react-dom": "catalog:",
+    "tailwindcss": "^4.2.0",
+    "tsdown": "^0.20.3",
+    "turbo": "^2.8.10",
     "typescript": "^5.9.3",
-    "ultracite": "^7.0.5",
-    "vite": "^7.3.0",
-    "vitest": "^4.0.16"
+    "ultracite": "^7.2.3",
+    "unplugin": "catalog:",
+    "unplugin-vue": "catalog:",
+    "vite": "catalog:",
+    "vite-tsconfig-paths": "^6.1.1",
+    "vitest": "^4.0.18",
+    "vue": "catalog:",
+    "vue-tsc": "^3.2.5"
+  },
+  "resolutions": {
+    "citty": ">=0.2"
   },
   "volta": {
-    "node": "24.12.0",
-    "pnpm": "10.27.0"
+    "node": "24.13.1",
+    "pnpm": "10.30.1"
   }
 }

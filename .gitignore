@@ -1,7 +1,15 @@
 # Outputs
 .cache
+.next
+.nitro
+.nuxt
+.output
+.react-router
+.tanstack
 build
 dist
+generated
+next-env.d.ts
 
 # Environment
 .env

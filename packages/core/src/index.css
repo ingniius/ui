@@ -1,0 +1,91 @@
+@custom-variant light {
+  &:is(:root[data-theme="light"] *, :host[data-theme="light"] *) {
+    @slot;
+  }
+}
+
+@custom-variant dark {
+  &:is(:root[data-theme="dark"] *, :host[data-theme="dark"] *) {
+    @slot;
+  }
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    text-rendering: optimizelegibility;
+  }
+
+  :root,
+  :host {
+    --ui-radius: 0.25rem;
+    --ui-container: var(--container-8xl);
+    --ui-header-height: var(--spacing-16);
+
+    ::-webkit-scrollbar {
+      width: 0.4rem;
+    }
+
+    ::-webkit-scrollbar-thumb {
+      border-radius: calc(var(--ui-radius) * 4);
+    }
+  }
+
+  :root[data-theme="light"],
+  :host[data-theme="light"] {
+    --ui-text-dimmed: var(--ui-color-neutral-400);
+    --ui-text-muted: var(--ui-color-neutral-500);
+    --ui-text-toned: var(--ui-color-neutral-600);
+    --ui-text: var(--ui-color-neutral-700);
+    --ui-text-highlighted: var(--ui-color-neutral-900);
+    --ui-text-inverted: white;
+
+    --ui-bg: white;
+    --ui-bg-muted: var(--ui-color-neutral-50);
+    --ui-bg-elevated: var(--ui-color-neutral-100);
+    --ui-bg-accented: var(--ui-color-neutral-200);
+    --ui-bg-inverted: var(--ui-color-neutral-900);
+
+    --ui-border: var(--ui-color-neutral-200);
+    --ui-border-muted: var(--ui-color-neutral-200);
+    --ui-border-accented: var(--ui-color-neutral-300);
+    --ui-border-inverted: var(--ui-color-neutral-900);
+
+    ::-webkit-scrollbar-track {
+      background-color: var(--ui-color-neutral-200);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--ui-color-neutral-500);
+    }
+  }
+
+  :root[data-theme="dark"],
+  :host[data-theme="dark"] {
+    --ui-text-dimmed: var(--ui-color-neutral-500);
+    --ui-text-muted: var(--ui-color-neutral-400);
+    --ui-text-toned: var(--ui-color-neutral-300);
+    --ui-text: var(--ui-color-neutral-200);
+    --ui-text-highlighted: white;
+    --ui-text-inverted: var(--ui-color-neutral-900);
+
+    --ui-bg: var(--ui-color-neutral-900);
+    --ui-bg-muted: var(--ui-color-neutral-800);
+    --ui-bg-elevated: var(--ui-color-neutral-800);
+    --ui-bg-accented: var(--ui-color-neutral-700);
+    --ui-bg-inverted: white;
+
+    --ui-border: var(--ui-color-neutral-800);
+    --ui-border-muted: var(--ui-color-neutral-700);
+    --ui-border-accented: var(--ui-color-neutral-700);
+    --ui-border-inverted: white;
+
+    ::-webkit-scrollbar-track {
+      background-color: var(--ui-color-neutral-800);
+    }
+
+    ::-webkit-scrollbar-thumb {
+      background-color: var(--ui-color-neutral-400);
+    }
+  }
+}
