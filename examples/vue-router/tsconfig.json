@@ -1,0 +1,10 @@
+{
+  "extends": "@veehance/typescript/vue.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "#build/*": ["./generated/*"], "@/*": ["./src/*"] },
+    "types": ["vite/client"]
+  },
+  "include": ["**/*.ts", "**/*.vue"],
+  "exclude": ["node_modules"]
+}

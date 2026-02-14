@@ -1,0 +1,14 @@
+@import "@veehance/core";
+@import "#build/ui.css";
+
+@source "./components/**/*.{js,vue}";
+
+@layer base {
+  body {
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    background-color: var(--ui-bg);
+    color: var(--ui-text);
+    touch-action: manipulation;
+  }
+}

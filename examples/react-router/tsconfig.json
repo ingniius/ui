@@ -1,0 +1,11 @@
+{
+  "extends": "@veehance/typescript/react.json",
+  "compilerOptions": {
+    "baseUrl": ".",
+    "paths": { "#build/*": ["./generated/*"], "@/*": ["./src/*"] },
+    "rootDirs": [".", "./.react-router/types"],
+    "types": ["vite/client"]
+  },
+  "include": ["**/*.ts", "**/*.tsx"],
+  "exclude": ["node_modules"]
+}

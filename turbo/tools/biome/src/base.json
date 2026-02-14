@@ -24,13 +24,28 @@
       }
     }
   },
+  "css": {
+    "parser": {
+      "tailwindDirectives": true
+    }
+  },
   "formatter": {
     "indentStyle": "space",
     "lineWidth": 80
   },
   "linter": {
     "rules": {
+      "nursery": {
+        "useSortedClasses": {
+          "level": "on",
+          "options": {
+            "attributes": ["classList"],
+            "functions": ["cc", "cn", "cv", "cx"]
+          }
+        }
+      },
       "style": {
+        "noNonNullAssertion": "off",
         "useBlockStatements": "off",
         "useConsistentTypeDefinitions": "off"
       },

@@ -1,0 +1,17 @@
+{
+  "framework": "vue:nuxt",
+  "theme": {
+    "defaultVariants": { "color": "primary", "size": "md" },
+    "colors": ["primary", "secondary", "success", "info", "warning", "error"],
+    "iconset": ["lucide", { "github": "simple-icons:github" }],
+    "preset": ["vega", { "icon": { "dynamic": false } }],
+    "transitions": true
+  },
+  "ui": {
+    "colors": {
+      "primary": "indigo",
+      "secondary": "violet",
+      "neutral": "slate"
+    }
+  }
+}

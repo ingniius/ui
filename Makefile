@@ -2,6 +2,12 @@ bump-deps:
 	@pnpx npm-check-updates --deep -u
 
 # ----------------------------------------
+# CLI commands
+# ----------------------------------------
+cli:
+	@pnpm exec veehance $(filter-out $@,$(MAKECMDGOALS))
+
+# ----------------------------------------
 # Changeset commands
 # ----------------------------------------
 CHAGENSET_CMD = pnpm changeset

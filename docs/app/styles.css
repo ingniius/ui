@@ -1,0 +1,7 @@
+@import "tailwindcss";
+@import "@veehance/vue";
+
+@theme inline {
+  --font-sans: "Geist", ui-sans-serif, system-ui, sans-serif;
+  --font-mono: "Geist Mono";
+}

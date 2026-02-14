@@ -1,0 +1,51 @@
+{
+  "name": "@veehance/cli",
+  "version": "0.0.0",
+  "type": "module",
+  "author": "@ingniius <ingniius@pm.me>",
+  "license": "MIT",
+  "homepage": "https://github.com/ingniius/ui#readme",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ingniius/ui.git",
+    "directory": "packages/cli"
+  },
+  "bugs": {
+    "url": "https://github.com/ingniius/ui/issues"
+  },
+  "maintainers": [
+    "@omaucf <omaucf@pm.me>"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "sideEffects": false,
+  "bin": {
+    "veehance": "./bin/index.mjs"
+  },
+  "exports": {
+    ".": "./dist/index.js",
+    "./program": "./dist/program.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "LICENSE",
+    "README.md",
+    "bin/index.mjs",
+    "dist/**/*.d.ts",
+    "dist/**/*.js",
+    "package.json"
+  ],
+  "scripts": {
+    "prepare": "[ ! -d dist ] && run-s build || true",
+    "dev": "tsdown --watch",
+    "build": "tsdown",
+    "test": "vitest run --coverage",
+    "typecheck": "tsc --noEmit",
+    "clean": "git clean -xdf .cache .turbo coverage dist node_modules"
+  },
+  "dependencies": {
+    "@veehance/core": "workspace:*",
+    "commander": "^14.0.3"
+  }
+}
